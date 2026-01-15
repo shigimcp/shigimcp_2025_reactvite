@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<gallery thumb="mc_thumbCR">
+
+	<album id="creative01" title="David LaChappelle - Body Painting w/ Joanne Gair" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative01.jpg">
+		<client>David LaChappelle</client>
+		<descr>Body Painting w/ Joanne Gair</descr>
+		<image>gallery/creative/th/th_creative01.jpg</image>
+	</album>
+
+	<album id="creative02" title="Espon - Body Painting w/ Joanne Gair" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative02.jpg">
+		<client>Espon</client>
+		<descr>Body Painting w/ Joanne Gair</descr>
+		<image>gallery/creative/th/th_creative02.jpg</image>
+	</album>
+
+	<album id="creative03" title="Sony Style - Body Painting w/ Joanne Gair" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative03.jpg">
+		<client>Sony Style</client>
+		<descr>Body Painting w/ Joanne Gair</descr>
+		<image>gallery/creative/th/th_creative03.jpg</image>
+	</album>
+
+	<album id="creative04" title="Sports Illustrated - Body Painting w/ Joanne Gair" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative06.jpg">
+		<client>Sports Illustrated</client>
+		<descr>Body Painting w/ Joanne Gair</descr>
+		<image>gallery/creative/th/th_creative06.jpg</image>
+	</album>
+
+	<album id="creative05" title="FA Wall Installation" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative11.jpg">
+		<client>Footaction</client>
+		<descr>Wall Installation</descr>
+		<image>gallery/creative/th/th_creative11.jpg</image>
+	</album>
+
+	<album id="creative06" title="FL Adidas Wardrobe Design" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative03.jpg">
+		<client>Foot Locker</client>
+		<descr>Adidas - Wardrobe Design</descr>
+		<image>gallery/creative/th/th_creative03.jpg</image>
+	</album>
+
+	<album id="creative07" title="Espon - Prop Design w/ Howard Schatz" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative13.jpg">
+		<client>Espon</client>
+		<descr>Prop Design w/ Howard Schatz</descr>
+		<image>gallery/creative/th/th_creative13.jpg</image>
+	</album>
+
+	<album id="creative08" title="Set/Prop Design w/ Howard Schatz" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative17.jpg">
+		<client>Howard Schatz</client>
+		<descr>Set/Prop Design</descr>
+		<image>gallery/creative/th/th_creative17.jpg</image>
+	</album>
+
+</gallery>

@@ -1,0 +1,611 @@
+/* #region ==================== MARK: .appContainer ==================== */
+
+.appContainer * {
+	/* border: 2px solid #ff0000; */
+
+	/* font-family: ChaleParNinSix, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+	/* letter-spacing: 0.0375rem; */
+	/* font-family: AvenirNext-Regular, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+	/* font-family: AvenirNext-Regular, system-ui, Helvetica, Arial, sans-serif; */
+	/* letter-spacing: -0.05rem; */
+	/* color: #ffffff; */
+
+	margin: 0;
+	padding: 0;
+}
+
+/* #endregion ==================== MARK: .appContainer ==================== */
+
+
+/* #region ========================= MARK: .wrapper ========================= */
+
+.wrapper {
+	/* border: 2px solid #ff0000; */
+
+	width: 100vw;
+	/* height: 100vh; */
+	/* height: auto; */
+
+	/* margin: 0; */
+	/* padding: 0; */
+
+	/* .testing123 {
+		margin-top: 50px;
+
+		button {
+			margin: 20px;
+			padding: 10px 20px;
+		}
+
+		h4 {
+			font-size: 25px;
+			font-weight: 700;
+		}
+	} */
+}
+
+/* #endregion ========================= MARK: .wrapper ========================= */
+
+
+/* #region ==================== MARK: .hedContainer ==================== */
+
+.hedContainer * {
+	/* font-family: ChaleParNinSix, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	letter-spacing: 0.0375rem;
+	font-family: AvenirNext-Regular, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	letter-spacing: -0.05rem;
+	color: #ffffff; */
+
+	margin: 0;
+	padding: 0;
+}
+
+.hedContainer {
+	/* display: none; */
+	/* border: 2px solid #ff0000; */
+	background: #000000;
+
+	width: 100vw;
+	/* height: 80px; */
+	height: var(--header-height);
+
+	/* margin-left: -30px; */
+
+	position: fixed;
+	/* position: sticky; */
+	z-index: 999;
+
+
+	/* #region -------------------- MARK: .hed -------------------- */
+
+	.hed {
+		/* border: 2px solid #0000ff; */
+
+		color: #ffffff;
+
+		height: inherit;
+
+		/* max-width: 1440px; */
+		max-width: var(--body-max-width);
+
+		margin: auto;
+		/* margin-left: -30px; */
+		/* bottom: 0; */
+
+		display: grid;
+		/* grid-template-columns: 1fr 1.5fr 2.875fr 1.75fr; */
+		grid-template-columns: 0.875fr 1.5fr 2.875fr 1.75fr;
+
+		.logo {
+			/* border: 2px solid #00ff00; */
+
+			/* width: 6.25vw; */
+			/* width: 190px; */
+			width: 170px;
+			/* width: 142.5px; */
+			/* min-height: 200px; */
+
+			margin-left: -30px;
+			/* margin-left: -20px; */
+
+			/* position: absolute; */
+			/* left: 5vw; */
+			/* top: 10px; */
+
+			.logoK, .logoW {
+				width: inherit;
+				/* min-width: 190px; */
+				/* min-height: 500px; */
+
+				position: absolute;
+				top: 10px;
+			}
+
+			.logoW {
+				/* clip: rect(0px, 100vw, 70px, 0px); */
+				/* clip: rect(0px, 100vw, 52.5px, 0px); */
+				clip: rect(0px, 100vw, calc(var(--header-height) - 10px), 0px);
+			}
+		}
+
+		.hed01, .hed02, .contact {
+			/* border: 2px solid #ffff00; */
+			margin-top: auto;
+		}
+
+		.hed01 {
+			font-size: 35px;
+			line-height: 110%;
+
+			margin-left: -20px;
+		}
+
+		.hed02 {
+			font-size: 21.25px;
+			line-height: 135%;
+		}
+
+		.contact {
+			font-size: 20px;
+			line-height: 135%;
+			text-align: right;
+
+			margin-right: 20px;
+
+			a {
+				color: #ffffff;
+				text-decoration: underline;
+				text-decoration-thickness: 1px;
+				text-underline-offset: 3.75px;
+			}
+		}
+	}
+
+	/* #endregion -------------------- MARK: .hed -------------------- */
+
+}
+
+/* #endregion ==================== MARK: .hedContainer ==================== */
+
+
+/* #region -------------------- MARK: .navBarContainer -------------------- */
+
+.navBarContainer {
+	/* border: 2px solid #ff0000; */
+	border-bottom: 1px solid #cccccc;
+	background: #ffffff;
+
+	width: inherit;
+	/* max-width: var(--body-min-width); */
+	height: var(--navBar-height);
+
+	margin: auto;
+	/* margin: 0 1500px; */
+	/* padding: 0 500px; */
+
+	overflow: visible;
+	/* position: relative; */
+	/* z-index: 0; */
+	position: fixed;
+	top: var(--header-height);
+	z-index: 990;
+
+
+	/* #region -------------------- MARK: .navBarBG -------------------- */
+
+	.navBarBG {
+		/* border: 2px solid #ff0000; */
+		/* border-bottom: 1px solid #cccccc;
+		background: #ffffff; */
+
+		/* width: inherit; */
+		max-width: var(--body-min-width);
+		/* height: var(--navBar-height); */
+		height: inherit;
+
+		margin: auto;
+		/* margin: 0 1500px; */
+		/* padding: 0 500px; */
+
+		overflow: visible;
+		/* position: fixed;
+		z-index: 0; */
+
+
+		/* #region -------------------- MARK: nav, .navBar -------------------- */
+
+		nav, .navBar {
+			/* border: 2px solid #ff00ff; */
+			/* background: #ff0000; */
+			/* background: #ffffff; */
+
+			/* color: #ffffff; */
+			color: #000000;
+			font-size: 1.125em;
+			text-align: center;
+			line-height: 2.25em;
+
+			/* width: var(--body-min-width); */
+			width: calc(var(--body-min-width) * 0.5);
+			/* max-width: 1115px; */
+			height: inherit;
+
+			/* margin: 0 25vw; */
+			margin: auto;
+			/* margin: -($navBar-height * 0.75) auto 0 auto; */
+			/* padding: 0 50%; */
+
+			display: grid;
+			/* grid-template-columns: repeat(6, 16.666666666666667%); */
+			grid-template-columns: repeat(4, auto);
+			/* grid-template-columns: repeat(5, auto); */
+			/* grid-template-columns: repeat(6, auto); */
+
+			column-gap: 0;
+			align-items: center;
+
+			position: fixed;
+			top: var(--header-height);
+			/* left: calc(50vw - (var(--body-min-width) * 0.5)); */
+			/* left: calc(50vw - (var(--body-min-width) * 0.3875)); */
+			left: calc(50vw - (var(--body-min-width) * 0.25));
+			/* left: calc(50vw - (var(--body-min-width) * 0.0625)); */
+
+			/* position: absolute;
+			top: 0;
+			left: 0;
+			right: 0; */
+
+			.navItem {
+				/* border: 2px inset #00ffff; */
+				/* border-right: 1px solid #cccccc; */
+
+				/* background: none; */
+
+				color: inherit;
+				text-decoration: none;
+
+				height: inherit;
+
+				/* margin: 0; */
+				/* padding: 0; */
+
+				/* margin-top: auto; */
+
+				/* display: flex;
+				align-items: center;
+				justify-content: center; */
+			}
+
+			.active {
+				/* border: 2px inset #00ffff; */
+				background-color: #dddddd;
+
+				/* @include bgGradient01(); */
+				/* @include bgGradient02(); */
+				/* @include bgGradient03(); */
+				/* mix-blend-mode: multiply; */
+
+				/* color: #ffffff; */
+				/* text-align: center;
+
+				height: inherit;
+
+				position: absolute;
+				left: 0; */
+			}
+		}
+
+		/* #endregion -------------------- MARK: nav, .navBar -------------------- */
+
+		/* #region -------------------- MARK: .resumeNav -------------------- */
+
+		.resumeNav {
+			/* border: 1px solid #ff0000; */
+			background-color: #dddddd;
+
+			/* @include bgGradient06(); */
+			/* @include bgGradient07(); */
+			/* visibility: visible; */
+
+			color: #000000;
+			text-align: center;
+			line-height: 1.75em;
+
+			/* width: 15vw; */
+			/* width: 175px; */
+			width: var(--workNav-width);
+			/* height: 25px; */
+			/* height: var(--workNav-height); */
+			height: calc(var(--navBar-height) * 0.75);
+
+			margin: 0;
+			padding: 0;
+
+			position: relative;
+			/* position: inherit; */
+			/* position: fixed; */
+
+			/* top: 100px; */
+			/* top: var(--header-height); */
+			top: var(--navBar-height);
+			/* top: calc(var(--header-height) + var(--navBar-height) - var(--workNav-height)); */
+			/* top: calc(var(--header-height) + var(--navBar-height)); */
+			/* right: 2.5vw; */
+			/* right: 1200px; */
+			/* right: calc(var(--body-max-width) - 175px - 20px); */
+			/* left: calc(var(--body-max-width) - 175px - 20px); */
+			/* left: var(--body-min-width); */
+			left: calc(var(--body-min-width) - 30px);
+			/* left: 1200px; */
+
+			/* float: right; */
+
+			/* z-index: -1; */
+			/* z-index: 999; */
+
+			cursor: pointer;
+
+			p {
+				/* border: 1px solid #ff00ff; */
+				height: inherit;
+				margin: 0 auto;
+				padding: 0;
+			}
+		}
+
+		/* #endregion -------------------- MARK: .resumeNav -------------------- */
+		
+	}
+	/* #endregion -------------------- MARK: .navBarBG -------------------- */
+}
+
+/* #endregion -------------------- MARK: .navBarContainer -------------------- */
+
+
+/* #region -------------------- MARK: .dialogModal -------------------- */
+
+.dialogModal {
+	/* border: 2px solid #ff0000; */
+	border: none;
+
+	/* background: rgba(var(--color): #000000, var(--alpha): 0.5); */
+	/* @include modalBG(); */
+	/* background: rgba(0, 0, 0, 0.25); */
+	background: none;
+
+
+	text-align: center;
+
+	width: 100vw;
+	height: 100vh;
+
+	/* width: 100%;
+	height: 100%; */
+
+	margin: auto;
+	/* margin: 0;
+	padding: 0; */
+
+	/* position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0; */
+	/* z-index: 999; */
+	/* display: inline-block; */
+
+	/* cursor: none; */
+
+	.dialogHotspot {
+		/* border: 2px solid #00ff00; */
+
+		/* background: rgba(var(--color): #000000, var(--alpha): 0.5); */
+		/* @include modalBG(); */
+		/* background: rgba(0, 0, 0, 0.25); */
+
+		text-align: center;
+
+		width: 100vw;
+		height: 100vh;
+
+		/* width: inherit;
+		height: inherit; */
+
+		/* position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0; */
+		/* z-index: 999; */
+		/* display: inline-block; */
+
+		/* cursor: pointer; */
+		/* cursor: none; */
+		cursor: auto;
+	}
+
+	.dialogBox {
+		/* border: 2px solid #00ffff; */
+		border: 2px solid #999999;
+
+		/* background: rgba(var(--color): #ffffff, var(--alpha): 1); */
+		/* @include modalBG(); */
+		/* @include bgGradient01(); */
+		background-color: #ffffff;
+
+		font-size: 15px;
+		line-height: 15px;
+
+		width: 30vw;
+		max-width: 300px;
+		height: auto;
+
+		margin: 0 auto;
+		padding: 10px 20px;
+
+		position: absolute;
+		top: 20%;
+		left: 0;
+		right: 0;
+		/* z-index: 999; */
+
+		.dialogHed {
+			/* border: 1px solid #ff0000; */
+
+			font-size: 1.125em;
+
+			margin: 0;
+			/* padding: 0; */
+
+			padding: 10px 0 20px 0;
+		}
+
+		.dialogHed02 {
+			/* border: 1px solid #ff0000; */
+
+			padding: 10% 0 5% 0;
+		}
+
+		.dialogMenu {
+			/* border: 1px solid #0000ff; */
+
+			/* width: 100%; */
+			/* height: 80%; */
+
+			margin: 0;
+			padding: 0;
+
+			display: grid;
+			/* grid-template-columns: repeat(4, auto); */
+			grid-template-columns: repeat(auto, 5);
+			grid-gap: 5%;
+
+			a {
+				/* border: 2px solid #00ff00; */
+				border-radius: 3px;
+
+				/* background: rgba(var(--color: #000000, var(--alpha: 0.125); */
+				/* @include btnBgRest(); */
+				background-color: #cccccc;
+
+				/* color: rgba(var(--color): #000000, var(--alpha): 1); */
+				color: #000000;
+				font-size: 0.875em;
+				text-decoration: none;
+
+				/* height: 20%; */
+				height: 20%;
+
+				/* margin: 10%; */
+				margin: 0;
+				padding: 3.75% 0;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				transition: 0.25s;
+				/* @include transition(background-color 1s 0.25s, color 0.25s); */
+				/* @include transition(0.25s); */
+			}
+
+			a:hover {
+				/* border: 2px solid #00ff00; */
+
+				/* @include btnBgHover(); */
+				transform: scale(1.03125);
+			}
+		}
+
+		.dialogMenu02 {
+			/* border: 1px solid #0000ff; */
+
+			grid-template-columns: repeat(auto, 1);
+			grid-gap: 5%;
+		}
+
+		.dialogCloseBTN {
+			border: none;
+			border-radius: 15px;
+
+			background: #eeeeee;
+
+			/* font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"; */
+			/* font-weight: bold; */
+			text-align: center;
+			vertical-align: middle;
+			/* text-decoration: none; */
+
+			width: 25px;
+			height: 25px;
+
+			position: absolute;
+			top: 10px;
+			right: 10px;
+		}
+
+		.dialogCloseBTN:hover {
+			background: #cccccc;
+		}
+
+		.dialogCloseBTN:focus {
+			outline: 0;
+		}
+	}
+}
+
+.dialogModal::backdrop {
+	background: hsl(0 0% 0% / 50%);
+}
+
+/* .dialogModalOpen {
+	z-index: 999;
+	display: initial;
+}
+
+.dialogModalClosed {
+	z-index: 0;
+	display: none;
+} */
+
+/* #endregion -------------------- MARK: .dialogModal -------------------- */
+
+
+/* #region ==================== MARK: .navBarContainer [null] ==================== */
+
+/* .navBarContainer * {
+	font-family: ChaleParNinSix, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	letter-spacing: 0.0375rem;
+	font-family: AvenirNext-Regular, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	letter-spacing: -0.05rem;
+	color: #ffffff;
+} */
+
+/* #endregion ==================== MARK: .navBarContainer [null] ==================== */
+
+
+/* #region ========================= MARK: .bodyContainer ========================= */
+
+.bodyContainer {
+	/* border: 2px solid #0000ff; */
+
+	/* width: 50%; */
+	/* min-width: 820px; */
+	/* max-width: 1200px; */
+
+	width: var(--body-width);
+	min-width: var(--body-min-width);
+	max-width: var(--body-max-width);
+
+	/* height: 100%; */
+
+	margin: 0 auto;
+	/* padding: 150px 0 0 0; */
+	/* padding: 0; */
+
+	position: relative;
+	top: calc(var(--header-height) + var(--navBar-height));
+}
+
+/* #endregion ========================= MARK: .bodyContainer ========================= */

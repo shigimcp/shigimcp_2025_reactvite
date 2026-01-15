@@ -1,0 +1,68 @@
+/* #region ========================= GLOBAL ========================= */
+html, body {
+  background: #ffffff;
+  color: #000000;
+  width: 300px;
+  height: 250px;
+  margin: 0 auto;
+  padding: 0;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */ /* IE 10+ */
+  user-select: none; /* Standard syntax */
+}
+
+/* #endregion ========================= GLOBAL ========================= */
+/* #region ========================= .bannerContainer ========================= */
+.bannerContainer {
+  border: 1px solid #eee3d4;
+  width: 298px;
+  height: 248px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+.bannerContainer .bottle, .bannerContainer .bottleMask {
+  width: 75px;
+  height: 125px;
+  position: absolute;
+  left: 196px;
+  top: 128px;
+}
+.bannerContainer .image, .bannerContainer .imageSVG {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+.bannerContainer .bottleSVG {
+  width: 75px;
+  height: 125px;
+  position: absolute;
+  left: 196px;
+  top: 128px;
+}
+.bannerContainer .bottleSVG .bottleBGPath {
+  fill: #ffffff;
+  position: absolute;
+  z-index: -10;
+}
+.bannerContainer .logo_untold {
+  width: 105px;
+  position: absolute;
+  left: 183px;
+  top: 103px;
+}
+.bannerContainer .logo_ea {
+  width: 76px;
+  position: absolute;
+  left: 112px;
+  top: 200px;
+}
+.bannerContainer .cta {
+  width: 95px;
+  position: absolute;
+  left: 8px;
+  top: 217px;
+}
+
+/* #endregion ========================= .bannerContainer ========================= *//*# sourceMappingURL=CR_4752_UNTOLD_2013_US_DIGITAL.css.map */

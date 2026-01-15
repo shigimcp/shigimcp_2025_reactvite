@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-drag: none;
+  -khtml-user-drag: none;
+  -webkit-user-drag: none;
+  -o-user-drag: none;
+  -ms-user-drag: none;
+}
+
+html, body {
+  font-family: "EvilGeniusBB";
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+}
+html .bannerContainer, body .bannerContainer {
+  background-image: url(../images/bg.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: 450px;
+  height: 360px;
+  margin: 0 auto;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+html .bannerContainer .btn_audioToggle, body .bannerContainer .btn_audioToggle {
+  background: rgba(0, 0, 0, 0);
+  opacity: 0.25;
+  left: 10px;
+  bottom: 10px;
+  z-index: 100;
+  cursor: pointer;
+}
+html .bannerContainer .btn_audioToggle .btn_audioToggleOn, body .bannerContainer .btn_audioToggle .btn_audioToggleOn {
+  fill: black;
+  visibility: visible;
+}
+html .bannerContainer .btn_audioToggle .btn_audioToggleOff, body .bannerContainer .btn_audioToggle .btn_audioToggleOff {
+  fill: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+}
+html .bannerContainer .bg, body .bannerContainer .bg {
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+}
+html .bannerContainer .clickTag, body .bannerContainer .clickTag {
+  background-image: url(../images/ECard01_PaperDoll.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  cursor: pointer;
+}
+html .bannerContainer .clickTag .btnPlay, body .bannerContainer .clickTag .btnPlay {
+  width: 20%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html .bannerContainer .clickTag::before, body .bannerContainer .clickTag::before {
+  background-color: #ffffff;
+  content: "";
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+html .bannerContainer .logoSVG, body .bannerContainer .logoSVG {
+  fill: #ffffff;
+  width: 23.3333333333%;
+  top: 91.6666666667%;
+  left: 74.4444444444%;
+  z-index: 99;
+  opacity: 0.25;
+  overflow: visible;
+}
+html .bannerContainer .dialogueContainer, body .bannerContainer .dialogueContainer {
+  width: 100%;
+  height: 100%;
+}
+html .bannerContainer .dialogueContainer .dialogueBubbleSVG, body .bannerContainer .dialogueContainer .dialogueBubbleSVG {
+  width: 50%;
+}
+html .bannerContainer .dialogueContainer .dialogue, body .bannerContainer .dialogueContainer .dialogue {
+  font-size: 1.25em;
+  line-height: 1em;
+  text-align: center;
+  width: 45%;
+  margin: 0;
+  padding: 0;
+  top: 7%;
+  left: 2.75%;
+}
+html .bannerContainer .dialogueContainer .dialogueSM, body .bannerContainer .dialogueContainer .dialogueSM {
+  font-size: 0.5em;
+  line-height: 1em;
+  text-align: center;
+  width: 45%;
+  margin: 0;
+  padding: 0;
+  top: 7%;
+  left: 2.75%;
+}
+html .bannerContainer .dialogueContainer #dialogueBubbleSVG03ID, body .bannerContainer .dialogueContainer #dialogueBubbleSVG03ID {
+  width: 70%;
+  left: 13.75%;
+}
+html .bannerContainer .dialogueContainer #dialogueID03, body .bannerContainer .dialogueContainer #dialogueID03 {
+  font-family: "EvilGeniusBB-Bold";
+  font-size: 1.875em;
+  width: 70%;
+  top: 6.875%;
+  left: 12.875%;
+}
+html .bannerContainer .dollContainer, body .bannerContainer .dollContainer {
+  width: 100%;
+  height: 100%;
+}
+html .bannerContainer .dollContainer .dollSVG, body .bannerContainer .dollContainer .dollSVG {
+  width: 60%;
+}/*# sourceMappingURL=ECard01_PaperDoll.css.map */

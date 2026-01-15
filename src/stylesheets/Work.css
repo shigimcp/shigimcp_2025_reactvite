@@ -1,0 +1,1125 @@
+/* @import './Global.scss'; */
+@import './App.css';
+
+
+/* force vertical scrollbar, prevent Packery gap */
+/* html {
+	overflow-y: scroll;
+} */
+
+
+/* #region ==================== MARK: BASE ==================== */
+
+/* #region ---------------------- MARK: .isotopeContainer ---------------------- */
+
+.isotopeContainer {
+	/* border: 2px solid #ff0000; */
+
+	font-size: 12px;
+	line-height: 14px;
+
+	/* width: 80vw; */
+	width: 100vw;
+	/* height: auto; */
+
+	margin: 0 auto;
+	padding: 0;
+	/* padding: 0 15px; */
+	/* padding: 20px 0; */
+
+	position: absolute;
+	/* top: calc(var(--header-height) + var(--navBar-height)); */
+
+	/* overflow-y: scroll; */
+
+	/* #region - - - - - - - - - - - MARK: .masonryWidth0 .masonryHeight0 - - - - - - - - - - -  */
+
+	.masonryWidth0 {
+		/* width: calc(4.16666667vw - 25px); */
+		width: calc(8.33333333vw - 25px);
+		/* width: calc(16.6666666666667vw - 25px); */
+		/* width: calc(33.3333333333333vw - 25px); */
+		/* width: calc(66.6666666666667vw - 25px); */
+
+		/* width: calc(5vw - 25px); */
+		/* width: calc(5.625vw - 25px); */
+		/* width: calc(6.25vw - 25px); */
+
+		/* width: calc(10vw - 25px); */
+	}
+
+	/* .masonryHeight0 { */
+		/*height: 200px; */
+		/*height: 20vh; */
+		/*height: calc(16.6666666666667vw * 1.5); */
+		/* height: calc(16.6666666666667vw * 2); */
+	/* } */
+
+	/* #endregion - - - - - - - - - - - MARK: .masonryWidth0 .masonryHeight0 - - - - - - - - - - -  */
+
+
+	/* #region - - - - - - - - - - - MARK: .masonryWidth1 .masonryHeight1 - - - - - - - - - - -  */
+
+	.masonryWidth1 {
+		/* width: calc(4.16666667vw - 25px); */
+		/* width: calc(8.33333333vw - 25px); */
+		width: calc(16.6666666666667vw - 25px);
+		/* width: calc(33.3333333333333vw - 25px); */
+		/* width: calc(66.6666666666667vw - 25px); */
+
+		/* width: calc(5vw - 25px); */
+		/* width: calc(5.625vw - 25px); */
+		/* width: calc(6.25vw - 25px); */
+
+		/* width: calc(15vw - 25px); */
+	}
+
+	/* .masonryHeight1 { */
+		/*height: 200px; */
+		/*height: 20vh; */
+		/*height: calc(16.6666666666667vw * 1.5); */
+		/* height: calc(16.6666666666667vw * 2); */
+	/* } */
+
+	/* #endregion - - - - - - - - - - - MARK: .masonryWidth1 .masonryHeight1 - - - - - - - - - - -  */
+
+
+	/* #region - - - - - - - - - - - MARK: .masonryWidth2 .masonryHeight2 - - - - - - - - - - -  */
+
+	.masonryWidth2 {
+		/* width: calc(4.16666667vw - 25px); */
+		/* width: calc(8.33333333vw - 25px); */
+		/* width: calc(16.6666666666667vw - 25px); */
+		width: calc(33.3333333333333vw - 25px);
+		/* width: calc(66.6666666666667vw - 25px); */
+
+		/* width: calc(10vw - 25px); */
+		/* width: calc(11.25vw - 25px); */
+		/* width: calc(12.5vw - 25px); */
+
+		/* width: calc(25vw - 25px); */
+	}
+
+	/* .masonryHeight2 { */
+		/*height: 200px; */
+		/*height: 20vh; */
+		/*height: calc(16.6666666666667vw * 1.5); */
+		/* height: calc(16.6666666666667vw * 2); */
+	/* } */
+
+	/* #endregion - - - - - - - - - - - MARK: .masonryWidth2 .masonryHeight2 - - - - - - - - - - -  */
+
+
+	/* #region - - - - - - - - - - - MARK: .masonryWidth3 .masonryHeight3 - - - - - - - - - - -  */
+
+	.masonryWidth3 {
+		/* width: calc(4.16666667vw - 25px); */
+		/* width: calc(8.33333333vw - 25px); */
+		/* width: calc(16.6666666666667vw - 25px); */
+		width: calc(33.3333333333333vw - 25px);
+		/* width: calc(66.6666666666667vw - 25px); */
+
+		/* width: calc(20vw - 25px); */
+		/* width: calc(22.5vw - 25px); */
+		/* width: calc(25vw - 25px); */
+
+		/* width: calc(35vw - 25px); */
+
+		min-height: 320px;
+	}
+
+	/* .masonryHeight3 { */
+		/*height: 200px; */
+		/*height: 20vh; */
+		/*height: calc(16.6666666666667vw * 1.5); */
+		/* height: calc(16.6666666666667vw * 2); */
+	/* } */
+
+	/* #endregion - - - - - - - - - - - MARK: .masonryWidth3 .masonryHeight3 - - - - - - - - - - -  */
+
+
+	/* #region - - - - - - - - - - - *** MARK: .masonryWidth4 .masonryHeight4 *** - - - - - - - - - - -  */
+
+	/* .masonryWidth4 {
+		width: calc(4.16666667vw - 20px);
+		width: calc(8.33333333vw - 20px);
+		width: calc(16.6666666666667vw - 20px);
+		width: calc(33.3333333333333vw - 20px);
+		width: calc(66.6666666666667vw - 25px);
+
+		width: calc(40vw - 20px);
+		width: calc(45vw - 20px);
+		width: calc(50vw - 20px);
+
+		width: calc(40vw - 20px);
+	} */
+
+	/* .masonryHeight4 { */
+		/*height: 200px; */
+		/*height: 20vh; */
+		/*height: calc(16.6666666666667vw * 1.5); */
+		/* height: calc(16.6666666666667vw * 2); */
+	/* } */
+
+	/* #endregion - - - - - - - - - - - MARK: .masonryWidth4 .masonryHeight4 - - - - - - - - - - -  */
+
+}
+
+/* #endregion ---------------------- MARK: .isotopeContainer ---------------------- */
+
+
+/* #region -------------------- MARK: .galleryContainer - REF: https://packery.metafizzy.co/layout & https://codepen.io/desandro/pen/xZjOXq -------------------- */
+
+.galleryContainer {
+	/* border: 2px solid #00ffff; */
+	/* border: 1px inset rgba($color: #000000, $alpha: 0.125); */
+
+	/* background: rgba($color: #000000, $alpha: 0.0625); */
+	/* @include bgGradient04(); */
+
+	text-align: left;
+
+	/* margin: 60px auto 0 auto; */
+	/* margin: var(--header-height) auto; */
+	/* padding: 0; */
+	/* padding: 0 0 0 2.5px; */
+	/* padding: 0 0 0 10px; */
+	/* padding: 0 17.5px; */
+	padding: 20px 17.5px;
+
+	/* position: inherit; */
+	/* position: absolute; */
+	/* top: calc(var(--header-height) + var(--navBar-height)); */
+	top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height));
+	/* top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) + 20px); */
+
+	visibility: hidden;
+	/* display: none; */
+
+	/* #region - - - - - - - - - - - MARK: .workItem - - - - - - - - - - -  */
+
+	.workItem {
+		/* border: 2px solid #00ffff; */
+		/* border: 1px inset rgba($color: #000000, $alpha: 0.125); */
+
+		/* background: rgba($color: #000000, $alpha: 0.0625); */
+		/* @include bgGradient04(); */
+
+		/* width: calc(33.3333333333333vw - 20px); */
+		/* width: calc(16.6666666666667vw - 20px); */
+		/* width: calc(8.33333333vw - 20px); */
+
+		/* width: calc(16.25vw - 20px); */
+		/* width: calc(20vw - 20px); */
+		/* width: calc(25vw - 20px); */
+
+		padding: 0;
+
+		/* margin: 0; */
+		/* margin: 0 5px 20px 15px; */
+		/* margin: 0 0 20px 15px; */
+		margin: 0 0 20px 0;
+		/* margin: 0 10px; */
+
+		/* cursor: pointer; */
+		cursor: auto;
+
+		img {
+			width: 100%;
+
+			/* margin: 0; */
+			/* padding: 0; */
+		}
+
+		.itemInfo {
+			/* border: 2px solid #0000ff; */
+			/* border: 1px inset rgba($color: #000000, $alpha: 0.125); */
+
+			/* background: rgba($color: #000000, $alpha: 0.0625); */
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.0625) 0%, rgba(255, 255, 255, 0) 80%);
+
+			margin: 0;
+			/* padding: 0; */
+			padding: 0 0 5px 10px;
+
+			/* h3, p { */
+				/* font-size: 1em; */
+				/*line-height: 1em; */
+				/*text-align: center; */
+				/*text-align: left; */
+				/*vertical-align: text-bottom; */
+
+				/*margin: 0; */
+				/*padding: 0; */
+				/*padding: 0 20px; */
+				/*display: table-cell; */
+			/* } */
+
+			h3 {
+				font-size: 0.9375em;
+
+				padding: 5px 0 0 0;
+			}
+
+			p {
+				font-size: 0.8375em;
+			}
+		}
+	}
+
+	/* #endregion - - - - - - - - - - - MARK: .workItem - - - - - - - - - - -  */
+
+
+	/* #region - - - - - - - - - - - MARK: .bannerContainer - - - - - - - - - - -  */
+
+	.bannerContainer {
+		/* border: 2px solid #ff0000; */
+
+		background: none;
+		/* background: rgba($color: #ff0000, $alpha: 0.5); */
+		/* @include bgGradient04(); */
+
+		/* width: 0; */
+		/* height: 0; */
+
+		/* width: 20%;
+		height: 200px; */
+
+		/* width: 100%; */
+		/* width: calc(100% - 35px);
+		height: 100%; */
+
+		/* width: inherit; */
+		/* height: inherit; */
+
+		/* margin: 0; */
+		/* padding: 0; */
+
+		position: absolute;
+		/* top: 0; */
+		/* left: 0; */
+		/* z-index: -999; */
+	}
+
+	/* #endregion - - - - - - - - - - - MARK: .bannerContainer - - - - - - - - - - -  */
+
+
+	/* #region - - - - - - - - - - - MARK: .banneriFrame, .banneriFrameOpen, .banneriFrameClosed - - - - - - - - - - -  */
+
+	.banneriFrame, .banneriFrameOpen {
+		/* border: 2px solid #0000ff; */
+		border: none;
+
+		/* background: rgba($color: #ff0000, $alpha: 0.5); */
+		/* @include bgGradient04(); */
+
+		/* width: 300px; */
+		/* height: 250px; */
+
+		margin: 0 auto;
+		padding: 0;
+
+		position: absolute;
+		/* z-index: 99; */
+		/* z-index: -999; */
+	}
+
+	.banneriFrameClosed {
+		/* border: 2px solid #ff0000; */
+
+		display: none;
+		z-index: 0;
+	}
+
+	/* #endregion - - - - - - - - - - - MARK: .banneriFrame, .banneriFrameOpen, .banneriFrameClosed - - - - - - - - - - -  */
+
+
+	/* #region - - - - - - - - - - - MARK: .webiFrameContainer, .webiFrameContainerOpen, .webiFrameContainerClosed / .videoContainer, .videoContainerOpen, .videoContainerClosed / .closeModalBtn, .closeModalBtnShow, .closeModalBtnHide  - - - - - - - - - - -  */
+
+	.webiFrameContainer, .videoContainer {
+		/* border: 2px solid #ff0000; */
+
+		/* background: rgba($color: #000000, $alpha: 0.5); */
+		/* @include modalBG(); */
+
+		width: 100vw;
+		height: 100vh;
+
+		position: fixed;
+		top: 0;
+		left: 0;
+		/* z-index: -999; */
+		z-index: 999;
+
+		cursor: pointer;
+
+		.webiFrame, .videoPlayer {
+			/* border: 2px solid #0000ff; */
+			border: none;
+
+			width: 50vw;
+			height: 50vh;
+
+			max-width: 3600px;
+			max-height: 1585px;
+
+			/* max-width: 1800px;
+			max-height: 1585px; */
+
+			/* margin: 0 auto; */
+			margin: 0;
+			padding: 0;
+
+			position: fixed;
+
+			top: 50vh;
+			left: 50vw;
+
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%);
+			-moz-transform: translate(-50%, -50%);
+			-o-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+
+		/* #region - - - - - - - - - - - MARK: .closeModalBtn - - - - - - - - - - -  */
+
+		.closeModalBtn {
+			/* border: 2px solid #ff0000; */
+			/* background: #ffffff; */
+			/* border-radius: 0; */
+
+			width: 100px;
+			/* height: 20px; */
+
+			padding: 5px 10px;
+
+			position: fixed;
+			top: 10%;
+			right: 2.5%;
+			/* right: 11.25%; */
+		}
+
+		/* #endregion - - - - - - - - - - - MARK: .closeModalBtn - - - - - - - - - - -  */
+	}
+
+	/* .webiFrameContainerOpen, .videoContainerOpen, .closeModalBtnShow { */
+	.webiFrameContainerOpen, .videoContainerOpen {
+		/* border: 2px solid #ff0000; */
+
+		/* background: rgba(255, 255, 255, 0.25); */
+		/* background: rgba(0, 0, 0, 0.5); */
+		/* background: rgba(0, 0, 0, 0.625); */
+		/* background: rgba(0, 0, 0, 0.75); */
+		background: rgba(0, 0, 0, 0.875);
+		/* background: rgba(0, 0, 0, 0.9375); */
+
+		/* z-index: 999; */
+		display: initial;
+	}
+
+	.closeModalBtnShow {
+		/* border: 2px solid #ff0000; */
+
+		/* z-index: 999; */
+		display: initial;
+	}
+
+	.webiFrameContainerClosed, .videoContainerClosed, .closeModalBtnHide {
+		/* border: 2px solid #ff0000; */
+
+		z-index: 0;
+		display: none;
+	}
+
+	/* #endregion - - - - - - - - - - - MARK: .webiFrameContainer, .webiFrameContainerOpen, .webiFrameContainerClosed / .videoContainer, .videoContainerOpen, .videoContainerClosed / .closeModalBtn, .closeModalBtnShow, .closeModalBtnHide  - - - - - - - - - - -  */
+}
+
+/* #endregion -------------------- MARK: .galleryContainer - REF: https://packery.metafizzy.co/layout & https://codepen.io/desandro/pen/xZjOXq -------------------- */
+
+
+/* #region ---------------------- MARK: .loadingContainer / .loadingImage ---------------------- */
+
+.loadingContainer {
+	/* border: 2px solid #ff0000; */
+
+	/* background: rgba($color: #ffffff, $alpha: 0.75); */
+	/* background: rgba($color: #ffffff, $alpha: 1); */
+
+	text-align: center;
+
+	width: 100vw;
+	height: 90vh;
+
+	margin: 0;
+	padding: 0;
+	/* padding: 10% 0; */
+
+	position: absolute;
+	/* top: 0; */
+	top: calc(var(--header-height) * -1) - calc(var(--navBar-height) * 0.375);
+	z-index: 99;
+
+	.loadingImage {
+		/* border: 2px solid #00ff00; */
+
+		text-align: inherit;
+
+		margin: 0 auto;
+
+		position: inherit;
+		top: 40%;
+		left: 50%;
+
+		transform: translate(-50%, 50%);
+		-ms-transform: translate(-50%, 50%);
+		-moz-transform: translate(-50%, 50%);
+		-o-transform: translate(-50%, 50%);
+		-webkit-transform: translate(-50%, 50%);
+		transform: translate(-50%, 50%);
+
+		/* img { */
+			/*border: 2px solid #00ff00; */
+
+			/*height: 80%; */
+			/* height: 100%; */
+
+			/* position: inherit; */
+			/* left: 50%; */
+			/* z-index: 99999; */
+
+			/* transform: translate(-50%, 0); */
+			/* -ms-transform: translate(-50%, 0); */
+			/* -moz-transform: translate(-50%, 0); */
+			/* -o-transform: translate(-50%, 0); */
+			/* -webkit-transform: translate(-50%, 0); */
+			/* transform: translate(-50%, 0); */
+		/* } */
+	}
+}
+
+/* #endregion ---------------------- MARK: .loadingContainer / .loadingImage ---------------------- */
+
+
+/* #region ---------------------- MARK: .workNavContainer ---------------------- */
+
+.workNavContainer {
+	/* border: 2px solid #ff00ff; */
+
+	/* background: none; */
+	background: #ffffff;
+	/* background: rgba(255, 255, 255, 0.25); */
+
+	width: inherit;
+	/* height: var(--workNav-height); */
+	/* height: var(--navBar-height); */
+	/* height: var(--header-height); */
+	/* height: auto; */
+
+	margin: 0 auto;
+	padding: 0;
+
+	position: fixed;
+	z-index: 99;
+
+	top: calc(var(--header-height) + var(--navBar-height));
+	/* top: calc(var(--header-height) + var(--navBar-height) - var(--workNav-height)); */
+
+
+	/* #region - - - - - - - - - - - MARK: .workNavBar - - - - - - - - - - - */
+
+	.workNavBar {
+		/* border: 2px solid #00ffff; */
+		opacity: 0;
+
+		/* background: none; */
+		/* background: #ffffff; */
+		/* background: rgba($color: #000000, $alpha: 0.25); */
+		/* background: rgba(255, 255, 255, 0.25); */
+		/* @include bgGradient01(); */
+
+		text-align: center;
+
+		/* width: inherit; */
+		width: var(--body-min-width);
+		/* width: calc(var(--body-min-width) - 150px); */
+		/* width: calc(var(--body-min-width) - 170px); */
+		/* width: calc(var(--body-min-width) - 200px); */
+		/* height: var(--navBar-height); */
+		/* height: calc(var(--navBar-height) * 1); */
+		/* height: inherit; */
+		height: var(--workNav-height);
+
+		/* overflow: visible; */
+
+		margin: inherit;
+		padding: inherit;
+
+		/* position: inherit; */
+		/* position: relative; */
+		/* position: absolute; */
+		/* transform: translate(-50%, 0); */
+		/* transform: translate(-55.25%, 0); */
+		/* transform: translate(-57%, 0); */
+		/* transform: translate(-61.25%, 0); */
+
+		/* left: 50%; */
+		/* top: 90px; */
+		/* top: var(--workNav-height); */
+		/* top: calc(var(--workNav-height) * -1); */
+		/* top: calc(var(--workNav-height) - 10px); */
+		/* top: calc(var(--header-height) + (var(--navBar-height) - var(--workNav-height))); */
+
+
+		/* #region - - - - - - - - - - - MARK: .employerNav, .typeNav - - - - - - - - - - - */
+
+		/* .workNav { */
+		.employerNav, .typeNav {
+			/* border: 2px solid #00ff00; */
+
+			/* opacity: 0; */
+
+			/* background: none; */
+			/* background: rgba(255, 255, 255, 0.25); */
+
+			font-size: 1.25em;
+			/* line-height: 1em; */
+
+			/* width: calc(var(--body-min-width) - 150px); */
+			height: inherit;
+			/* height: var(--navBar-height); */
+			/* height: calc(var(--navBar-height) * 1.25); */
+
+			/* margin: 0 auto;
+			padding: 0; */
+
+			margin: inherit;
+			padding: inherit;
+
+			/* display: flex; */
+			/* justify-content: center; */
+			align-items: center;
+
+			/* position: relative; */
+			position: absolute;
+			/* position: inherit; */
+
+			display: grid;
+			align-items: center;
+
+			/* transform: translate(-50%, 0); */
+
+			/* left: 50%; */
+			/* left: 200px; */
+			/* top: calc(var(--navBar-height) * -1); */
+			/* top: var(--header-height); */
+			/* top: calc(var(--workNav-height) * -2); */
+			/* top: calc(var(--workNav-height) * -1); */
+			/* top: calc(var(--workNav-height) * -1); */
+
+			.workNavItem, .workNavItemLogo {
+				/* border: 0.5px solid #0000ff; */
+
+				/* background: none; */
+
+				/* width: auto; */
+				/* width: inherit; */
+				/* min-width: 50px; */
+				/* max-width: 70px; */
+				/* height: var(--navBar-height); */
+				height: inherit;
+				/* max-height: var(--navBar-height); */
+
+				margin: 0;
+				padding: 0;
+				/* margin: inherit;
+				padding: inherit; */
+
+				/* justify-content: center; */
+				align-content: center;
+				/* align-items: center; */
+				/* vertical-align: bottom; */
+
+				cursor: pointer;
+
+				.workNavLogo {
+					/* border: 2px solid #0000ff; */
+
+					/* background: none; */
+
+					/* width: 100%; */
+					/* height: auto; */
+					max-height: var(--navBar-height);
+					/* max-height: 100%; */
+
+					margin: 0;
+					padding: 0;
+
+					/* vertical-align: top; */
+					vertical-align: middle;
+					/* vertical-align: bottom; */
+				}
+			}
+
+			.workNavItem {
+				/* border: 0.5px solid #ff0000; */
+
+				/* background: none; */
+
+				text-align: center;
+				/* text-align: left; */
+
+				/* width: 30%; */
+				/* height: 30%;
+				height: inherit; */
+
+				/* margin: 0;
+				padding: 0; */
+				/* margin-right: 20px; */
+				/* margin: 0 auto; */
+				/* padding-right: 20px; */
+			}
+
+			/* .workNavItemLogo {
+				border: 2px solid #0000ff;
+
+				margin: 0;
+				padding: 0;
+
+				padding: 0 5px;
+
+				position: relative;
+			} */
+
+			.activeEmplDiv, .activeTypeDiv {
+				/* border: 2px inset #00ffff; */
+				/* border-left: 2px inset #00ffff; */
+				/* border-left: 5px rgba(0, 0, 0, 0.125); */
+
+				/* background: #ff0000; */
+				background: rgba(0, 0, 0, 0.125);
+
+				/* @include bgGradient01(); */
+				/* @include bgGradient02(); */
+				/* @include bgGradient03(); */
+
+				/* @include bgGradient04(); */
+
+				/* @include bgGradient05(); */
+				/* @include bgGradient06(); */
+				/* @include bgGradient07(); */
+				/* mix-blend-mode: multiply; */
+
+				/* color: #ff0000; */
+
+				/* width: inherit; */
+				/* width: 100%; */
+				/* width: 50px; */
+				height: inherit;
+
+				/* position: relative; */
+				/* position: absolute; */
+				position: inherit;
+				/* top: $header-height; */
+				top: 0;
+				/* right: 0; */
+				z-index: -1;
+
+				/* display: none; */
+			}
+		}
+
+		/* #endregion - - - - - - - - - - - MARK: .employerNav, .typeNav - - - - - - - - - - - */
+
+		/* #region - - - - - - - - - - - MARK: .employerNav - - - - - - - - - - - */
+
+		.employerNav {
+			/* border: 2px solid #ff0000; */
+			/* background: black; */
+
+			/* width: inherit; */
+			/* width: var(--body-min-width); */
+			/* width: calc(var(--body-min-width) - 150px); */
+			/* width: calc(var(--body-min-width) - 180px); */
+			width: calc(var(--body-min-width) - 250px);
+
+			/* margin-right: 250px; */
+			/* padding-right: 150px; */
+
+			/* display: none; */
+
+			/* display: grid; */
+			/* grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto; */
+			/* grid-template-columns: repeat(13, 7.5%); */
+			/* grid-template-columns: repeat(13, auto); */
+			grid-template-columns: repeat(12, auto);
+			/* column-gap: 0px; */
+			column-gap: 10px;
+			/* column-gap: 15px; */
+
+			/* left: 50%; */
+			/* left: calc(50% - 50px); */
+			/* top: 0; */
+			/* top: var(--workNav-height); */
+			/* top: calc(var(--navBar-height) * -1); */
+			/* top: calc(var(--navBar-height) * -1.25); */
+			/* top: calc(var(--workNav-height) * -1); */
+			/* top: calc(var(--workNav-height) * 1); */
+
+			/* .workNavItem {
+				width: 30%;
+			} */
+		}
+
+		/* #endregion - - - - - - - - - - - MARK: .employerNav - - - - - - - - - - - */
+
+		/* #region - - - - - - - - - - - MARK: .typeNav - - - - - - - - - - - */
+
+		.typeNav {
+			/* border: 2px solid #0000ff; */
+			/* background: black; */
+
+			/* width: 25%; */
+			/* width: 30%; */
+			/* width: 35%; */
+			width: 40%;
+			/* width: 50%; */
+
+			/* display: none; */
+
+			/* display: grid; */
+			/* grid-template-columns: repeat(6, auto); */
+			grid-template-columns: repeat(5, auto);
+			column-gap: 0;
+
+			/* opacity: 0; */
+
+			left: 30%;
+			/* left: 32.5%; */
+			/* left: 37.5%; */
+			/* left: 50%; */
+			/* left: 55%; */
+			/* top: 0; */
+			/* top: 100px; */
+			/* top: calc(var(--header-height) * -1); */
+			top: calc(var(--workNav-height) * -1);
+			/* top: calc(var(--workNav-height) * -2); */
+
+			/* z-index: 999; */
+		}
+
+		/* #endregion - - - - - - - - - - - MARK: .typeNav - - - - - - - - - - - */
+
+		/* #region - - - - - - - - - - - MARK: .toggleNav, .navToggleBtn - - - - - - - - - - - */
+
+		.toggleNav {
+		/* .toggleBtn { */
+		/* .navToggleBtn { */
+			border: 1px solid #bbbbbb;
+			/* background: rgba(var(--color): #000000, var(--alpha): 0.5); */
+			/* background: #cccccc; */
+
+			/* line-height: 2.5em; */
+			line-height: 1.25em;
+			/* color: #ffffff; */
+
+			/* vertical-align: middle; */
+			display: grid;
+			align-items: center;
+			grid-template-columns: repeat(1, auto);
+			column-gap: 0;
+
+			/* width: 11.25vw; */
+			/* width: 120px; */
+			width: 160px;
+			/* height: 20px; */
+			/* height: var(--workNav-height); */
+			height: calc(var(--workNav-height) * 0.5);
+
+			margin: 0;
+			padding: 0;
+			/* padding: 5px 0; */
+
+			/* position: relative; */
+			position: absolute;
+			/* top: 0; */
+			/* top: calc(var(--workNav-height) * 0.5); */
+			top: calc(var(--workNav-height) * 0.1875);
+			/* top: calc((var(--workNav-height) * 0.1875) + var(--workNav-height)); */
+
+			/* left: calc(var(--body-min-width) - 75px - 30px); */
+			/* left: calc(var(--body-min-width) + 55px); */
+			/* left: calc(var(--body-min-width) - 120px - 30px); */
+
+			/* right: var(--body-min-width); */
+			/* right: calc(var(--body-min-width) * 2.0); */
+			/* right: var(--workNav-width); */
+			/* right: calc(var(--workNav-width) + 340px); */
+			right: calc(var(--workNav-width) - 100px);
+
+			/* display: none; */
+
+			cursor: pointer;
+
+			/* span {
+				border: 2px solid #00ff00;
+
+				text-align: center;
+
+				width: 100%;
+				display: table-cell;
+				vertical-align: middle;
+				position: inherit;
+				top: 50%;
+				left: 50%;
+
+				transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-moz-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+			} */
+
+			/* .toggleBtn {
+				border: 2px solid #00ff00;
+
+				color: #ffffff;
+
+				cursor: pointer;
+			} */
+		}
+
+		/* #endregion - - - - - - - - - - - MARK: .navToggleBtn - - - - - - - - - - - */
+	}
+
+	/* #endregion - - - - - - - - - - - MARK: .workNavBar - - - - - - - - - - - */
+
+}
+
+/* #endregion ---------------------- MARK: .workNavContainer ---------------------- */
+
+
+/* #region -------------------- MARK: .chipContainer - REF: https://packery.metafizzy.co/layout & https://codepen.io/desandro/pen/xZjOXq -------------------- */
+
+.chipContainer {
+	/* border: 0.5px solid #ff0000; */
+	/* border: 1px inset rgba($color: #000000, $alpha: 0.125); */
+
+	/* background: rgba($color: #000000, $alpha: 0.0625); */
+	/* @include bgGradient04(); */
+
+	/* text-align: left; */
+	/* text-align: center; */
+
+	max-width: 80vw;
+	/* max-width: 1400px; */
+	/* max-width: 1440px; */
+	/* height: 50vh; */
+	/* height: var(--workNav-height); */
+	/* height: var(--navBar-height); */
+	/* height: var(--header-height); */
+	/* min-height: 100vh; */
+
+	/* overflow: scroll; */
+
+	/* margin: 60px auto 0 auto; */
+	/* margin: var(--header-height) auto; */
+	/* margin: calc(var(--header-height) + var(--workNav-height)) auto; */
+	margin: 0 auto;
+	padding: 0 0 100px 0;
+	/* padding: 20px 0 100px 0; */
+	/* padding: 0 0 0 2.5px; */
+	/* padding: 0 0 0 10px; */
+	/* padding: 0 17.5px; */
+	/* padding: 10px 17.5px; */
+	/* padding: 20px 17.5px; */
+	/* padding: 10px 17.5px 50px 17.5px; */
+	/* padding: 0px 17.5px 50px 17.5px; */
+
+	/* display: inherit; */
+	/* display: grid;
+	grid-template-columns: repeat(3, auto);
+	column-gap: 10px; */
+
+	display: flex;
+	flex-wrap: wrap;
+	/* justify-content: center; */
+	justify-content: space-between;
+	/* gap: 20px 10px; */
+	row-gap: 20px;
+
+	/* position: inherit; */
+	position: relative;
+	/* position: absolute; */
+	/* position: initial; */
+	/* top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height)); */
+	/* top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) + 20px); */
+	/* top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) - 15px); */
+	top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) - 20px);
+	/* top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) - 30px); */
+	/* top: calc(var(--header-height) + var(--navBar-height)); */
+	/* top: calc(var(--header-height) + var(--workNav-height)); */
+	/* top: calc(var(--header-height) + var(--workNav-height) - 10px); */
+	/* top: 20px; */
+	/* z-index: 0; */
+
+	/* #region - - - - - - - - - - - MARK: .chipItem - - - - - - - - - - -  */
+
+	.chipItem {
+		/* border: 2px solid #00ffff; */
+		/* border: 1px inset rgba($color: #000000, $alpha: 0.125); */
+
+		/* background: rgba($color: #000000, $alpha: 0.0625); */
+		/* @include bgGradient04(); */
+
+		/* width: calc(33.3333333333333vw - 20px); */
+		/* width: calc(16.6666666666667vw - 20px); */
+		/* width: calc(8.33333333vw - 20px); */
+		/* width: calc(1440px/3 - 13.75px); */
+		/* width: calc(1440px/3 - 13px); */
+
+		/* width: calc(16.25vw - 20px); */
+		/* width: calc(20vw - 20px); */
+		/* width: calc(25vw - 20px); */
+
+		/* width: 33.333%; */
+
+		margin: 0;
+		/* margin: 0 auto; */
+		/* margin: 0 5px 20px 15px; */
+		/* margin: 0 0 20px 15px; */
+		/* margin: 0 0 20px 0; */
+		/* margin: 0 10px; */
+
+		padding: 0;
+		/* padding: 10px; */
+
+		/* flex-grow: -1; */
+		/* flex-grow: 1; */
+		/* flex-grow: 5; */
+
+		/* flex-shrink: 1; */
+
+		/* flex-basis: auto; */
+		/* flex-basis: 0; */
+		/* flex-basis: 30%; */
+		/* flex-basis: 32.5%; */
+		/* flex-basis: 33.333%; */
+
+		/* flex: 0 0 auto; */
+		/* flex: 0 0 0; */
+		/* flex: 0 0 23.75%; */
+		flex: 0 0 24.375%;
+		/* flex: 0 0 25%; */
+		/* flex: 1 1 25%; */
+
+		/* position: inherit; */
+		/* position: relative; */
+
+		cursor: pointer;
+		/* cursor: auto; */
+
+		/* img { */
+		.chipNavImg {
+			/* width: inherit; */
+			width: 100%;
+			/* width: auto; */
+			/* object-fit: contain; */
+
+			margin: 0;
+			padding: 0;
+			/* padding: 10px; */
+		}
+
+		.chipInfo {
+			/* border: 2px solid #0000ff; */
+			/* border: 1px inset rgba($color: #000000, $alpha: 0.125); */
+
+			font-size: 0.625em;
+			/* font-size: 0.75em; */
+			/* font-size: 0.875em; */
+
+			/* background: rgba($color: #000000, $alpha: 0.0625); */
+			background: linear-gradient(to top, rgba(0, 0, 0, 0.0625) 0%, rgba(255, 255, 255, 0) 80%);
+
+			margin: 0;
+			/* padding: 0; */
+			/* padding: 0 0 5px 10px; */
+			padding: 0 10px;
+
+			display: grid;
+			grid-template-columns: repeat(2, auto);
+			column-gap: 0px;
+			/* column-gap: 20px; */
+			/* align-items: center; */
+
+			/* h3, p { */
+				/* font-size: 1em; */
+				/*line-height: 1em; */
+				/*text-align: center; */
+				/*text-align: left; */
+				/*vertical-align: text-bottom; */
+
+				/*margin: 0; */
+				/*padding: 0; */
+				/*padding: 0 20px; */
+				/*display: table-cell; */
+			/* } */
+
+			h3 {
+				font-family: AvenirNext-DemiBold, system-ui, Helvetica, Arial, sans-serif;
+				/* font-size: 0.9375em; */
+				/* font-size: 1.25em; */
+				/* font-weight: 600; */
+
+				/* padding: 5px 0 0 0; */
+				padding: 10px 0 5px 0;
+			}
+
+			p {
+				/* font-size: 0.8375em; */
+				/* font-size: 1em; */
+				text-align: right;
+
+				padding: 10px 0 5px 0;
+			}
+		}
+	}
+
+	/* #endregion - - - - - - - - - - - MARK: .chipItem - - - - - - - - - - -  */
+}
+
+/* #endregion -------------------- MARK: .chipContainer - REF: https://packery.metafizzy.co/layout & https://codepen.io/desandro/pen/xZjOXq -------------------- */
+
+
+/* #region ---------------------- MARK: .chipToggleBtn ---------------------- */
+
+/* .chipToggleBtn {
+	border: 2px solid #ff00ff;
+	border: none;
+
+	background: none;
+	background: rgba(255, 0, 0, 0.25);
+
+	width: inherit;
+	width: 200px;
+	height: var(--navBar-height);
+
+	margin: 0 auto;
+	padding: 0;
+
+	position: fixed;
+	z-index: 999;
+
+	top: var(--header-height);
+	top: calc(var(--header-height) + var(--navBar-height));
+	top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) + 20px);
+
+	cursor: pointer;
+} */
+
+/* #endregion ---------------------- MARK: .chipToggleBtn ---------------------- */
+
+/* #endregion ==================== BASE ==================== */

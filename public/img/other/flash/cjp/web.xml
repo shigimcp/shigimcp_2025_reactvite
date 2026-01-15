@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<gallery thumb="mc_thumbWB">
+
+	<album id="web01" title="Foot Locker - Adidas End to End" description="" lgpath="gallery/web/lg/" tnpath="gallery/web/th/" tn="gallery/web/th/lg_web0104.jpg">
+		<client>Foot Locker</client>
+		<descr>Adidas End to End</descr>
+		<image>gallery/web/th/th_web0104.jpg</image>
+	</album>
+
+	<album id="web02" title="Foot Locker - Puma Superstructure" description="" lgpath="gallery/web/lg/" tnpath="gallery/web/th/" tn="gallery/web/th/lg_web0202.jpg">
+		<client>Foot Locker</client>
+		<descr>Puma Superstructure</descr>
+		<image>gallery/web/th/th_web0202.jpg</image>
+	</album>
+
+</gallery>

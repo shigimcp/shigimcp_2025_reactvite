@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta name="viewport" content="width=device-width, inital-scale=1.0"> -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>CR_4752_UNTOLD_2013_US_DIGITAL</title>
+
+        <link rel="stylesheet" type="text/css" href="scripts/CR_4752_UNTOLD_2013_US_DIGITAL.css" />
+
+    </head>
+
+    <body>
+
+        <div class="bannerContainer" id="bannerContainerID">
+
+            <svg class="imageSVG" id="imageSVGID" xmlns="http://www.w3.org/2000/svg" width="284" height="200" viewBox="0 0 284 200">
+
+                <defs>
+
+                    <clipPath class="bottleClip" id="bottleClipID">
+                        <path class="bottleClipPath" id="bottleClipPathID" fill="#00ff00" d="M25.507 35.128S7.994 41.496 9.047 64.133C9.643 77.015 20.866 96 28.798 96 44.61 96 60 75.66 60 57.428c0-19.286-18.182-24.032-19.38-24.258-1.308-.247-2.244-.15-2.244-.15s1.048 1.882-5.687 2.937c-6.2.97-7.183-.83-7.183-.83z" />
+                    </clipPath>
+
+                    <filter id="rippleFilterID">
+                        <feImage x="0" y="0" width="1900" height="1250" result="rippleImage" />
+                        <feDisplacementMap id="displacement_map" xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" in2="rippleImage" result="displacementMap" color-interpolation-filters="sRGB" scale="0" />
+                        <feComposite operator="in" in2="rippleImage"></feComposite>
+                    </filter>
+
+                </defs>
+
+                <g>
+                    <image class="model" id="modelID" x="0" y="0" width="100%" height="100%" xlink:href="./images/image.jpg" />
+                    <image class="model" id="modelID_clipped" x="0" y="0" width="100%" height="100%" xlink:href="./images/image.jpg" filter="url(#rippleFilterID)" clip-path="url(#bottleClipID)" />
+                </g>
+
+            </svg>
+
+
+            <img class="logo_untold" id="logo_untoldID" src="./images/logo_UNTOLD_white.svg">
+            <img class="logo_ea" id="logo_eaID" src="./images/logo_EA.svg">
+            <img class="cta" id="ctaID" src="./images/btn_discover.svg">
+
+
+            <svg class="bottleSVG" id="bottleSVGID" xmlns="http://www.w3.org/2000/svg" width="75" height="125" viewBox="0 0 75 125">
+
+                <defs>
+                    <clipPath class="bottleClipInverse" id="bottleClipInverseID">
+                        <path class="bottleClipInversePath" id="bottleClipInversePathID" fill="#0f0" d="M32.69 35.957c6.734-1.055 5.687-2.938 5.687-2.938s.935-.098 2.245.15C41.818 33.395 60 38.14 60 57.428 60 75.658 44.61 96 28.8 96 20.867 96 9.643 77.015 9.045 64.133c-1.052-22.637 16.46-29.005 16.46-29.005s.983 1.8 7.184.83zM75 0H0v125h75V0z" />
+                    </clipPath>
+                </defs>
+
+                <g>
+                    <image class="bottle" id="bottleID_clipped" width="75" height="125" xlink:href="./images/bottle.png" clip-path="url(#bottleClipInverseID)" />
+                    <image class="bottle" id="bottleID" width="75" height="125" xlink:href="./images/bottle.png" />
+                </g>
+
+            </svg>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+        <script type="text/javascript" src="scripts/CR_4752_UNTOLD_2013_US_DIGITAL.js"></script>
+
+    </body>
+
+</html>

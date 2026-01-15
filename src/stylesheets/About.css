@@ -1,0 +1,406 @@
+/* #region ==================== MARK: BASE ==================== */
+
+.aboutContainer {
+	/* border: 2px solid #ff0000; */
+
+	width: 85vw;
+	height: 100%;
+	/* height: auto; */
+
+	/* margin: 110px auto 0 auto;
+	padding: 0; */
+
+	margin: 0 auto;
+	/* padding: 0; */
+	/* padding: calc(var(--navBar-height) * 2) 0; */
+	padding: calc(var(--navBar-height) * 0.75) 0;
+
+	/* position: absolute; */
+	position: fixed;
+	top: calc(var(--header-height) + var(--navBar-height));
+	left: 50%;
+
+	transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	-moz-transform: translate(-50%, 0);
+	-o-transform: translate(-50%, 0);
+	-webkit-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+
+	.haiku {
+		/* border: 2px solid #00ffff; */
+
+		font-size: 15px;
+		font-weight: normal;
+		text-align: center;
+		/* letter-spacing: 0.0625px; */
+		/* line-height: 2.5em; */
+		line-height: 50px;
+
+		margin: 0;
+		/* padding: 0; */
+		padding: 0 0 25px 0;
+
+		h1 {
+			font-size: 2em;
+			font-weight: inherit;
+			/* letter-spacing: 0.005em; */
+			/* line-height: 1.125em; */
+			/* line-height: inherit; */
+			line-height: 1em;
+		}
+
+		h2 {
+			font-size: 1.625em;
+			font-weight: inherit;
+			/* letter-spacing: 0.025em; */
+			/* line-height: inherit; */
+			line-height: 1.25em;
+		}
+
+		h3 {
+			font-size: 1.375em;
+			font-weight: normal;
+			/* letter-spacing: 0.025em; */
+			/* line-height: inherit; */
+			line-height: 1.1875em;
+		}
+
+		.credit {
+			font-size: 1em;
+			/* letter-spacing: 0.025em; */
+			line-height: 2.5em;
+
+			/* padding: 0.875vh 0 0 0; */
+		}
+
+		.plea {
+			font-size: 0.875em;
+			/* letter-spacing: 0.0375em; */
+			line-height: 0.125em;
+
+			/* padding: 0.0625vh 0 1.25vh 0; */
+		}
+	}
+
+	.afroContainer, .guideContainer, .curlContainer {
+		/* border: 2px solid #ff00ff; */
+
+		width: inherit;
+		/* height: inherit; */
+		/* height: auto; */
+
+		/* position: absolute; */
+		position: inherit;
+	}
+
+	.afroContainer {
+		/* border: 2px solid #00ff00; */
+
+		width: 100%;
+	}
+
+	.guideContainer {
+		/* border: 2px solid #ff0000; */
+
+		/* height: 100%; */
+		/* height: 100vh; */
+
+		/* margin: 100% 0 0 0; */
+
+		visibility: hidden;
+
+		.guideSVG {
+			/* border: 2px solid #0000ff; */
+
+			opacity: 0.5;
+
+			/* margin: -100% 0 0 0; */
+
+			/* position: inherit; */
+			position: absolute      ;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.boingSvg {
+		/* border: 2px solid #0000ff; */
+
+		width: 25%;
+		height: auto;
+
+		position: absolute;
+
+		visibility: hidden;
+
+		.boingPath {
+			stroke: #000000;
+			stroke: #ff00ff;
+		}
+	}
+
+	.curlContainer {
+		/* border: 2px solid #0000ff; */
+
+		/* width: 100%; */
+		/* width: 50%; */
+		/* height: auto; */
+		/* height: 100%; */
+		/* position: relative; */
+		/* position: absolute; */
+		/* transform: translate(-50% 0); */
+
+		/* display: table; */
+		/* overflow: auto; */
+
+		.curlSvg {
+			/* border: 2px solid #0000ff; */
+
+			/* width: 3.75vw; */
+			/* width: 3.75%; */
+			width: 4.375%;
+			/* width: 5%; */
+			/* width: 5.75%; */
+
+			position: absolute;
+			overflow: visible;
+
+			cursor: pointer;
+
+			.curlPath {
+				fill: #333333;
+				/* fill: #ff00ff; */
+				/* stroke-linejoin: round; */
+				/* pointer-events: visible; */
+			}
+
+			.curlRect{
+				/* fill: rgba(255,0,0,0.5); */
+				fill: rgba(255,0,0,0);
+			}
+		}
+	}
+
+	.thoughtBubbleDiv * {
+		margin: 0;
+		padding: 0;
+	}
+
+	.thoughtBubbleDiv {
+		/* border: 2px solid #999999; */
+
+		font-family: AnimeAceItalic, Arial, Helvetica, sans-serif;
+		/* font-size: 12px;
+		line-height: 17.5px; */
+		font-size: 17.5px;
+		line-height: 25px;
+		/* font-size: 1.625em;
+		line-height: 1em; */
+		text-align: center;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+		width: 37.5%;
+		/* width: 50%; */
+		/* width: 52.5%; */
+
+		visibility: hidden;
+		opacity: 0;
+
+		/* width: 30%; */
+		height: auto;
+
+		/* position: relative; */
+		/* position: absolute; */
+		/* z-index: 999; */
+
+		.thoughtBubbleSvg {
+			/* border: 2px solid #0000ff; */
+			/* opacity: 0.25; */
+
+			/* width: 100%; */
+			/* height: 100%; */
+			/* width: 35%; */
+			/* height: auto; */
+
+			position: inherit;
+
+			.thoughtBubblePath {
+
+				fill: #ffffff;
+				stroke: #000000;
+				stroke-linejoin: round;
+
+				/* fill: #00ffff; */
+				/* stroke: #ffff00; */
+			}
+		}
+
+		.thoughtBubbleText {
+			/* border: 2px solid #ff00ff; */
+
+			/* font-size: 1.5em; */
+			/* line-height: 1.375em; */
+			/* text-align: center; */
+
+			/* width: 77.5%; */
+			/* height: 60%; */
+
+			/* width: 80%; */
+			width: 75%;
+			height: 60%;
+
+			/* margin: 0; */
+			/* padding: 0; */
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			position: absolute;
+
+			/* top: 20%; */
+			top: 21%;
+			/* top: 21.25%; */
+			/* top: 21.5%; */
+			/* top: 19.375%; */
+			left: 13.125%;
+			/* left: 11.25%; */
+			/* left: 8.75%; */
+
+			p {
+				padding: 1.125% 0;
+			}
+		}
+
+		.thoughtClose {
+			/* border: 05px solid #000000; */
+			border-radius: 10%;
+
+			/* background-color: #FFFFFF; */
+
+			font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+			font-size: 1rem;
+			font-weight: 600;
+			line-height: 1.5em;
+			text-align: center;
+
+			width: 10%;
+			height: 10%;
+
+			position: absolute;
+			top: 17.5%;
+			right: 1.25%;
+
+			/* overflow: visible; */
+
+			cursor: pointer;
+
+			.thoughtClosePath {
+				/* border: 02px solid #00ff00; */
+
+				/* fill: #ff0000; */
+				fill: #ffffff;
+
+				/* stroke: #00ff00; */
+				stroke: #000000;
+				stroke-width: 12.5%;
+				/* stroke-width: 0.2vw; */
+
+				/* paint-order: stroke; */
+			}
+
+			.thoughtCloseX {
+				/* border: 02px solid #0000ff; */
+
+				/* font-size: 0.75em; */
+
+				stroke: #000000;
+				stroke-width: 3.75%;
+			}
+		}
+	}
+
+	.resetThoughtsDiv {
+		/* border: 2px solid #ff00ff; */
+
+		font-family: AnimeAceItalic, Arial, Helvetica, sans-serif;
+		/* font-size: 12px; */
+		/* font-size: 0.625rem; */
+		font-size: 17.5px;
+		line-height: 25px;
+		text-align: center;
+		/* letter-spacing: 0.025em; */
+		/* color: #666666; */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+
+		width: 13.75%;
+		/* height: auto; */
+
+		opacity: 0.5;
+
+		position: absolute;
+		/* top: 0; */
+		/* right: 0; */
+		top: 25%;
+		right: -2.5%;
+
+		transition: 0.2s;
+
+		cursor: pointer;
+
+		.resetThoughtsSvg {
+			/* border: 2px solid #00ff00; */
+
+			overflow: visible;
+
+			.resetThoughtsPath {
+				/* border: 2px solid #0000ff; */
+
+				/* fill: #ff0000; */
+				/* fill: #eeeeee; */
+				/* fill: #efefef; */
+				/* fill: #fefefe; */
+				fill: #ffffff;
+
+				stroke: #000000;
+				/* stroke: #666666; */
+				stroke-width: 2.5%;
+				stroke-opacity: 0.625;
+				/* stroke-linejoin: round; */
+				stroke-linejoin: miter;
+				stroke-miterlimit: 1;
+			}
+		}
+
+		.resetThoughtsText {
+			/* border: 2px solid #ff00ff; */
+			width: 100%;
+
+			margin: 0;
+			/* padding: 0; */
+			padding: 0 0 0 1.25%;
+
+			position: inherit;
+			/* top: 50%; */
+			top: 47.5%;
+
+			transform: translate(0, -50%);
+			-ms-transform: translate(0, -50%);
+			-moz-transform: translate(0, -50%);
+			-o-transform: translate(0, -50%);
+			-webkit-transform: translate(0, -50%);
+			transform: translate(0, -50%);
+		}
+	}
+
+	.resetThoughtsDiv:hover {
+		opacity: 1;
+		transform: scale(1.125);
+	}
+}
+
+/* #endregion ==================== BASE ==================== */

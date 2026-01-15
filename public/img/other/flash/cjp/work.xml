@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gallery>
+
+<!-- PRINT01 -->
+	<album id="print01" title="Schick" description="Schick Hydro w/ Jim Fiscus" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0101.jpg">
+		<image src="lg_print0101.jpg" tn="th_print0101.jpg"/>
+		<image src="lg_print0102.jpg" tn="th_print0102.jpg"/>
+		<image src="lg_print0103.jpg" tn="th_print0103.jpg"/>
+		<image src="lg_print0104.jpg" tn="th_print0104.jpg"/>
+	</album>
+
+<!-- PRINT02 -->
+	<album id="print02" title="Visine w/ Hans Stark" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0201.jpg">
+		<image src="lg_print0201.jpg" tn="th_print0201.jpg"/>
+		<image src="lg_print0202.jpg" tn="th_print0202.jpg"/>
+		<image src="lg_print0203.jpg" tn="th_print0203.jpg"/>
+		<image src="lg_print0204.jpg" tn="th_print0204.jpg"/>
+	</album>
+
+<!-- PRINT03 -->
+	<album id="print03" title="Schick Intuition w/ Andrew Yee" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0301.jpg">
+		<image src="lg_print0301.jpg" tn="th_print0301.jpg"/>
+		<image src="lg_print0302.jpg" tn="th_print0302.jpg"/>
+		<image src="lg_print0303.jpg" tn="th_print0303.jpg"/>
+	</album>
+
+<!-- PRINT04 -->
+	<album id="print04" title="Shots" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0401.jpg">
+		<image src="lg_print0401.jpg" tn="th_print0401.jpg"/>
+	</album>
+
+<!-- PRINT05 -->
+	<album id="print05" title="Schick Trimstyle w/ James Porto" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0501.jpg">
+		<image src="lg_print0501.jpg" tn="th_print0501.jpg"/>
+	</album>
+
+<!-- PRINT06 - RESERVED -->
+
+<!-- PRINT07 -->
+	<album id="print07" title="Tsubo Roam" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0703.jpg">
+		<image src="lg_print0701.jpg" tn="th_print0701.jpg"/>
+		<image src="lg_print0702.jpg" tn="th_print0702.jpg"/>
+		<image src="lg_print0703.jpg" tn="th_print0703.jpg"/>
+		<image src="lg_print0704.jpg" tn="th_print0704.jpg"/>
+		<image src="lg_print0705.jpg" tn="th_print0705.jpg"/>
+		<image src="lg_print0706.jpg" tn="th_print0706.jpg"/>
+	</album>
+
+<!-- PRINT08 - RESERVED -->
+
+<!-- PRINT09 -->
+	<album id="print09" title="HSBC w/ Jake Chessum" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0902.jpg">
+		<image src="lg_print0901.jpg" tn="th_print0901.jpg"/>
+		<image src="lg_print0902.jpg" tn="th_print0902.jpg"/>
+		<image src="lg_print0903.jpg" tn="th_print0903.jpg"/>
+		<image src="lg_print0904.jpg" tn="th_print0904.jpg"/>
+		<image src="lg_print0905.jpg" tn="th_print0905.jpg"/>
+		<image src="lg_print0906.jpg" tn="th_print0906.jpg"/>
+		<image src="lg_print0907.jpg" tn="th_print0907.jpg"/>
+		<image src="lg_print0908.jpg" tn="th_print0908.jpg"/>
+		<image src="lg_print0909.jpg" tn="th_print0909.jpg"/>
+		<image src="lg_print0910.jpg" tn="th_print0910.jpg"/>
+		<image src="lg_print0911.jpg" tn="th_print0911.jpg"/>
+	</album>
+
+<!-- PRINT10 -->
+	<album id="print10" title="Lady Foot Locker w/ Mark Andrew" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print1003.jpg">
+		<image src="lg_print1001.jpg" tn="th_print1001.jpg"/>
+		<image src="lg_print1002.jpg" tn="th_print1002.jpg"/>
+		<image src="lg_print1003.jpg" tn="th_print1003.jpg"/>
+		<image src="lg_print1004.jpg" tn="th_print1004.jpg"/>
+		<image src="lg_print1005.jpg" tn="th_print1005.jpg"/>
+		<image src="lg_print1006.jpg" tn="th_print1006.jpg"/>
+		<image src="lg_print1007.jpg" tn="th_print1007.jpg"/>
+		<image src="lg_print1008.jpg" tn="th_print1008.jpg"/>
+		<image src="lg_print1009.jpg" tn="th_print1009.jpg"/>
+		<image src="lg_print1010.jpg" tn="th_print1010.jpg"/>
+		<image src="lg_print1011.jpg" tn="th_print1011.jpg"/>
+		<image src="lg_print1012.jpg" tn="th_print1012.jpg"/>
+		<image src="lg_print1013.jpg" tn="th_print1013.jpg"/>
+		<image src="lg_print1014.jpg" tn="th_print1014.jpg"/>
+		<image src="lg_print1015.jpg" tn="th_print1015.jpg"/>
+		<image src="lg_print1016.jpg" tn="th_print1016.jpg"/>
+		<image src="lg_print1017.jpg" tn="th_print1017.jpg"/>
+		<image src="lg_print1018.jpg" tn="th_print1018.jpg"/>
+		<image src="lg_print1019.jpg" tn="th_print1019.jpg"/>
+		<image src="lg_print1020.jpg" tn="th_print1020.jpg"/>
+		<image src="lg_print1021.jpg" tn="th_print1021.jpg"/>
+		<image src="lg_print1022.jpg" tn="th_print1022.jpg"/>
+		<image src="lg_print1023.jpg" tn="th_print1023.jpg"/>
+		<image src="lg_print1024.jpg" tn="th_print1024.jpg"/>
+		<image src="lg_print1025.jpg" tn="th_print1025.jpg"/>
+		<image src="lg_print1026.jpg" tn="th_print1026.jpg"/>
+		<image src="lg_print1027.jpg" tn="th_print1027.jpg"/>
+		<image src="lg_print1028.jpg" tn="th_print1028.jpg"/>
+		<image src="lg_print1029.jpg" tn="th_print1029.jpg"/>
+		<image src="lg_print1030.jpg" tn="th_print1030.jpg"/>
+	</album>
+
+<!-- BROADCAST01 -->
+<!-- 
+	<album id="broadcast01" title="Champs" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast01.jpg">
+		<image id="broadcast01" src="broadcast01.flv" tn="th_broadcast01.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast01.jpg"/>
+		<image id="broadcast02" src="broadcast02.flv" tn="th_broadcast02.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast02.jpg"/>
+		<image id="broadcast03" src="broadcast03.flv" tn="th_broadcast03.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast03.jpg"/>
+		<image id="broadcast04" src="broadcast04.flv" tn="th_broadcast04.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast04.jpg"/>
+		<image id="broadcast05" src="broadcast05.flv" tn="th_broadcast05.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast05.jpg"/>
+		<image id="broadcast06" src="broadcast06.flv" tn="th_broadcast06.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast06.jpg"/>
+		<image id="broadcast07" src="broadcast07.flv" tn="th_broadcast07.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast07.jpg"/>
+		<image id="broadcast08" src="broadcast08.flv" tn="th_broadcast08.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast08.jpg"/>
+		<image id="broadcast09" src="broadcast09.flv" tn="th_broadcast09.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast09.jpg"/>
+		<image id="broadcast10" src="broadcast10.flv" tn="th_broadcast10.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast10.jpg"/>
+	</album>
+ -->
+
+	<album id="broadcast01" title="Champs - Reebok Classic" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast01.jpg">
+		<image id="broadcast01" src="broadcast01.flv" tn="th_broadcast01.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast01.jpg"/>
+	</album>
+
+	<album id="broadcast02" title="Champs - Nike Shox" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast02.jpg">
+		<image id="broadcast02" src="broadcast02.flv" tn="th_broadcast02.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast02.jpg"/>
+	</album>
+
+	<album id="broadcast03" title="Foot Locker - Puma Superstructure" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast03.jpg">
+		<image id="broadcast03" src="broadcast03.flv" tn="th_broadcast03.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast03.jpg"/>
+	</album>
+
+	<album id="broadcast04" title="Nike - House of Hoops" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast04.jpg">
+		<image id="broadcast04" src="broadcast04.flv" tn="th_broadcast04.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast04.jpg"/>
+	</album>
+
+	<album id="broadcast05" title="Champs - A3 Superstar" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast05.jpg">
+		<image id="broadcast05" src="broadcast05.flv" tn="th_broadcast05.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast05.jpg"/>
+	</album>
+
+	<album id="broadcast06" title="Champs - Tantrum" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast06.jpg">
+		<image id="broadcast06" src="broadcast06.flv" tn="th_broadcast06.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast06.jpg"/>
+	</album>
+
+	<album id="broadcast07" title="Foot Locker - AND1 Marbury Mid-Rise" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast07.jpg">
+		<image id="broadcast07" src="broadcast07.flv" tn="th_broadcast07.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast07.jpg"/>
+	</album>
+
+	<album id="broadcast08" title="Foot Locker - Love Thy Sneaker" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast08.jpg">
+		<image id="broadcast08" src="broadcast08.flv" tn="th_broadcast08.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast08.jpg"/>
+	</album>
+
+	<album id="broadcast09" title="careerbuilder.com - Actors: Here's to the Day Job" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast09.jpg">
+		<image id="broadcast09" src="broadcast09.flv" tn="th_broadcast09.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast09.jpg"/>
+	</album>
+
+	<album id="broadcast10" title="Foot Locker - NYC Marathon" description="" lgpath="gallery/broadcast/lg/" tnpath="gallery/broadcast/th/" tn="gallery/broadcast/th/lg_broadcast10.jpg">
+		<image id="broadcast10" src="broadcast10.flv" tn="th_broadcast10.jpg" vidpreview="gallery/broadcast/lg/lg_broadcast10.jpg"/>
+	</album>
+
+<!-- 03 WEB -->
+	<album id="web01" title="web01" description="" lgpath="gallery/web/lg/" tnpath="gallery/web/th/" tn="gallery/web/th/lg_web0104.jpg">
+		<image id="web0101" src="web0101.flv" tn="th_web0104.jpg"/>
+	</album>
+
+	<album id="web02" title="web02" description="" lgpath="gallery/web/lg/" tnpath="gallery/web/th/" tn="gallery/web/th/lg_web0202.jpg">
+		<image id="web0201" src="lg_web0201.jpg" tn="th_web0201.jpg"/>
+		<image id="web0202" src="lg_web0202.jpg" tn="th_web0202.jpg"/>
+		<image id="web0203" src="lg_web0203.jpg" tn="th_web0203.jpg"/>
+		<image id="web0204" src="lg_web0204.jpg" tn="th_web0204.jpg"/>
+	</album>
+
+<!-- CREATIVE -->
+	<album id="creative01" title="Body Painting - David LaChappelle w/ Joanne Gair" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative01.jpg">
+		<image src="lg_creative01.jpg" tn="th_creative01.jpg"/>
+	</album>
+
+	<album id="creative02" title="Body Painting - Espon w/ Joanne Gair" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative02.jpg">
+		<image src="lg_creative02.jpg" tn="th_creative02.jpg"/>
+	</album>
+
+	<album id="creative03" title="Body Painting - Sony Style w/ Joanne Gair" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative03.jpg">
+		<image src="lg_creative03.jpg" tn="th_creative03.jpg"/>
+		<image src="lg_creative04.jpg" tn="th_creative04.jpg"/>
+	</album>
+
+	<album id="creative04" title="Body Painting - Sports Illustrated w/ Joanne Gair" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative06.jpg">
+		<image src="lg_creative05.jpg" tn="th_creative05.jpg"/>
+		<image src="lg_creative06.jpg" tn="th_creative06.jpg"/>
+		<image src="lg_creative07.jpg" tn="th_creative07.jpg"/>
+		<image src="lg_creative08.jpg" tn="th_creative08.jpg"/>
+	</album>
+
+	<album id="creative05" title="FA Wall Installation" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative11.jpg">
+		<image src="lg_creative09.jpg" tn="th_creative09.jpg"/>
+		<image src="lg_creative10.jpg" tn="th_creative10.jpg"/>
+		<image src="lg_creative11.jpg" tn="th_creative11.jpg"/>
+		<image src="lg_creative12.jpg" tn="th_creative12.jpg"/>
+	</album>
+
+	<album id="creative06" title="FL Adidas Wardrobe Design" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative03.jpg">
+	</album>
+
+	<album id="creative07" title="Prop Design - Espon w/ Howard Schatz" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative13.jpg">
+		<image src="lg_creative13.jpg" tn="th_creative13.jpg"/>
+		<image src="lg_creative14.jpg" tn="th_creative14.jpg"/>
+	</album>
+
+	<album id="creative08" title="Set/Prop Design - w/ Howard Schatz" description="" lgpath="gallery/creative/lg/" tnpath="gallery/creative/th/" tn="gallery/creative/th/lg_creative17.jpg">
+		<image src="lg_creative15.jpg" tn="th_creative15.jpg"/>
+		<image src="lg_creative16.jpg" tn="th_creative16.jpg"/>
+		<image src="lg_creative17.jpg" tn="th_creative17.jpg"/>
+	</album>
+
+<!-- PHOTOGRAPHY -->
+
+	<album id="personal" title="personal" description="" lgpath="gallery/personal/lg/" tnpath="gallery/personal/th/" tn="gallery/personal/th/lg_photography17.jpg">
+		<image src="lg_photography01.jpg" tn="th_photography01.jpg"/>
+		<image src="lg_photography02.jpg" tn="th_photography02.jpg"/>
+		<image src="lg_photography03.jpg" tn="th_photography03.jpg"/>
+		<image src="lg_photography04.jpg" tn="th_photography04.jpg"/>
+		<image src="lg_photography05.jpg" tn="th_photography05.jpg"/>
+		<image src="lg_photography06.jpg" tn="th_photography06.jpg"/>
+		<image src="lg_photography07.jpg" tn="th_photography07.jpg"/>
+		<image src="lg_photography08.jpg" tn="th_photography08.jpg"/>
+		<image src="lg_photography09.jpg" tn="th_photography09.jpg"/>
+		<image src="lg_photography10.jpg" tn="th_photography10.jpg"/>
+		<image src="lg_photography11.jpg" tn="th_photography11.jpg"/>
+		<image src="lg_photography12.jpg" tn="th_photography12.jpg"/>
+		<image src="lg_photography13.jpg" tn="th_photography13.jpg"/>
+		<image src="lg_photography14.jpg" tn="th_photography14.jpg"/>
+		<image src="lg_photography15.jpg" tn="th_photography15.jpg"/>
+		<image src="lg_photography16.jpg" tn="th_photography16.jpg"/>
+		<image src="lg_photography17.jpg" tn="th_photography17.jpg"/>
+		<image src="lg_photography18.jpg" tn="th_photography18.jpg"/>
+	</album>
+
+</gallery>

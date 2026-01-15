@@ -1,0 +1,546 @@
+/* #region ==================== MARK: FONTS - REF: https://fonts.google.com/selection ==================== */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+
+/* #endregion ==================== MARK: FONTS - REF: https://fonts.google.com/selection ==================== */
+
+
+/* #region ==================== MARK: FONTS ==================== */
+
+@font-face {
+	font-family: 'ChaleParNinSix';
+	src: url('../assets/fonts/ChaletParNineteenSixty/ChaleParNinSix.otf') format("opentype");
+	src: url('../assets/fonts/ChaletParNineteenSixty/ChaleParNinSix.eot');
+	src: url('../assets/fonts/ChaletParNineteenSixty/ChaleParNinSix.woff') format('woff'),
+	url('../assets/fonts/ChaletParNineteenSixty/ChaleParNinSix.svg#-GothaBoo') format('svg');
+}
+
+@font-face {
+	font-family: 'AnimeAceItalic';
+	src: url('../assets/fonts/AnimeAceItalic/AnimeAceItalic.otf') format("opentype");
+	src: url('../assets/fonts/AnimeAceItalic/AnimeAceItalic.eot');
+	src: url('../assets/fonts/AnimeAceItalic/AnimeAceItalic.woff') format('woff'),
+	url('../assets/fonts/AnimeAceItalic/AnimeAceItalic.svg#-Italic') format('svg');
+}
+
+@font-face {
+	font-family: 'AvenirNext-Regular';
+	src: url('../assets/fonts/AvenirNext/AvenirNext-Regular.otf') format("opentype");
+	src: url('../assets/fonts/AvenirNext/AvenirNext-Regular.eot');
+	src: url('../assets/fonts/AvenirNext/AvenirNext-Regular.woff') format('woff'),
+	url('../assets/fonts/AvenirNext/AvenirNext-Regular.svg#-Italic') format('svg');
+}
+
+@font-face {
+	font-family: 'AvenirNext-Italic';
+	src: url('../assets/fonts/AvenirNext/AvenirNext-Italic.otf') format("opentype");
+	src: url('../assets/fonts/AvenirNext/AvenirNext-Italic.eot');
+	src: url('../assets/fonts/AvenirNext/AvenirNext-Italic.woff') format('woff'),
+	url('../assets/fonts/AvenirNext/AvenirNext-Italic.svg#-Italic') format('svg');
+}
+
+@font-face {
+	font-family: 'AvenirNext-Medium';
+	src: url('../assets/fonts/AvenirNext/AvenirNext-Medium.otf') format("opentype");
+	src: url('../assets/fonts/AvenirNext/AvenirNext-Medium.eot');
+	src: url('../assets/fonts/AvenirNext/AvenirNext-Medium.woff') format('woff'),
+	url('../assets/fonts/AvenirNext/AvenirNext-Medium.svg#-Italic') format('svg');
+}
+
+@font-face {
+	font-family: 'AvenirNext-MediumItalic';
+	src: url('../assets/fonts/AvenirNext/AvenirNext-MediumItalic.otf') format("opentype");
+	src: url('../assets/fonts/AvenirNext/AvenirNext-MediumItalic.eot');
+	src: url('../assets/fonts/AvenirNext/AvenirNext-MediumItalic.woff') format('woff'),
+	url('../assets/fonts/AvenirNext/AvenirNext-MediumItalic.svg#-Italic') format('svg');
+}
+
+@font-face {
+	font-family: 'AvenirNext-DemiBold';
+	src: url('../assets/fonts/AvenirNext/AvenirNext-DemiBold.otf') format("opentype");
+	src: url('../assets/fonts/AvenirNext/AvenirNext-DemiBold.eot');
+	src: url('../assets/fonts/AvenirNext/AvenirNext-DemiBold.woff') format('woff'),
+	url('../assets/fonts/AvenirNext/AvenirNext-DemiBold.svg#-Italic') format('svg');
+}
+
+@font-face {
+	font-family: 'AvenirNext-DemiBoldItalic';
+	src: url('../assets/fonts/AvenirNext/AvenirNext-DemiBoldItalic.otf') format("opentype");
+	src: url('../assets/fonts/AvenirNext/AvenirNext-DemiBoldItalic.eot');
+	src: url('../assets/fonts/AvenirNext/AvenirNext-DemiBoldItalic.woff') format('woff'),
+	url('../assets/fonts/AvenirNext/AvenirNext-DemiBoldItalic.svg#-Italic') format('svg');
+}
+
+/* #endregion ==================== MARK: FONTS ==================== */
+
+
+/* #region ==================== MARK: GLOBAL ==================== */
+
+* {
+	/* letter-spacing: 0.025em; */
+	/* letter-spacing: -0.00625em; */
+
+	margin: 0;
+	padding: 0;
+
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+
+	-ms-user-select: none;
+	-webkit-touch-callout: none;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+img {
+	border: 0;
+
+	/* user-drag: none;  */
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+/* #endregion ==================== MARK: GLOBAL ==================== */
+
+
+/* #region ==================== MARK: ROOT ==================== */
+
+:root, body {
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	/* border: 2px solid #ff00ff; */
+
+	/* font-family: ChaleParNinSix, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+	font-family: AvenirNext-Regular, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	/* font-family: Avenir, system-ui, Helvetica, Arial, sans-serif; */
+	/* font-family: AvenirNext-Regular, system-ui, Helvetica, Arial, sans-serif; */
+	/* font-family: Noto, system-ui, Helvetica, Arial, sans-serif; */
+
+	/* line-height: 1.5;
+	font-weight: 400; */
+
+	/* color-scheme: light dark;
+	color: rgba(255, 255, 255, 0.87); */
+	/* background-color: #ffffff; */
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	width: 100vw;
+	/* height: 100vh; */
+
+	/* max-width: 1440px; */
+
+	/* margin: 0;
+	padding: 0; */
+
+	/* position: fixed;
+	z-index: 999; */
+
+	/* #region -------------------- MARK: variables -------------------- */
+
+	/* --header-height: 80px; */
+	--header-height: 70px;
+	/* --header-height: 60px; */
+
+	--navBar-height: 40px;
+
+	--workNav-width: 175px;
+	/* --workNav-height: 25px; */
+	--workNav-height: 60px;
+
+	--body-min-width: 1115px;
+	--body-max-width: 1440px;
+
+	/* --body-width: 50vw;
+	--body-min-width: 820px;
+	--body-max-width: 1115px;
+
+	--header-height: 60px;
+	--navBar-height: 35px;
+	--workNav-height: 50px; */
+
+	/* #endregion -------------------- MARK: variables -------------------- */
+}
+
+/* #endregion ==================== MARK: ROOT ==================== */
+
+
+
+
+
+/* #region ========================= MARK: VARIABLES fr Global.css (2021) ========================= */
+
+/* #region - - - - - - - - - - - VARIABLES: BG MIXINS - REF: https://cssgradient.io - - - - - - - - - - - */
+
+/* @mixin bgGradient01() {
+	background: rgb(255, 255, 255);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 10%,
+		rgba(255, 255, 255, 1) 90%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 10%,
+		rgba(255, 255, 255, 1) 90%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 10%,
+		rgba(255, 255, 255, 1) 90%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin bgGradient02() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 0) 0%,
+		rgba(230, 230, 230, 1) 20%,
+		rgba(230, 230, 230, 1) 80%,
+		rgba(230, 230, 230, 0) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 0) 0%,
+		rgba(230, 230, 230, 1) 20%,
+		rgba(230, 230, 230, 1) 80%,
+		rgba(230, 230, 230, 0) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 0) 0%,
+		rgba(230, 230, 230, 1) 20%,
+		rgba(230, 230, 230, 1) 80%,
+		rgba(230, 230, 230, 0) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin bgGradient03() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(230, 230, 230, 0) 20%,
+		rgba(230, 230, 230, 0) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(230, 230, 230, 0) 20%,
+		rgba(230, 230, 230, 0) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(230, 230, 230, 0) 20%,
+		rgba(230, 230, 230, 0) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin bgGradient04() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(210, 210, 210, 1) 0%,
+		rgba(210, 210, 210, 0) 40%,
+		rgba(210, 210, 210, 0) 60%,
+		rgba(210, 210, 210, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(210, 210, 210, 1) 0%,
+		rgba(210, 210, 210, 0) 40%,
+		rgba(210, 210, 210, 0) 60%,
+		rgba(210, 210, 210, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(210, 210, 210, 1) 0%,
+		rgba(210, 210, 210, 0) 40%,
+		rgba(210, 210, 210, 0) 60%,
+		rgba(210, 210, 210, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin bgGradient05() {
+	background: rgb(255, 255, 255);
+	background: -moz-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+	mix-blend-mode: screen;
+}
+
+@mixin bgGradient06() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(255, 255, 255, 1) 20%,
+		rgba(255, 255, 255, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(255, 255, 255, 1) 20%,
+		rgba(255, 255, 255, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(255, 255, 255, 1) 20%,
+		rgba(255, 255, 255, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin bgGradient07() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+} */
+
+/* #endregion - - - - - - - - - - - VARIABLES: BG MIXINS - REF: https://cssgradient.io - - - - - - - - - - - */
+
+/* #region - - - - - - - - - - - VARIABLES: SVG FILL MIXINS - REF: https://cssgradient.io - *** OOPS! CAN'T use css to give SVGs gradient fills; must use inline <linearGradient> *** - - - - - - - - - - - */
+
+/* @mixin fillGradient01() {
+	fill: rgb(255, 255, 255);
+	fill: -moz-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	fill: -webkit-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	fill: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+	mix-blend-mode: screen;
+} */
+
+/* #endregion - - - - - - - - - - - VARIABLES: SVG FILL MIXINS - REF: https://cssgradient.io - *** OOPS! CAN'T use css to give SVGs gradient fills; must use inline <linearGradient> *** - - - - - - - - - - - */
+
+/* #region - - - - - - - - - - - VARIABLES: modalBG - - - - - - - - - - - */
+
+/* @mixin modalBG() {
+	background: rgba(--color: #000000, --alpha: 0.5);
+
+	mix-blend-mode: screen;
+} */
+
+/* #endregion - - - - - - - - - - - VARIABLES: modalBG - - - - - - - - - - - */
+
+/* #region - - - - - - - - - - - VARIABLES: BUTTON MIXINS - REF: https://cssgradient.io - - - - - - - - - - - */
+
+/* @mixin btnBgRest() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin btnBgHover() {
+	background: rgb(170, 170, 170);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(170, 170, 170, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(170, 170, 170, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(170, 170, 170, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(170, 170, 170, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(170, 170, 170, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(170, 170, 170, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+} */
+
+/* #endregion - - - - - - - - - - - VARIABLES: BUTTON MIXINS - REF: https://cssgradient.io - - - - - - - - - - - */
+
+/* #region - - - - - - - - - - - VARIABLES: TRANSITION MIXINS - REF: https://codepen.io/marknotton/pen/VamaqN - - - - - - - - - - - */
+
+/* @mixin transition(--transition...) {
+	-moz-transition: --transition;
+	-o-transition: --transition;
+	-webkit-transition: --transition;
+	transition: --transition;
+}
+
+@mixin transition-property(--property...) {
+	-moz-transition-property: --property;
+	-o-transition-property: --property;
+	-webkit-transition-property: --property;
+	transition-property: --property;
+}
+
+@mixin transition-duration(--duration...) {
+	-moz-transition-property: --duration;
+	-o-transition-property: --duration;
+	-webkit-transition-property: --duration;
+	transition-property: --duration;
+}
+
+@mixin transition-timing-function(--timing...) {
+	-moz-transition-timing-function: --timing;
+	-o-transition-timing-function: --timing;
+	-webkit-transition-timing-function: --timing;
+	transition-timing-function: --timing;
+}
+
+@mixin transition-delay(--delay...) {
+	-moz-transition-delay: --delay;
+	-o-transition-delay: --delay;
+	-webkit-transition-delay: --delay;
+	transition-delay: --delay;
+} */
+
+/* #endregion - - - - - - - - - - - VARIABLES: TRANSITION MIXINS - REF: https://codepen.io/marknotton/pen/VamaqN - - - - - - - - - - - */
+
+/* #region - - - - - - - - - - - VARIABLES: EXPORT - - - - - - - - - - - */
+
+/* REF: https://til.hashrocket.com/posts/sxbrscjuqu-share-scss-variables-with-javascript */
+/* REF: https://medium.com/clover-platform-blog/modular-scss-and-why-you-need-it-6bb2d8c40fd8 */
+/* REF: https://css-tricks.com/getting-javascript-to-talk-to-css-and-sass/ */
+
+/* @function remove-px(--var) { */
+/* @return --var / 1px - 1; */
+/* } */
+
+/* @function remove-vw(--var) { */
+/* @return --var / 1vw - 1; */
+/* } */
+
+/* :export {
+	bodyWidth: --body-width;
+	bodyMinWidth: --body-min-width;
+	bodyMaxWidth: --body-max-width;
+
+	headerHeight: --header-height;
+	navBarHeight: --navBar-height;
+	workNavHeight: --workNav-height;
+} */
+
+/* :root { */
+/* --bodyWidth: --bodyWidth; */
+/* --bodyMinWidth: --bodyMinWidth; */
+/* --bodyMaxWidth: --bodyMaxWidth; */
+
+/* --headerHeight: --headerHeight; */
+/* --navBarHeight: --navBarHeight; */
+/* --workNavHeight: --workNavHeight; */
+/* } */
+
+/* #endregion - - - - - - - - - - - VARIABLES: EXPORT - - - - - - - - - - - */
+
+/* #endregion ========================= MARK: VARIABLES fr Global.css (2021) ========================= */

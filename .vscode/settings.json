@@ -1,0 +1,14 @@
+{
+	"maptz.regionfolder": {
+		// "[markdown]": {        
+		// 	"defaultFoldStartRegex": "\\<!--[\\s]*#region\\(collapsed\\)[\\s]*(.*)",
+
+		// 	"foldEnd": "<!-- #endregion -->",
+		// 	"foldEndRegex": "\\<!--[\\s]*#endregion",
+		// 	"foldStart": "<!-- #region [NAME] -->",
+		// 	"foldStartRegex": "\\<!--[\\s]*#region[\\s]*(.*)"
+		// }
+	},
+	"workbench.externalBrowser": "chrome",
+	"editor.defaultFormatter": "esbenp.prettier-vscode"
+}

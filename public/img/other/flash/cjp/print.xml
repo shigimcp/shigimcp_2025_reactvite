@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
+<gallery thumb="mc_thumbPR">
+
+	<album id="print01" title="Schick Hydro w/ Jim Fiscus" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0101.jpg">
+		<client>Schick</client>
+		<descr>Hydro w/ Jim Fiscus</descr>
+		<image>gallery/print/th/th_print0101.jpg</image>
+	</album>
+
+	<album id="print02" title="Visine w/ Hans Stark" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0201.jpg">
+		<client>Visine</client>
+		<descr>w/ Hans Stark</descr>
+		<image>gallery/print/th/th_print0201.jpg</image>
+	</album>
+
+	<album id="print03" title="Schick Intuition w/ Andrew Yee" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0301.jpg">
+		<client>Schick</client>
+		<descr>Intuition w/ Andrew Yee</descr>
+		<image>gallery/print/th/th_print0301.jpg</image>
+	</album>
+
+	<album id="print04" title="Shots" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0401.jpg">
+		<client>Shots</client>
+		<descr></descr>
+		<image>gallery/print/th/th_print0401.jpg</image>
+	</album>
+
+	<album id="print05" title="Schick Trimstyle w/ James Porto" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0501.jpg">
+		<client>Schick</client>
+		<descr>Trimstyle w/ James Porto</descr>
+		<image>gallery/print/th/th_print0501.jpg</image>
+	</album>
+
+<!-- PRINT06 - RESERVED -->
+
+	<album id="print07" title="Tsubo Roam" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0703.jpg">
+		<client>Tsubo</client>
+		<descr>Roam</descr>
+		<image>gallery/print/th/th_print0703.jpg</image>
+	</album>
+
+<!-- PRINT08 - RESERVED -->
+
+	<album id="print09" title="HSBC w/ Jake Chessum" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print0902.jpg">
+		<client>HSBC</client>
+		<descr>w/ Jake Chessum</descr>
+		<image>gallery/print/th/th_print0902.jpg</image>
+	</album>
+
+	<album id="print10" title="Lady Foot Locker w/ Mark Andrew" description="" lgpath="gallery/print/lg/" tnpath="gallery/print/th/" tn="gallery/print/th/lg_print1003.jpg">
+		<client>Lady Foot Locker</client>
+		<descr>w/ Mark Andrew</descr>
+		<image>gallery/print/th/th_print1003.jpg</image>
+	</album>
+
+</gallery>

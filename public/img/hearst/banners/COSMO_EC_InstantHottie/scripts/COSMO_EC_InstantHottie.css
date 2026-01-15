@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-drag: none;
+  -khtml-user-drag: none;
+  -webkit-user-drag: none;
+  -o-user-drag: none;
+  -ms-user-drag: none;
+}
+
+html, body {
+  font-family: "ItcKabel-Demi";
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+}
+html .bannerContainer, body .bannerContainer {
+  background: #ffffff;
+  width: 450px;
+  height: 360px;
+  margin: 0 auto;
+  padding: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+html .bannerContainer .btn_audioToggle, body .bannerContainer .btn_audioToggle {
+  background: rgba(0, 0, 0, 0);
+  opacity: 0.75;
+  left: 10px;
+  bottom: 10px;
+  z-index: 100;
+  cursor: pointer;
+}
+html .bannerContainer .btn_audioToggle .btn_audioToggleOn, body .bannerContainer .btn_audioToggle .btn_audioToggleOn {
+  fill: #ffffff;
+  visibility: visible;
+}
+html .bannerContainer .btn_audioToggle .btn_audioToggleOff, body .bannerContainer .btn_audioToggle .btn_audioToggleOff {
+  fill: #ffffff;
+  visibility: hidden;
+}
+html .bannerContainer .bg, body .bannerContainer .bg {
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+}
+html .bannerContainer .clickTag, body .bannerContainer .clickTag {
+  background-image: url(../images/COSMO_EC_InstantHottie.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  cursor: pointer;
+}
+html .bannerContainer .clickTag .btnPlay, body .bannerContainer .clickTag .btnPlay {
+  width: 20%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+html .bannerContainer .clickTag::before, body .bannerContainer .clickTag::before {
+  background-color: #ffffff;
+  content: "";
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}
+html .bannerContainer .logo_cosmoSVG, body .bannerContainer .logo_cosmoSVG {
+  width: 100%;
+  top: -1.3888888889%;
+}
+html .bannerContainer .logo_bachelorsSVG, body .bannerContainer .logo_bachelorsSVG {
+  width: 55.5555555556%;
+  height: 10.4166666667%;
+  top: 11.1111111111%;
+}
+html .bannerContainer .logo_bachelorsSVG .logo_bachelorsCosmo, body .bannerContainer .logo_bachelorsSVG .logo_bachelorsCosmo {
+  fill: #d60070;
+}
+html .bannerContainer .logo_bachelorsSVG .logo_bachelorsBachelors, body .bannerContainer .logo_bachelorsSVG .logo_bachelorsBachelors {
+  fill: #0490bf;
+}
+html .bannerContainer .rippleContainer, body .bannerContainer .rippleContainer {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
+  width: inherit;
+  height: inherit;
+  top: 0;
+  left: 0;
+}
+html .bannerContainer .copyContainer, body .bannerContainer .copyContainer {
+  width: 52.2222222222%;
+  height: 52.7777777778%;
+  overflow: visible;
+  top: 37.5%;
+  left: 40%;
+}
+html .bannerContainer .copyContainer .copySVG, body .bannerContainer .copyContainer .copySVG {
+  width: 100%;
+  overflow: visible;
+}
+html .bannerContainer .copyContainer .copySVG #copy04ID, body .bannerContainer .copyContainer .copySVG #copy04ID {
+  fill: #b8f9fb;
+}
+html .bannerContainer .url_cosmoBachelors, body .bannerContainer .url_cosmoBachelors {
+  width: 153.5957px;
+  opacity: 0.75;
+  top: 91.6666666667%;
+  left: 64.4444444444%;
+}
+html .bannerContainer .poolboy, body .bannerContainer .poolboy {
+  width: 62.2222222222%;
+  left: 0;
+  bottom: 0;
+}/*# sourceMappingURL=COSMO_EC_InstantHottie.css.map */

@@ -1,0 +1,364 @@
+/* #region ========================= VARIABLES ========================= */
+
+/* #region - - - - - - - - - - - VARIABLES: BG MIXINS - REF: https://cssgradient.io - - - - - - - - - - - */
+
+/* @mixin bgGradient01() {
+	background: rgb(255, 255, 255);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 10%,
+		rgba(255, 255, 255, 1) 90%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 10%,
+		rgba(255, 255, 255, 1) 90%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 10%,
+		rgba(255, 255, 255, 1) 90%,
+		rgba(255, 255, 255, 0) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin bgGradient02() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 0) 0%,
+		rgba(230, 230, 230, 1) 20%,
+		rgba(230, 230, 230, 1) 80%,
+		rgba(230, 230, 230, 0) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 0) 0%,
+		rgba(230, 230, 230, 1) 20%,
+		rgba(230, 230, 230, 1) 80%,
+		rgba(230, 230, 230, 0) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 0) 0%,
+		rgba(230, 230, 230, 1) 20%,
+		rgba(230, 230, 230, 1) 80%,
+		rgba(230, 230, 230, 0) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin bgGradient03() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(230, 230, 230, 0) 20%,
+		rgba(230, 230, 230, 0) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(230, 230, 230, 0) 20%,
+		rgba(230, 230, 230, 0) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(230, 230, 230, 0) 20%,
+		rgba(230, 230, 230, 0) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin bgGradient04() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(210, 210, 210, 1) 0%,
+		rgba(210, 210, 210, 0) 40%,
+		rgba(210, 210, 210, 0) 60%,
+		rgba(210, 210, 210, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(210, 210, 210, 1) 0%,
+		rgba(210, 210, 210, 0) 40%,
+		rgba(210, 210, 210, 0) 60%,
+		rgba(210, 210, 210, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(210, 210, 210, 1) 0%,
+		rgba(210, 210, 210, 0) 40%,
+		rgba(210, 210, 210, 0) 60%,
+		rgba(210, 210, 210, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin bgGradient05() {
+	background: rgb(255, 255, 255);
+	background: -moz-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	background: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+	mix-blend-mode: screen;
+}
+
+@mixin bgGradient06() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(255, 255, 255, 1) 20%,
+		rgba(255, 255, 255, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(255, 255, 255, 1) 20%,
+		rgba(255, 255, 255, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(255, 255, 255, 1) 20%,
+		rgba(255, 255, 255, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin bgGradient07() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+} */
+
+/* #endregion - - - - - - - - - - - VARIABLES: BG MIXINS - REF: https://cssgradient.io - - - - - - - - - - - */
+
+/* #region - - - - - - - - - - - VARIABLES: SVG FILL MIXINS - REF: https://cssgradient.io - *** OOPS! CAN'T use css to give SVGs gradient fills; must use inline <linearGradient> *** - - - - - - - - - - - */
+
+/* @mixin fillGradient01() {
+	fill: rgb(255, 255, 255);
+	fill: -moz-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	fill: -webkit-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	fill: linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#ffffff",GradientType=1);
+	mix-blend-mode: screen;
+} */
+
+/* #endregion - - - - - - - - - - - VARIABLES: SVG FILL MIXINS - REF: https://cssgradient.io - *** OOPS! CAN'T use css to give SVGs gradient fills; must use inline <linearGradient> *** - - - - - - - - - - - */
+
+/* #region - - - - - - - - - - - VARIABLES: modalBG - - - - - - - - - - - */
+
+/* @mixin modalBG() {
+	background: rgba(--color: #000000, --alpha: 0.5);
+
+	mix-blend-mode: screen;
+} */
+
+/* #endregion - - - - - - - - - - - VARIABLES: modalBG - - - - - - - - - - - */
+
+/* #region - - - - - - - - - - - VARIABLES: BUTTON MIXINS - REF: https://cssgradient.io - - - - - - - - - - - */
+
+/* @mixin btnBgRest() {
+	background: rgb(230, 230, 230);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(230, 230, 230, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(230, 230, 230, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+}
+
+@mixin btnBgHover() {
+	background: rgb(170, 170, 170);
+	background: -moz-linear-gradient(
+		90deg,
+		rgba(170, 170, 170, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(170, 170, 170, 1) 100%
+	);
+	background: -webkit-linear-gradient(
+		90deg,
+		rgba(170, 170, 170, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(170, 170, 170, 1) 100%
+	);
+	background: linear-gradient(
+		90deg,
+		rgba(170, 170, 170, 1) 0%,
+		rgba(245, 245, 245, 1) 20%,
+		rgba(245, 245, 245, 1) 80%,
+		rgba(170, 170, 170, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e6e6e6",endColorstr="#e6e6e6",GradientType=1);
+	mix-blend-mode: multiply;
+} */
+
+/* #endregion - - - - - - - - - - - VARIABLES: BUTTON MIXINS - REF: https://cssgradient.io - - - - - - - - - - - */
+
+/* #region - - - - - - - - - - - VARIABLES: TRANSITION MIXINS - REF: https://codepen.io/marknotton/pen/VamaqN - - - - - - - - - - - */
+
+/* @mixin transition(--transition...) {
+	-moz-transition: --transition;
+	-o-transition: --transition;
+	-webkit-transition: --transition;
+	transition: --transition;
+}
+
+@mixin transition-property(--property...) {
+	-moz-transition-property: --property;
+	-o-transition-property: --property;
+	-webkit-transition-property: --property;
+	transition-property: --property;
+}
+
+@mixin transition-duration(--duration...) {
+	-moz-transition-property: --duration;
+	-o-transition-property: --duration;
+	-webkit-transition-property: --duration;
+	transition-property: --duration;
+}
+
+@mixin transition-timing-function(--timing...) {
+	-moz-transition-timing-function: --timing;
+	-o-transition-timing-function: --timing;
+	-webkit-transition-timing-function: --timing;
+	transition-timing-function: --timing;
+}
+
+@mixin transition-delay(--delay...) {
+	-moz-transition-delay: --delay;
+	-o-transition-delay: --delay;
+	-webkit-transition-delay: --delay;
+	transition-delay: --delay;
+} */
+
+/* #endregion - - - - - - - - - - - VARIABLES: TRANSITION MIXINS - REF: https://codepen.io/marknotton/pen/VamaqN - - - - - - - - - - - */
+
+/* #region - - - - - - - - - - - VARIABLES: EXPORT - - - - - - - - - - - */
+
+/* REF: https://til.hashrocket.com/posts/sxbrscjuqu-share-scss-variables-with-javascript */
+/* REF: https://medium.com/clover-platform-blog/modular-scss-and-why-you-need-it-6bb2d8c40fd8 */
+/* REF: https://css-tricks.com/getting-javascript-to-talk-to-css-and-sass/ */
+
+/* @function remove-px(--var) { */
+/* @return --var / 1px - 1; */
+/* } */
+
+/* @function remove-vw(--var) { */
+/* @return --var / 1vw - 1; */
+/* } */
+
+/* :export {
+	bodyWidth: --body-width;
+	bodyMinWidth: --body-min-width;
+	bodyMaxWidth: --body-max-width;
+
+	headerHeight: --header-height;
+	navBarHeight: --navBar-height;
+	workNavHeight: --workNav-height;
+} */
+
+/* :root { */
+/* --bodyWidth: --bodyWidth; */
+/* --bodyMinWidth: --bodyMinWidth; */
+/* --bodyMaxWidth: --bodyMaxWidth; */
+
+/* --headerHeight: --headerHeight; */
+/* --navBarHeight: --navBarHeight; */
+/* --workNavHeight: --workNavHeight; */
+/* } */
+
+/* #endregion - - - - - - - - - - - VARIABLES: EXPORT - - - - - - - - - - - */
+
+/* #endregion ========================= VARIABLES ========================= */

@@ -1,0 +1,1785 @@
+//#region ==================== MARK: IMPORTS ====================
+
+import React from 'react';
+import { useRef } from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
+// import { Suspense } from 'react';
+// import { useCallback } from 'react';
+
+// import { isBrowser } from "react-device-detect";
+
+// REF: https://www.youtube.com/watch?v=PMXUCNzthQU&t=508s => https://www.npmjs.com/package/ua-parser-js => https://github.com/faisalman/ua-parser-js => https://docs.uaparser.dev/api/main/overview.html
+import { UAParser } from 'ua-parser-js';
+
+import { gsap } from 'gsap';
+
+// REF: https://metafizzy.co => https://isotope.metafizzy.co => https://packery.metafizzy.co => https://imagesloaded.desandro.com => https://github.com/desandro/imagesloaded => https://www.npmjs.com/package/imagesloaded
+import Isotope from 'isotope-layout';
+import Packery from 'isotope-packery';
+import imagesloaded from 'imagesloaded';
+// import { imagesloaded } from 'imagesloaded';
+
+import FadeLoader from 'react-spinners/FadeLoader';
+
+import ReactPlayer from 'react-player/vimeo';
+
+// import '../stylesheets/Global.css';
+import '../stylesheets/App.css';
+import '../stylesheets/Work.css';
+
+import myData from '../data/MyData';
+
+
+//#region -------------------- IMPORTS: GSAP BANNERS --------------------
+
+//#region - - - - - - - - - - - EA - - - - - - - - - - -
+
+import EAAR_18951 from '../assets/images/ea/banners/CR_18951_ALWAYS_RED_DIGITAL_PLAN_1H15_300x600/EAAR_18951';
+import NMPF_04852 from '../assets/images/ea/banners/CR_4852_NMPF_US_Walmart_300x250/NMPF_04852';
+import NMMN_11155 from '../assets/images/ea/banners/CR_11155_MINAJESTY_2014_US_DIGITAL_300x600/NMMN_11155';
+import BCBG_02342 from '../assets/images/ea/banners/BCBG_MAXAZRIA_CR00002342_AU_Digital_Plan/BCBG_02342';
+import BCBG_05500 from '../assets/images/ea/banners/CR_5500_BCBG_BC_AU_Digital_Plan_2013/BCBG_05500';
+import JCNR_07074 from '../assets/images/ea/banners/CR_7074_JC_VNOIR_2013_AU_300x600/JCNR_07074';
+import BSPS_26897 from '../assets/images/ea/banners/26897_BS_PRIVATE_SHOW_GWP_PR_Walgreens_300x250/BSPS_26897';
+import NMTG_26903 from '../assets/images/ea/banners/26903_NM_TRINI_GIRL_GWP_PR_Walgreens_300x250/NMTG_26903';
+import JCVR_26963 from '../assets/images/ea/banners/26963_JC_VIVA_ROSE_GWP_PR_Walgreens_300x250/JCVR_26963';
+import JBJA_10263 from '../assets/images/ea/banners/CR_10263_J_by_JENNIFER_ANISTON_Kohls_300x250/JBJA_10263';
+
+//#endregion - - - - - - - - - - - EA - - - - - - - - - - -
+
+
+//#region - - - - - - - - - - - KIEHLS - - - - - - - - - - -
+
+// import KU_0000 from '../assets/images/kiehls/anims/KU-0000_HOMEPAGE_ANIMS_WK01_products_snow';
+
+//#endregion - - - - - - - - - - - KIEHLS - - - - - - - - - - -
+
+//#endregion -------------------- IMPORTS: GSAP BANNERS --------------------
+
+//#endregion ==================== MARK: IMPORTS ====================
+
+
+//#region ==================== MARK: CONSTANTS n VARS ====================
+
+const remoteLoc = 'https://www.shigimcp.com/assets/img/';
+const videoLoc = 'https://vimeo.com/';
+
+const ua = new UAParser().getResult();
+
+// if (ua.device.type === undefined) {
+// 	// setBrowserDetect('desktop');
+// 	let browserDetect = 'desktop';
+// } else {
+// 	// setBrowserDetect(ua.device.type);
+// 	let browserDetect = ua.device.type;
+// }
+
+let workNavWidth;
+let workNavHeight;
+
+
+//#region -------------------- MARK: workNavTL: desktop vs mobile --------------------
+
+// if (ua.device.type === undefined) {
+
+// 	workNavTL
+// 		// .fromTo([employerNav_Ref.current], { y: -workNavHeight, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		// .fromTo([typeNav_Ref.current], { y: 0, autoAlpha: 1 }, { y: -workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		// // .fromTo([activeEmplDiv_Ref.current], { height: 0 }, { height: workNavHeight, duration: 0.5 }, 'frame01')
+
+// 		.fromTo(['.employerNav'], { y: -workNavHeight, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		.fromTo(['.typeNav'], { y: 0, autoAlpha: 1 }, { y: -workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		// .fromTo([activeEmplDiv_Ref.current], { height: 0 }, { height: workNavHeight, duration: 0.5 }, 'frame01')
+// 	;
+
+// 	// workNavTL.pause();
+
+// } else {
+
+// 	workNavTL
+// 		// .fromTo([employerNav_Ref.current], { x: -workNavWidth, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		// .fromTo([typeNav_Ref.current], { x: 0, autoAlpha: 1 }, { x: -workNavWidth, autoAlpha: 0, duration: 0.5 }, 'frame01')
+// 		// // .fromTo([activeEmplDiv_Ref.current], { width: 0 }, { width: workNavHeight, duration: 0.5 }, 'frame01')
+
+// 		.fromTo(['.employerNav'], { x: -workNavWidth, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		.fromTo(['.typeNav'], { x: 0, autoAlpha: 1 }, { x: -workNavWidth, autoAlpha: 0, duration: 0.5 }, 'frame01')
+// 		// .fromTo([activeEmplDiv_Ref.current], { width: 0 }, { width: workNavHeight, duration: 0.5 }, 'frame01')
+// 	;
+// }
+
+//#endregion -------------------- MARK: workNavTL: desktop vs mobile --------------------
+
+
+//#region -------------------- MARK: DATA --------------------
+
+// console.log('');
+// // console.log('myData = ' + myData);
+// console.log('myData = ');
+// console.log(myData);
+
+let employerData = myData[0];
+let workData = myData[1];
+
+// console.log('');
+// // console.log('employerData = ' + employerData);
+// console.log('employerData = ');
+// console.log(employerData);
+// // console.log(employerData[0].employer);
+
+// console.log('');
+// // console.log('workData = ' + workData);
+// console.log('workData = ');
+// console.log(workData);
+
+//#endregion -------------------- MARK: DATA --------------------
+
+
+//#region -------------------- MARK: FILTER ARRAY: filterEmployer (and... push "All" for employerNav) --------------------
+
+const filterEmployer = employerData.filter(isInGallery => isInGallery.isInGallery);
+
+// console.log('');
+// // console.log('filterEmployer = ' + filterEmployer);
+// console.log('filterEmployer = ');
+// console.log(filterEmployer);
+
+// filterEmployer.unshift(
+filterEmployer.push(
+	{
+		"album_index": '00',
+		// "album_id": "*",
+		"album_id": "all",
+		"employer": "All",
+		"title": "Digital Designer / Front-End Developer",
+		"date_start": "present",
+		"date_end": "present",
+		"info": "View ALL work",
+		"info_other": "",
+		"other_html": "",
+		"other_type": "",
+		"other": "",
+		"software": "",
+		"languages": "",
+		//    "logopath": "0elements/shigeru_logo.svg",
+		//    "logo": "shigeru_logo_transparent.svg",
+		"logopath": "#",
+		"logo": "#",
+		"slpath": "other/sl",
+		"thpath": "other/th",
+		"flpath": "https://www.shigimcp.com/img/other/",
+		"flpath_stage": "https://www.shigimcp.com/Xstage/shigimcp_2019/img/other/",
+		"availability": true,
+		"isInGallery": true
+	}
+)
+
+// console.log('');
+// // console.log('filterEmployer = ' + filterEmployer);
+// console.log('filterEmployer = ');
+// console.log(filterEmployer);
+
+//#endregion -------------------- MARK: FILTER ARRAY: filterEmployer (and... push "All" for employerNav) --------------------
+
+
+//#region -------------------- MARK: FILTER ARRAY: filterType - REF: https://github.com/rhernandog/gsap-flip-react/blob/master/src/App.js --------------------
+
+const filterType = [
+	// { key: '0000', id: 'allCheck', value: 'all', label: 'All' },
+	{ key: '0000', id: 'websiteCheck', value: 'website', label: 'Website' },
+	{ key: '0001', id: 'mobileCheck', value: 'mobile', label: 'Mobile' },
+	{ key: '0002', id: 'videoCheck', value: 'video', label: 'Video' },
+	{ key: '0003', id: 'bannerCheck', value: 'banner', label: 'Banners' },
+	{ key: '0004', id: 'printCheck', value: 'print', label: 'Print' },
+	{ key: '0005', id: 'allCheck', value: '*', label: 'All' },
+];
+
+// console.log('');
+// console.log('filterType = ' + filterType);
+// console.log('filterType = ');
+// console.log(filterType);
+
+//#endregion -------------------- MARK: FILTER ARRAY: filterType - REF: https://github.com/rhernandog/gsap-flip-react/blob/master/src/App.js --------------------
+
+
+//#region -------------------- MARK: HTML5 BANNERS: bannerContent[] --------------------
+
+const bannerContent = {
+	EAAR_18951: EAAR_18951,
+	NMPF_04852: NMPF_04852,
+	NMMN_11155: NMMN_11155,
+	BCBG_02342: BCBG_02342,
+	BCBG_05500: BCBG_05500,
+	JCNR_07074: JCNR_07074,
+	BSPS_26897: BSPS_26897,
+	NMTG_26903: NMTG_26903,
+	JCVR_26963: JCVR_26963,
+	JBJA_10263: JBJA_10263,
+};
+
+//#endregion -------------------- MARK: HTML5 BANNERS: xContent[] --------------------
+
+//#endregion ==================== MARK: CONSTANTS n VARS ====================
+
+
+//#region ==================== MARK: TIMELINES ====================
+
+//#region -------------------- MARK: TIMELINES: workNavIN --------------------');
+
+// console.log('-------------------- MARK: TIMELINES: workNavIN --------------------');
+
+// const workNavIN = new gsap.timeline();
+// const workNavIN = new gsap.timeline({ paused: true });
+// const workNavIN = new gsap.timeline().pause();
+
+// workNavIN 
+// 	.fromTo(['.employerNav'], { y: -workNavHeight, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5 });
+
+// 	// .to([activeEmplDiv_Ref.current], { x: thisLocX, y: thisLocY, width: thisLocW, height: thisLocH, duration: 0.375 })
+// 	// .to([activeTypeDiv_Ref.current], { x: thisLocX, y: thisLocY, width: thisLocW, height: thisLocH, duration: 0.375 })
+// ;
+
+//#endregion -------------------- MARK: TIMELINES: workNavIN --------------------');
+
+
+//#region -------------------- MARK: TIMELINES: workNavTL --------------------');
+
+// console.log('-------------------- MARK: TIMELINES: workNavTL --------------------');
+
+// const workNavTL = new gsap.timeline();
+// const workNavTL = new gsap.timeline({ paused: true });
+const workNavTL = new gsap.timeline().pause();
+
+// workNavTL
+// 	.to([activeEmplDiv_Ref.current], { x: thisLocX, y: thisLocY, width: thisLocW, height: thisLocH, duration: 0.375 })
+// 	.to([activeTypeDiv_Ref.current], { x: thisLocX, y: thisLocY, width: thisLocW, height: thisLocH, duration: 0.375 })
+// ;
+
+// if (ua.device.type === undefined) {
+
+// 	workNavTL
+// 		// .fromTo([employerNav_Ref.current], { y: -workNavHeight, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		// .fromTo([typeNav_Ref.current], { y: 0, autoAlpha: 1 }, { y: -workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		// // .fromTo([activeEmplDiv_Ref.current], { height: 0 }, { height: workNavHeight, duration: 0.5 }, 'frame01')
+
+// 		.fromTo(['.employerNav'], { y: -workNavHeight, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		.fromTo(['.typeNav'], { y: 0, autoAlpha: 1 }, { y: -workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		// .fromTo([activeEmplDiv_Ref.current], { height: 0 }, { height: workNavHeight, duration: 0.5 }, 'frame01')
+// 	;
+
+// 	// workNavTL.pause();
+
+// } else {
+
+// 	workNavTL
+// 		// .fromTo([employerNav_Ref.current], { x: -workNavWidth, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		// .fromTo([typeNav_Ref.current], { x: 0, autoAlpha: 1 }, { x: -workNavWidth, autoAlpha: 0, duration: 0.5 }, 'frame01')
+// 		// // .fromTo([activeEmplDiv_Ref.current], { width: 0 }, { width: workNavHeight, duration: 0.5 }, 'frame01')
+
+// 		.fromTo(['.employerNav'], { x: -workNavWidth, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+// 		.fromTo(['.typeNav'], { x: 0, autoAlpha: 1 }, { x: -workNavWidth, autoAlpha: 0, duration: 0.5 }, 'frame01')
+// 		// .fromTo([activeEmplDiv_Ref.current], { width: 0 }, { width: workNavHeight, duration: 0.5 }, 'frame01')
+// 	;
+// }
+
+//#endregion -------------------- MARK: TIMELINES: workNavTL --------------------');
+
+//#endregion ==================== MARK: TIMELINES ====================
+
+
+
+// const Work = (props) => {
+// export default function Work(props) {
+export default function Work() {
+
+	//#region ==================== FINDIN' OUT SH*T ====================
+
+	// console.log('');
+	// console.log('==================== COMPONENT: Work.jsx ====================');
+	// console.log('props = ' + props);
+	// console.log(props);
+
+	// console.log('');
+	// console.log('isBrowser = ' + isBrowser);
+	// // console.log(isBrowser);
+
+	// console.log('isMobile = ' + isMobile);
+	// // console.log(isMobile);
+
+	//#endregion ==================== FINDIN' OUT SH*T ====================
+
+
+	//#region ==================== MARK: imagesLoaded ====================
+
+	// // var imagesLoaded = require('imagesloaded');
+	// var imagesLoaded = import.meta.glob('imagesloaded');
+	// // var imagesLoaded = import.meta.globEager('imagesloaded');
+
+	// var galleryImages = imagesLoaded(document.querySelector('#galleryContainerID'), function(instance) {
+	// 	console.log('all images are loaded');
+	// 	console.log('galleryImages = ' + galleryImages);
+	// 	console.log('instance = ' + instance);
+	// });
+
+	// console.log('galleryImages = ' + galleryImages);
+	// // console.log('instance = ' + instance);
+
+	//#endregion ==================== MARK: imagesLoaded ====================
+
+
+	//#region ==================== MARK: FUNCTIONS ====================
+
+	//#region -------------------- FUNCTION: getDimensions(thisObject) --------------------
+
+	function getDimensions(thisObject) {
+
+		// let thisObject_x = document.getElementById(thisObject.id).offsetLeft;
+		// let thisObject_y = document.getElementById(thisObject.id).offsetTop;
+		// let thisObject_w = document.getElementById(thisObject.id).offsetWidth;
+		// let thisObject_h = document.getElementById(thisObject.id).offsetHeight;
+
+		let thisObject_x = thisObject.offsetLeft;
+		let thisObject_y = thisObject.offsetTop;
+		let thisObject_w = thisObject.offsetWidth;
+		let thisObject_h = thisObject.offsetHeight;
+
+		// let thisObject_x = thisObject.left;
+		// let thisObject_y = thisObject.top;
+		// let thisObject_w = thisObject.width;
+		// let thisObject_h = thisObject.height;
+
+		return [thisObject_x, thisObject_y, thisObject_w, thisObject_h];
+	}
+
+	//#endregion -------------------- FUNCTION: getDimensions(thisContainer) --------------------
+
+
+	//#region -------------------- FUNCTION: resizeContent(thisContent) --------------------
+
+	function resizeContent(thisContent) {
+
+		//#region -------------------- FINDIN' OUT SH*T --------------------
+
+		// console.log('');
+		// console.log('-------------------- resizeContent(thisContent) --------------------');
+		// console.log('thisContent = ' + thisContent);
+		// console.log(thisContent);
+
+		// console.log('');
+		// console.log('thisContent.mwidth = ' + thisContent.mwidth + '     thisContent.mheight = ' + thisContent.mheight);
+		// console.log('window.innerWidth = ' + window.innerWidth + '     window.innerHeight = ' + window.innerHeight);
+
+		//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+		let newVidWidth;
+		let newVidHeight;
+		// let vidScale;
+		// let vidScale = 0.5;
+		let vidScale = 0.8;
+		// let vidScale = 1.5;
+
+		switch (true) {
+
+			case thisContent.mwidth >= window.innerWidth && thisContent.mwidth >= thisContent.mheight:
+
+				// console.log('This content is TOO WIDE & LANDSCAPE');
+				// console.log('thisContent.mwidth = ' + thisContent.mwidth + '     thisContent.mheight = ' + thisContent.mheight);
+
+				newVidWidth = window.innerWidth * vidScale;
+				newVidHeight = thisContent.mheight * (newVidWidth / thisContent.mwidth);
+
+				break;
+
+			case thisContent.mwidth >= window.innerWidth && thisContent.mwidth <= thisContent.mheight:
+
+				// console.log('This content is TOO WIDE & PORTRAIT');
+				// console.log('thisContent.mwidth = ' + thisContent.mwidth + '     thisContent.mheight = ' + thisContent.mheight);
+
+				newVidWidth = window.innerWidth * vidScale;
+				newVidHeight = thisContent.mheight * (newVidWidth / thisContent.mwidth);
+
+				break;
+
+			case thisContent.mheight >= window.innerHeight && thisContent.mwidth >= thisContent.mheight:
+
+				// console.log('This content is TOO TALL & LANDSCAPE');
+				// console.log('thisContent.mwidth = ' + thisContent.mwidth + '     thisContent.mheight = ' + thisContent.mheight);
+
+				newVidWidth = thisContent.mwidth * (newVidHeight / thisContent.mheight);
+				newVidHeight = window.innerHeight * vidScale;
+
+				break;
+
+			case thisContent.mheight >= window.innerHeight && thisContent.mwidth <= thisContent.mheight:
+
+				// console.log('This content is TOO TALL & PORTRAIT');
+				// console.log('thisContent.mwidth = ' + thisContent.mwidth + '     thisContent.mheight = ' + thisContent.mheight);
+
+				newVidWidth = thisContent.mwidth * (newVidHeight / thisContent.mheight);
+				newVidHeight = window.innerHeight * vidScale;
+
+				break;
+
+			default:
+
+				// console.log('DEFAULT');
+				// console.log('thisContent.mwidth = ' + thisContent.mwidth + '     thisContent.mheight = ' + thisContent.mheight);
+
+				if (window.innerWidth / window.innerHeight <= thisContent.mwidth / thisContent.mheight) {
+
+					// console.log('thisContent.mwidth / thisContent.mheight = ' + thisContent.mwidth / thisContent.mheight);
+					// console.log('window.innerWidth / window.innerHeight = ' + window.innerWidth / window.innerHeight);
+
+					// console.log('This content FITS and I want it to behave LANDSCAPE');
+
+					newVidWidth = window.innerWidth * 0.75;
+					newVidHeight = thisContent.mheight * (newVidWidth / thisContent.mwidth);
+
+				} else {
+
+					// console.log('thisContent.mwidth / thisContent.mheight = ' + thisContent.mwidth / thisContent.mheight);
+					// console.log('window.innerWidth / window.innerHeight = ' + window.innerWidth / window.innerHeight);
+
+					// console.log('This content FITS and I want it to behave PORTRAIT');
+
+					newVidHeight = window.innerHeight * 0.75;
+					newVidWidth = thisContent.mwidth * (newVidHeight / thisContent.mheight);
+				}
+
+				break;
+		}
+
+
+		// console.log('');
+		// console.log('newVidWidth = ' + newVidWidth + '     newVidHeight = ' + newVidHeight);
+
+		return ([newVidWidth, newVidHeight]);
+	}
+
+	//#endregion -------------------- FUNCTION: resizeContent(thisContent) --------------------
+
+
+	//#region -------------------- FUNCTION: clearContent() --------------------
+
+	function clearContent() {
+
+		//#region -------------------- FINDIN' OUT SH*T --------------------
+
+		// console.log('');
+		// console.log('-------------------- FUNCTION: clearContent() --------------------');
+
+		// console.log(bannerContainer_Ref.current.parentNode);
+		// console.log(bannerContainer_Ref.current);
+		// console.log(bannerContainer_Ref.current.children);
+		// console.log(document.getElementById('bannerContainerID').children);
+		// // console.log(bannerContainer_Ref.current.children.tl);
+
+		//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+		setBannerShow(null);
+		// bannerContainer_Ref.current.removeChild(children);
+		// bannerContainer_Ref.current.children.remove();
+		// bannerContainer_Ref.current.children = null;
+		// document.getElementById('bannerContainerID').children.remove();
+
+		setBanneriFrameOpen(false);
+		banneriFrame_Ref.current.src = '';
+		bannerContainer_Ref.current.style.left = 0 + 'px';
+		bannerContainer_Ref.current.style.top = 0 + 'px';
+		gsap.set([bannerContainer_Ref.current], { scale: 0, transformOrigin: '0 0', immediateRender: true });
+
+		setWebiFrameOpen(false);
+		webiFrame_Ref.current.src = '';
+
+		setVideoOpen(false);
+		setLoadedVideo(null);
+	}
+
+	//#endregion -------------------- FUNCTION: clearContent() --------------------
+
+
+	//#region -------------------- useCallback: clearContent() --------------------
+
+	// const handleESCKeyDown = useCallback((clearContent) => {
+
+	// 	setBannerShow(null);
+	// 	// bannerContainer_Ref.current.removeChild(children);
+	// 	// bannerContainer_Ref.current.children.remove();
+	// 	// bannerContainer_Ref.current.children = null;
+	// 	// document.getElementById('bannerContainerID').children.remove();
+
+	// 	setBanneriFrameOpen(false);
+	// 	banneriFrame_Ref.current.src = '';
+	// 	bannerContainer_Ref.current.style.left = 0 + 'px';
+	// 	bannerContainer_Ref.current.style.top = 0 + 'px';
+	// 	gsap.set([bannerContainer_Ref.current], { scale: 0, transformOrigin: '0 0', immediateRender: true });
+
+	// 	setWebiFrameOpen(false);
+	// 	webiFrame_Ref.current.src = '';
+
+	// 	setVideoOpen(false);
+	// 	setLoadedVideo(null);
+	// });
+
+	//#endregion -------------------- useCallback: clearContent() --------------------
+
+
+	//#region -------------------- FUNCTION: loadContent(thisEvent, thisWorkItem) --------------------
+
+	let newContent;
+	let iframeSRC;
+
+	function loadContent(thisEvent, thisWorkItem) {
+
+		//#region -------------------- FINDIN' OUT SH*T --------------------
+
+		// console.log('');
+		// console.log('-------------------- FUNCTION: loadContent(thisEvent, thisWorkItem) --------------------');
+
+		// // console.log('');
+		// console.log('thisEvent = ' + thisEvent);
+		// console.log(thisEvent);
+		// // console.log('');
+		// console.log('thisEvent.target = ' + thisEvent.target);
+		// console.log(thisEvent.target);
+		// // console.log('');
+		// console.log('thisEvent.currentTarget = ' + thisEvent.currentTarget);
+		// console.log(thisEvent.currentTarget);
+
+		// console.log('');
+		// console.log('thisWorkItem = ' + thisWorkItem);
+		// console.log(thisWorkItem);
+
+		//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+		// let thisLocX;
+		// let thisLocY;
+		// let thisLocW;
+		// let thisLocH;
+
+		let currentTargetDims = getDimensions(thisEvent.currentTarget);
+
+		// console.log('');
+		// console.log('currentTargetDims loadContent: ANIMATE or STANDARD = ' + currentTargetDims);
+		// console.log(currentTargetDims);
+
+
+		let targetDims = getDimensions(thisEvent.target);
+
+		// console.log('');
+		// console.log('targetDims loadContent: HTML5 = ' + targetDims);
+		// console.log(targetDims);
+
+
+		switch (thisWorkItem.format) {
+
+			case 'banner': {
+				//#region -------------------- ASSIGN NEW CONTENT: banner --------------------
+
+				// console.log('');
+				// console.log('-------------------- ASSIGN NEW CONTENT: banner --------------------');
+				// console.log('I AM A BANNER: ' + thisWorkItem.format);
+
+
+				let bannerScale = thisEvent.target.offsetWidth / thisWorkItem.mwidth;
+
+				// console.log('bannerScale = ' + bannerScale);
+
+				clearContent();
+
+
+				if (thisWorkItem.format_src === 'animate' || thisWorkItem.format_src === 'standard') {
+
+					//#region - - - - - - - - - - - IF 'animate'... - - - - - - - - - - -
+
+					// console.log('I am an ANIMATE or STANDARD banner: ' + thisWorkItem.format_src);
+
+					// iframeSRC = remoteLoc + thisWorkItem.album_id + '/banners/' + thisWorkItem.link;
+					iframeSRC = remoteLoc + thisWorkItem.album_id + '/banners/' + thisWorkItem.link + '/index.html';
+
+					// console.log('iframeSRC = ' + iframeSRC);
+
+					banneriFrame_Ref.current.src = iframeSRC;
+					banneriFrame_Ref.current.style.left = currentTargetDims[0] + 'px';
+					banneriFrame_Ref.current.style.top = currentTargetDims[1] + 'px';
+					banneriFrame_Ref.current.style.width = targetDims[2] / bannerScale + 'px';
+					banneriFrame_Ref.current.style.height = targetDims[3] / bannerScale + 'px';
+
+					gsap.set([banneriFrame_Ref.current], { scale: bannerScale, transformOrigin: '0 0', immediateRender: true });
+
+					setBanneriFrameOpen(true);
+
+					//#endregion - - - - - - - - - - - IF 'animate'... - - - - - - - - - - -
+
+				} else if (thisWorkItem.format_src === 'html5') {
+
+					//#region - - - - - - - - - - - ELSE IF 'html5'... - - - - - - - - - - -
+
+					// console.log('I am an HTML5 banner: ' + thisWorkItem.format_src);
+
+					newContent = React.createElement(bannerContent[thisWorkItem.link2]);
+
+					// console.log('newContent = ' + newContent);
+					// console.log(newContent);
+
+					// gsap.set([bannerContainer_Ref.current], { x: currentTargetDims[0], y: currentTargetDims[1], width: currentTargetDims[2], height: currentTargetDims[3], transformOrigin: '0 0', immediateRender: true });
+					// gsap.set([bannerContainer_Ref.current], { x: currentTargetDims[0], y: currentTargetDims[1], width: currentTargetDims[2], height: currentTargetDims[3], scale: bannerScale, transformOrigin: '0 0', immediateRender: true });
+					// gsap.set([bannerContainer_Ref.current], { x: currentTargetDims[0], y: currentTargetDims[1], width: targetDims[2], height: targetDims[3], scale: bannerScale, transformOrigin: '0 0', immediateRender: true });
+
+					bannerContainer_Ref.current.src = newContent;
+					bannerContainer_Ref.current.style.left = currentTargetDims[0] + 'px';
+					bannerContainer_Ref.current.style.top = currentTargetDims[1] + 'px';
+					bannerContainer_Ref.current.style.width = targetDims[2] / bannerScale + 'px';
+					bannerContainer_Ref.current.style.height = targetDims[3] / bannerScale + 'px';
+
+					gsap.set([bannerContainer_Ref.current], { scale: bannerScale, transformOrigin: '0 0', immediateRender: true });
+
+					setBannerShow(newContent);
+
+					//#endregion - - - - - - - - - - - ELSE IF 'html5'... - - - - - - - - - - -
+				}
+
+				break;
+
+				//#endregion -------------------- ASSIGN NEW CONTENT: banner --------------------
+			}
+
+
+			case 'html5':
+			case 'website':
+			case 'mobile': {
+
+				//#region -------------------- ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) --------------------
+
+				console.log('');
+				console.log('-------------------- ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) --------------------');
+				console.log('I AM either HTML5, WEBSITE or MOBILE: ' + thisWorkItem.format);
+				console.log('thisWorkItem = ' + thisWorkItem);
+				console.log(thisWorkItem);
+				// console.log('thisWorkItem.format_src = ' + thisWorkItem.format_src);
+				// console.log(thisWorkItem.format_src);
+
+
+				clearContent();
+
+				iframeSRC;
+
+				switch (true) {
+
+					case thisWorkItem.format_src === 'external':
+
+						iframeSRC = thisWorkItem.link2;
+
+						// // console.log('');
+						// console.log('iframeSRC = ' + iframeSRC);
+						// console.log(iframeSRC);
+
+						webiFrame_Ref.current.src = iframeSRC;
+						webiFrame_Ref.current.style.width = thisWorkItem.mwidth + 'px';
+						webiFrame_Ref.current.style.height = thisWorkItem.mheight + 'px';
+						webiFrame_Ref.current.style.left = (window.innerWidth - thisWorkItem.mwidth) / 2 + 'px';
+
+						setWebiFrameOpen(true);
+
+						break;
+
+					case thisWorkItem.format_src === 'video':
+
+						iframeSRC = videoLoc + thisWorkItem.link2;
+
+						// // console.log('');
+						// console.log('iframeSRC = ' + iframeSRC);
+						// console.log(iframeSRC);
+
+						// let newVidWidth;
+						// let newVidHeight;
+
+						// // let vidScale = 0.5;
+						// let vidScale = 0.8;
+
+
+						//#region -------------------- SEE: resizeContent(thisContent) --------------------
+
+						// switch (true) {
+
+						//     case thisWorkItem.mwidth >= window.innerWidth && thisWorkItem.mwidth >= thisWorkItem.mheight:
+
+						//         // console.log('This content is TOO WIDE & LANDSCAPE');
+						//         // console.log('thisWorkItem.mwidth = ' + thisWorkItem.mwidth + '     thisWorkItem.mheight = ' + thisWorkItem.mheight);
+
+						//         newVidWidth = window.innerWidth * vidScale;
+						//         newVidHeight = thisWorkItem.mheight * (newVidWidth / thisWorkItem.mwidth);
+
+						//         break;
+
+						//     case thisWorkItem.mwidth >= window.innerWidth && thisWorkItem.mwidth <= thisWorkItem.mheight:
+
+						//         // console.log('This content is TOO WIDE & PORTRAIT');
+						//         // console.log('thisWorkItem.mwidth = ' + thisWorkItem.mwidth + '     thisWorkItem.mheight = ' + thisWorkItem.mheight);
+
+						//         newVidWidth = window.innerWidth * vidScale;
+						//         newVidHeight = thisWorkItem.mheight * (newVidWidth / thisWorkItem.mwidth);
+
+						//         break;
+
+						//     case thisWorkItem.mheight >= window.innerHeight && thisWorkItem.mwidth >= thisWorkItem.mheight:
+
+						//         // console.log('This content is TOO TALL & LANDSCAPE');
+						//         // console.log('thisWorkItem.mwidth = ' + thisWorkItem.mwidth + '     thisWorkItem.mheight = ' + thisWorkItem.mheight);
+
+						//         newVidHeight = window.innerHeight * vidScale;
+						//         newVidWidth = thisWorkItem.mwidth * (newVidHeight / thisWorkItem.mheight);
+
+						//         break;
+
+						//     case thisWorkItem.mheight >= window.innerHeight && thisWorkItem.mwidth <= thisWorkItem.mheight:
+
+						//         // console.log('This content is TOO TALL & PORTRAIT');
+						//         // console.log('thisWorkItem.mwidth = ' + thisWorkItem.mwidth + '     thisWorkItem.mheight = ' + thisWorkItem.mheight);
+
+						//         newVidHeight = window.innerHeight * vidScale;
+						//         newVidWidth = thisWorkItem.mwidth * (newVidHeight / thisWorkItem.mheight);
+
+						//         break;
+
+						//     default:
+
+						//         // console.log('VIDEO: DEFAULT');
+						//         // console.log('thisWorkItem.mwidth = ' + thisWorkItem.mwidth + '     thisWorkItem.mheight = ' + thisWorkItem.mheight);
+
+						//         // newVidWidth = thisWorkItem.mwidth;
+						//         // newVidHeight = thisWorkItem.mheight;
+
+						//         // newVidWidth = window.innerWidth * vidScale;
+						//         // newVidHeight = thisWorkItem.mheight * (newVidWidth / thisWorkItem.mwidth);
+
+						//         if (window.innerWidth / window.innerHeight <= thisWorkItem.mwidth / thisWorkItem.mheight) {
+
+						//             // console.log('thisWorkItem.mwidth / thisWorkItem.mheight = ' + thisWorkItem.mwidth / thisWorkItem.mheight);
+						//             // console.log('window.innerWidth / window.innerHeight = ' + window.innerWidth / window.innerHeight);
+
+						//             // console.log('This content FITS and I want it to behave LANDSCAPE');
+
+						//             newVidWidth = window.innerWidth * 0.75;
+						//             newVidHeight = thisWorkItem.mheight * (newVidWidth / thisWorkItem.mwidth);
+
+						//         } else {
+
+						//             // console.log('thisWorkItem.mwidth / thisWorkItem.mheight = ' + thisWorkItem.mwidth / thisWorkItem.mheight);
+						//             // console.log('window.innerWidth / window.innerHeight = ' + window.innerWidth / window.innerHeight);
+
+						//             // console.log('This content FITS and I want it to behave PORTRAIT');
+
+						//             newVidHeight = window.innerHeight * 0.75;
+						//             newVidWidth = thisWorkItem.mwidth * (newVidHeight / thisWorkItem.mheight);
+						//         }
+
+						//         break;
+						// }
+
+						//#endregion -------------------- SEE: resizeContent(thisContent) --------------------
+
+
+						resizeContent(thisWorkItem);
+
+						console.log('resizeContent(thisWorkItem) = ' + resizeContent(thisWorkItem));
+						console.log('resizeContent(thisWorkItem)[0] = ' + resizeContent(thisWorkItem)[0]);
+						console.log('resizeContent(thisWorkItem)[1] = ' + resizeContent(thisWorkItem)[1]);
+
+
+						// setVideoWidth(newVidWidth);
+						// setVideoHeight(newVidHeight);
+						setVideoWidth(resizeContent(thisWorkItem)[0]);
+						setVideoHeight(resizeContent(thisWorkItem)[1]);
+
+						setLoadedVideo(iframeSRC);
+						setVideoOpen(true);
+
+						break;
+
+					default:
+
+						iframeSRC = remoteLoc + thisWorkItem.album_id + '/' + thisWorkItem.link2;
+						// iframeSRC = remoteLoc + thisWorkItem.album_id + '/' + thisWorkItem.link;
+
+						// // console.log('');
+						// console.log('iframeSRC = ' + iframeSRC);
+						// console.log(iframeSRC);
+
+						webiFrame_Ref.current.src = iframeSRC;
+						webiFrame_Ref.current.style.width = thisWorkItem.mwidth + 'px';
+						webiFrame_Ref.current.style.height = thisWorkItem.mheight + 'px';
+						webiFrame_Ref.current.style.left = (window.innerWidth - thisWorkItem.mwidth) / 2 + 'px';
+
+						setWebiFrameOpen(true);
+
+						break;
+				}
+
+				// setWebiFrameOpen(true);
+
+
+				//#region - - - - - - - - - - - ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) - compensate for oversized / oddly-sized content  - - - - - - - - - - -
+
+				// if (thisWorkItem.mheight >= window.innerHeight) {
+				// if (thisWorkItem.mwidth >= window.innerWidth || thisWorkItem.mheight >= window.innerHeight) {
+				if (thisWorkItem.mwidth >= window.innerWidth || thisWorkItem.mheight >= window.innerHeight || thisWorkItem.mwidth <= window.innerWidth * 0.5 || thisWorkItem.mheight <= window.innerHeight * 0.5) {
+
+					//#region - - - - - - - - - - - ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) - TOO BIG / SMALL  - - - - - - - - - - -
+
+					// let thisScale = (window.innerHeight / thisWorkItem.mheight) * 0.9;
+					// let thisScale = (window.innerHeight / thisWorkItem.mheight) * 0.875;
+					let thisScale = (window.innerHeight / thisWorkItem.mheight) * 0.75;
+					// let thisScale = (window.innerHeight / thisWorkItem.mheight) * 0.5;
+					let thisY = (window.innerHeight - (thisWorkItem.mheight * thisScale)) / 2;
+
+					gsap.set([webiFrame_Ref.current], { top: thisY, scale: thisScale, transformOrigin: '50% 0', immediateRender: true });
+
+					//#endregion - - - - - - - - - - - ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) - TOO BIG / SMALL  - - - - - - - - - - -
+
+				} else {
+
+					//#region - - - - - - - - - - - ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) - JUUUUST RIIIIGHT  - - - - - - - - - - -
+
+					let thisY = (window.innerHeight - thisWorkItem.mheight) / 2;
+
+					gsap.set([webiFrame_Ref.current], { top: thisY, transformOrigin: '50% 0', immediateRender: true });
+
+					//#endregion - - - - - - - - - - - ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) - JUUUUST RIIIIGHT  - - - - - - - - - - -
+				}
+
+				//#endregion - - - - - - - - - - - ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) - compensate for oversized / oddly-sized content  - - - - - - - - - - -
+
+				break;
+
+				//#endregion -------------------- ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) --------------------
+			}
+
+			case 'video': {
+
+				//#region -------------------- ASSIGN NEW CONTENT: video (REACT-PLAYER) --------------------
+
+				// console.log('');
+				// console.log('-------------------- ASSIGN NEW CONTENT: video (REACT-PLAYER) --------------------');
+				// console.log(thisWorkItem);
+				// console.log('thisWorkItem.mwidth = ' + thisWorkItem.mwidth + '     thisWorkItem.mheight = ' + thisWorkItem.mheight);
+				// console.log('window.innerWidth = ' + window.innerWidth + '     window.innerHeight = ' + window.innerHeight);
+				// console.log('window.innerWidth * 0.8 = ' + window.innerWidth * 0.8);
+
+
+				clearContent();
+
+				let videoSRC = videoLoc + thisWorkItem.link2;
+
+				// // console.log('');
+				// console.log('videoSRC = ' + videoSRC);
+				// console.log(videoSRC);
+
+				// let newVidWidth;
+				// let newVidHeight;
+
+				// // let vidScale = 0.5;
+				// let vidScale = 0.8;
+
+
+				resizeContent(thisWorkItem);
+
+				// console.log('resizeContent(thisWorkItem) = ' + resizeContent(thisWorkItem));
+				// console.log('resizeContent(thisWorkItem)[0] = ' + resizeContent(thisWorkItem)[0]);
+				// console.log('resizeContent(thisWorkItem)[1] = ' + resizeContent(thisWorkItem)[1]);
+
+				// console.log('newVidWidth = ' + newVidWidth + '     newVidHeight = ' + newVidHeight);
+
+				// setVideoWidth(newVidWidth);
+				// setVideoHeight(newVidHeight);
+				setVideoWidth(resizeContent(thisWorkItem)[0]);
+				setVideoHeight(resizeContent(thisWorkItem)[1]);
+
+				setLoadedVideo(videoSRC);
+				setVideoOpen(true);
+
+				break;
+
+				//#endregion -------------------- ASSIGN NEW CONTENT: video (REACT-PLAYER) --------------------
+			}
+
+			default: {
+				//#region -------------------- ASSIGN NEW CONTENT: default --------------------
+
+				console.log('');
+				console.log('I AM THE DEFAULT: ' + thisWorkItem.format);
+
+				clearContent();
+
+				break;
+
+				//#endregion -------------------- ASSIGN NEW CONTENT: default --------------------
+			}
+		}
+	}
+
+	//#endregion -------------------- FUNCTION: loadContent(thisEvent, thisWorkItem) --------------------
+
+	//#endregion ==================== MARK: FUNCTIONS ====================
+
+
+
+	//#region ==================== MARK: useRef DEFs ====================
+
+	// init one ref to store the future isotope object
+	const isotope_Ref = useRef();
+
+	const workNav_Ref = useRef(null);
+
+	const employerNav_Ref = useRef(null);
+	const activeEmplDiv_Ref = useRef(null);
+
+	const typeNav_Ref = useRef(null);
+	const activeTypeDiv_Ref = useRef(null);
+
+	const toggleNav_Ref = useRef(null);
+	const toggleBtn_Ref = useRef(null);
+	// const navToggleBtn_Ref = useRef(null);
+
+	const galleryContainer_Ref = useRef(null);
+
+	const bannerContainer_Ref = useRef(null);
+	const banneriFrame_Ref = useRef(null);
+
+	const iframeContainer_Ref = useRef(null);
+	const webiFrame_Ref = useRef(null);
+
+	const videoContainer_Ref = useRef(null);
+	const videoPlayer_Ref = useRef(null);
+
+	//#endregion ==================== MARK: useRef DEFs ====================
+
+
+
+	//#region ==================== MARK: useState DEFs ====================
+
+	// REF: https://jack72828383883.medium.com/how-to-preload-images-into-cache-in-react-js-ff1642708240
+	// const [isLoading, setIsLoading] = useState(true);
+
+	// const [isLoaded, setIsLoaded] = useState(false);
+
+	const [browserDetect, setBrowserDetect] = useState();
+	// const [browserDetect, setBrowserDetect] = useState(null);
+	// const [browserDetect, setBrowserDetect] = useState('desktop');
+
+	// store the filter keyword in a state
+	// const [filterKey, setFilterKey] = useState('*');``
+	const [filterKey, setFilterKey] = useState('all');``
+	// const [filterKey, setFilterKey] = useState('ctm');
+	// const [filterKey, setFilterKey] = useState(null);
+
+	// const [workNavToggleText, setWorkNavToggleText] = useState('View by employer');
+	const [workNavToggleText, setWorkNavToggleText] = useState('View by type');
+	const [workNavToggleBtn, setWorkNavToggleBtn] = useState(true);
+	// const [workNavToggleBtn, setWorkNavToggleBtn] = useState(false);
+
+	const [bannerShow, setBannerShow] = useState(null);
+	const [banneriFrameOpen, setBanneriFrameOpen] = useState(false);
+
+	const [webiFrameOpen, setWebiFrameOpen] = useState(false);
+
+	const [videoOpen, setVideoOpen] = useState(false);
+	const [loadedVideo, setLoadedVideo] = useState(null);
+	const [videoWidth, setVideoWidth] = useState(null);
+	const [videoHeight, setVideoHeight] = useState(null);
+
+	//#endregion ==================== MARK: useState DEFs ====================
+
+
+
+	//#region ==================== MARK: useEffect(s) ====================
+
+	//#region -------------------- useEffect: Close modal on ESC key press --------------------
+
+	useEffect(() => {
+
+		const handleESCKeyDown = (e) => {
+			if (e.key === "Escape") {
+				// clearContent();
+
+				setBannerShow(null);
+				// bannerContainer_Ref.current.removeChild(children);
+				// bannerContainer_Ref.current.children.remove();
+				// bannerContainer_Ref.current.children = null;
+				// document.getElementById('bannerContainerID').children.remove();
+
+				setBanneriFrameOpen(false);
+				banneriFrame_Ref.current.src = '';
+				bannerContainer_Ref.current.style.left = 0 + 'px';
+				bannerContainer_Ref.current.style.top = 0 + 'px';
+				gsap.set([bannerContainer_Ref.current], { scale: 0, transformOrigin: '0 0', immediateRender: true });
+
+				setWebiFrameOpen(false);
+				webiFrame_Ref.current.src = '';
+
+				setVideoOpen(false);
+				setLoadedVideo(null);
+			}
+		};
+
+		if (bannerShow || banneriFrameOpen || webiFrameOpen || videoOpen ) {
+			document.addEventListener("keydown", handleESCKeyDown);
+		}
+
+		return () => {
+			document.removeEventListener("keydown", handleESCKeyDown);
+		};
+
+	// }, [bannerShow, banneriFrameOpen, webiFrameOpen, videoOpen, clearContent]);
+	}, [bannerShow, banneriFrameOpen, webiFrameOpen, videoOpen]);
+
+	//#endregion -------------------- useEffect: Close modal on ESC key press --------------------
+
+
+	//#region -------------------- useEffect: browserDetect => workNavTL --------------------
+
+	useEffect(() => {
+
+		//#region -------------------- FINDIN' OUT SH*T --------------------
+
+		// console.log('');
+		// console.log('-------------------- useEffect: browserDetect => workNavTL --------------------');
+		// // console.log('browserDetect = ' + browserDetect);
+	
+		// const ua = new UAParser().getResult();
+
+		// // console.log('ua = ' + ua);
+		// console.log(ua);
+		// console.log('ua.device.type = ' + ua.device.type);
+
+		//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+		// if (ua.device.type === undefined) {
+		// 	setBrowserDetect('desktop');
+		// } else {
+		// 	setBrowserDetect(ua.device.type);
+		// }
+
+
+		workNavWidth = employerNav_Ref.current.getBoundingClientRect().width;
+		workNavHeight = employerNav_Ref.current.getBoundingClientRect().height;
+
+
+		if (ua.device.type === undefined) {
+
+			setBrowserDetect('desktop');
+
+			// workNavIN
+			// 	// .fromTo([workNav_Ref.current], { y: 0, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame00')
+			// 	.fromTo([workNav_Ref.current], { y: -workNavHeight, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame00')
+			// ;
+
+			// workNavIN.play();
+
+			workNavTL
+				.fromTo([employerNav_Ref.current], { y: -workNavHeight, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+				// .fromTo([typeNav_Ref.current], { y: 0, autoAlpha: 1 }, { y: -workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01')
+				.fromTo([typeNav_Ref.current], { y: workNavHeight, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+				// .to([typeNav_Ref.current], { y: workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01')
+				// .fromTo([activeEmplDiv_Ref.current], { height: 0 }, { height: workNavHeight, duration: 0.5 }, 'frame01')
+
+				// .fromTo([employerNav_Ref.current], { y: 0, autoAlpha: 1 }, { y: -workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01')
+				// .fromTo([typeNav_Ref.current], { y: -workNavHeight, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+				// // .fromTo([activeEmplDiv_Ref.current], { height: 0 }, { height: workNavHeight, duration: 0.5 }, 'frame01')
+			;
+
+			// workNavTL.pause();
+
+		} else {
+
+			setBrowserDetect(ua.device.type);
+
+			// workNavIN
+			// 	// .fromTo([workNav_Ref.current], { y: 0, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame00')
+			// 	.fromTo([workNav_Ref.current], { y: -workNavHeight, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame00')
+			// ;
+
+			workNavTL
+				.fromTo([employerNav_Ref.current], { x: -workNavWidth, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+				.fromTo([typeNav_Ref.current], { x: 0, autoAlpha: 1 }, { x: -workNavWidth, autoAlpha: 0, duration: 0.5 }, 'frame01')
+				// .fromTo([activeEmplDiv_Ref.current], { width: 0 }, { width: workNavHeight, duration: 0.5 }, 'frame01')
+			;
+
+			// workNavTL.pause();
+		}
+
+		// workNavTL.pause();
+
+
+		if (workNavToggleBtn) {
+			// workNavIN.restart(0);
+			// workNavIN.seek(0);
+
+			workNavTL.restart();
+			// workNavTL.seek('start');
+			// workNavTL.seek('end');
+			// workNavTL.play();
+		}
+
+
+		//#region -------------------- FINDIN' OUT MORE SH*T --------------------
+
+		// console.log('ua.device.type (post-if...)= ' + ua.device.type);
+		// console.log('browserDetect = ' + browserDetect);
+
+		//#endregion -------------------- FINDIN' OUT MORE SH*T --------------------
+
+	// }, [])
+	// }, [browserDetect])
+	}, [browserDetect, workNavToggleBtn])
+
+	//#endregion -------------------- useEffect: browserDetect => workNavTL --------------------
+
+
+	//#region -------------------- useEffect: workNavTL --------------------
+
+	// useEffect(() => {
+
+	// 	//#region -------------------- FINDIN' OUT SH*T --------------------
+
+	// 	// console.log('');
+	// 	// console.log('-------------------- useEffect: workNavTL --------------------');
+	// 	// console.log('workNavTL = ' + workNavTL);
+	// 	// // console.log('isBrowser = ' + isBrowser);
+	// 	// console.log('browserDetect = ' + browserDetect);
+	// 	// console.log('browserDetect = ' + browserDetect);
+	// 	// console.log('workNavToggleText = ' + workNavToggleText);
+
+	// 	//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+	// 	// let workNavWidth = employerNav_Ref.current.getBoundingClientRect().width;
+	// 	// let workNavHeight = employerNav_Ref.current.getBoundingClientRect().height;
+
+	// 	workNavWidth = employerNav_Ref.current.getBoundingClientRect().width;
+	// 	workNavHeight = employerNav_Ref.current.getBoundingClientRect().height;
+
+	// 	// console.log('');
+	// 	// console.log('workNavWidth = ' + workNavWidth);
+	// 	// console.log('workNavHeight = ' + workNavHeight);
+
+
+	// 	//#region -------------------- workNavIN --------------------
+
+	// 	// gsap.to(['.workNavBar'], { y: workNavHeight, opacity: 1, duration: 0.375 });
+	// 	// gsap.to(['.workNavBar'], { y: workNavHeight, opacity: 1, duration: 0.375 });
+
+	// 	// gsap.fromTo(['.workNavBar'], { y: -workNavHeight, autoAlpha: 0 }, { y: workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01');
+	// 	// gsap.fromTo(['.workNavBar'], { y: -workNavHeight, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5 });
+	// 	// gsap.fromTo([toggleNav_Ref.current], { y: -workNavHeight, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5 });
+
+	// 	// workNavIN 
+	// 	// 	.fromTo(['.workNavBar'], { y: -workNavHeight, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.5 });
+	// 	// ;
+
+	// 	// workNavIN.play();
+
+	// 	//#endregion -------------------- workNavIN --------------------
+
+
+	// 	//#region -------------------- workNavTL: desktop vs mobile --------------------
+
+	// 	// if (isBrowser === true) {
+	// 	// if (browserDetect === 'desktop') {
+	// 	// if (ua.device.type === undefined) {
+	// 	if (ua.device.type === undefined) {
+
+	// 		workNavTL
+	// 			.fromTo([employerNav_Ref.current], { y: -workNavHeight, autoAlpha: 1 }, { y: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+	// 			.fromTo([typeNav_Ref.current], { y: 0, autoAlpha: 1 }, { y: -workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01')
+	// 			// .fromTo([activeEmplDiv_Ref.current], { height: 0 }, { height: workNavHeight, duration: 0.5 }, 'frame01')
+
+	// 			// .fromTo([employerNav_Ref.current], { y: 0, autoAlpha: 1 }, { y: -workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01')
+	// 			// .fromTo([typeNav_Ref.current], { y: -workNavHeight, autoAlpha: 1 }, { y: workNavHeight, autoAlpha: 1, duration: 0.5 }, 'frame01')
+	// 			// // .fromTo([activeEmplDiv_Ref.current], { height: 0 }, { height: workNavHeight, duration: 0.5 }, 'frame01')
+	// 		;
+
+	// 		// workNavTL.pause();
+
+	// 	} else {
+
+	// 		workNavTL
+	// 			.fromTo([employerNav_Ref.current], { x: -workNavWidth, autoAlpha: 0 }, { x: 0, autoAlpha: 1, duration: 0.5 }, 'frame01')
+	// 			.fromTo([typeNav_Ref.current], { x: 0, autoAlpha: 1 }, { x: -workNavWidth, autoAlpha: 0, duration: 0.5 }, 'frame01')
+	// 			// .fromTo([activeEmplDiv_Ref.current], { width: 0 }, { width: workNavHeight, duration: 0.5 }, 'frame01')
+	// 		;
+	// 	}
+
+	// 	//#endregion -------------------- workNavTL: desktop vs mobile --------------------
+
+
+	// 	// console.log('');
+	// 	// // console.log('typeNav_Ref.current.offsetTop = ' + typeNav_Ref.current.offsetTop);
+	// 	console.log('workNavToggleBtn = ' + workNavToggleBtn);
+	// 	// console.log('workNavToggleText = ' + workNavToggleText);
+
+
+	// 	if (workNavToggleBtn) {
+	// 	// if (!workNavToggleBtn) {
+	// 		workNavTL.restart();
+	// 		// workNavTL.reverse();
+	// 		// workNavTL.time(0).kill();
+	// 		// workNavTL.time(0);
+	// 		// workNavTL.seek('end');
+	// 	}
+
+	// 	// workNavTL.seek('end', false);
+
+	// // }, [])
+	// // }, [workNavHeight])
+	// // }, [workNavToggleBtn])
+	// }, [browserDetect, workNavToggleBtn])
+	// // }, [browserDetect, workNavToggleBtn, workNavToggleText])
+
+	//#endregion -------------------- useEffect: workNavTL --------------------
+
+
+	//#region -------------------- useEffect: workNavToggleBtn --------------------
+
+	useEffect(() => {
+
+		//#region -------------------- FINDIN' OUT SH*T --------------------
+
+		// console.log('');
+		// console.log('-------------------- useEffect: workNavToggleBtn --------------------');
+		// console.log('workNavToggleBtn = ' + workNavToggleBtn);
+
+		// // console.log('');
+		// console.log('employerNav_Ref.current.lastChild = ' + employerNav_Ref.current.lastChild);
+		// console.log(employerNav_Ref.current.lastChild);
+
+		// console.log('');
+		// console.log('typeNav_Ref.current.lastChild = ' + typeNav_Ref.current.lastChild);
+		// console.log(typeNav_Ref.current.lastChild);
+
+		//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+		// clearContent();
+
+		if (workNavToggleBtn) {
+			workNavTL.play();
+			setWorkNavToggleText('View by type');
+			// typeNav_Ref.current.lastChild.click();
+		} else {
+			workNavTL.reverse();
+			setWorkNavToggleText('View by employer');
+			// employerNav_Ref.current.lastChild.click();
+		}
+
+	// }, [])
+	}, [workNavToggleBtn])
+	// }, [workNavToggleBtn, employerNav_Ref])
+
+	//#endregion -------------------- useEffect: workNavToggleBtn --------------------
+
+
+	//#region -------------------- useEffect: initialize an Isotope object with configs --------------------
+
+	useEffect(() => {
+
+		//#region -------------------- FINDIN' OUT SH*T --------------------
+
+		// console.log('');
+		// console.log('-------------------- useEffect: initialize an Isotope object with configs --------------------');
+
+		// console.log('isLoading = ' + isLoading);
+		// console.log('isLoaded = ' + isLoaded);
+		// console.log('isotope_Ref = ' + isotope_Ref);
+		// console.log('isotope_Ref.current = ' + isotope_Ref.current);
+
+		//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+		// let galleryImagesLoaded = require('imagesloaded');
+		// let galleryImagesLoaded = { imagesloaded };
+
+		// galleryImagesLoaded(workNav_Ref.current, function () {
+		// imagesloaded(workNav_Ref.current, function () {
+
+			isotope_Ref.current = new Isotope('.galleryContainer', {
+
+				// itemSelector: '.filter-item',
+				itemSelector: '.workItem',
+				percentPosition: true,
+
+				// layoutMode: 'masonry',
+				// masonry: {
+				// 	columnWidth: 100,
+				// 	gutter: 20,
+				// 	isFitWidth: true,
+				// }
+
+				layoutMode: 'packery',
+				packery: {
+					gutter: 20,
+					// columnWidth: '.workItem',
+					// rowHeight: 60,
+					// horizontal: true
+				}
+			})
+
+			// console.log('isotope_Ref.current = ' + isotope_Ref.current);
+
+			// setIsLoaded(!isLoaded);
+
+			// // cleanup
+			// return () => isotope_Ref.current.destroy()
+
+		// });
+
+	}, [])
+	// }, [isLoading])
+	// }, [isLoaded])
+	// }, [isLoading, isLoaded])
+
+	//#endregion -------------------- useEffect: initialize an Isotope object with configs --------------------
+
+
+	//#region -------------------- useEffect: handleFilterKeyChange - handling filter key change --------------------
+	// -------------------- imagesloaded: REF01: https://isotope.metafizzy.co/layout.html#imagesloaded --------------------
+	// -------------------- imagesloaded: REF02: https://imagesloaded.desandro.com/#webpack --------------------
+	// -------------------- imagesloaded: REF03: https://github.com/desandro/imagesloaded --------------------
+
+	useEffect(() => {
+
+		//#region -------------------- FINDIN' OUT SH*T --------------------
+
+		// console.log('');
+		// console.log('-------------------- useEffect: handleFilterKeyChange - handling filter key change --------------------');
+		// console.log('filterKey = ' + filterKey);
+		// console.log('isLoading = ' + isLoading);
+
+		// console.log('isotope_Ref = ' + isotope_Ref);
+		// console.log('isotope_Ref.current = ' + isotope_Ref.current);
+
+		//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+		// let imagesLoaded = require('imagesloaded');
+
+		if (galleryContainer_Ref.current) {
+			// imagesLoaded(galleryContainer_Ref.current, function () {
+			imagesloaded(galleryContainer_Ref.current, function () {
+
+				// filterKey === '*'
+				filterKey === 'all'
+					? isotope_Ref.current.arrange({ filter: `*` })
+					// ? isotope_Ref.current.arrange({ filter: `all` })
+					: isotope_Ref.current.arrange({ filter: `.${filterKey}` });
+
+				window.scrollTo(0, 0);
+
+				// setActiveEmplDiv(filterKey);
+				// setIsLoaded(true);
+
+			});
+		}
+
+	}, [filterKey])
+	// }, [filterKey, isLoading])
+
+	//#endregion -------------------- useEffect: handleFilterKeyChange - handling filter key change --------------------
+
+	//#endregion ==================== MARK: useEffect(s) ====================
+
+
+
+	//#region ==================== const handleFilterKeyChange: setFilterKey / activeEmplDiv_Ref / activeTypeDiv_Ref ====================
+
+	// const handleFilterKeyChange = key => () => setFilterKey(key);
+
+	const handleFilterKeyChange = key => (keyJSONnode) => {
+
+		//#region -------------------- FINDIN' OUT SH*T --------------------
+
+		console.log('');
+		console.log('==================== const handleFilterKeyChange: setFilterKey / activeEmplDiv_Ref / activeTypeDiv ====================');
+
+		console.log('key = ' + key);
+		console.log(key);
+
+		console.log('');
+		console.log('keyJSONnode = ' + keyJSONnode);
+		console.log(keyJSONnode);
+
+		// console.log('');
+		// console.log('keyJSONnode.target = ' + keyJSONnode.target);
+		// console.log(keyJSONnode.target);
+
+		// console.log('');
+		// console.log('keyJSONnode.currentTarget = ' + keyJSONnode.currentTarget);
+		// console.log(keyJSONnode.currentTarget);
+
+		// console.log('');
+		// console.log('keyJSONnode.currentTarget.parentNode = ' + keyJSONnode.currentTarget.parentNode);
+		// console.log(keyJSONnode.currentTarget.parentNode);
+		// console.log('keyJSONnode.currentTarget.parentNode.id = ' + keyJSONnode.currentTarget.parentNode.id);
+
+		// console.log('isLoading = ' + isLoading);
+
+		// console.log('employerNav_Ref = ' + employerNav_Ref);
+		// console.log(employerNav_Ref);
+		// console.log('employerNav_Ref.current = ' + employerNav_Ref.current);
+		// console.log('employerNav_Ref.current.id = ' + employerNav_Ref.current.id);
+		// console.log('employerNav_Ref.current.offsetWidth = ' + employerNav_Ref.current.offsetWidth);
+
+		//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+		// clearContent();
+
+		setFilterKey(key);
+
+		let thisLocX;
+		let thisLocY;
+		let thisLocW;
+		let thisLocH;
+
+		let activeDivDims = getDimensions(keyJSONnode.currentTarget);
+
+		// console.log('');
+		// console.log('activeDivDims: activeEmplDiv_Ref / activeEmplDiv_Ref = ' + activeDivDims);
+		// console.log(activeDivDims);
+
+
+		if (keyJSONnode.currentTarget.parentNode.id === 'employerNavID') {
+		// if (keyJSONnode.currentTarget.parentNode.id === 'employerNavID' && keyJSONnode.currentTarget.className === 'workNavItemLogo') {
+		// if (keyJSONnode.currentTarget.className === 'workNavItemLogo') {
+
+			if (keyJSONnode.currentTarget.className === 'workNavItemLogo') {
+				// thisLocX = activeDivDims[0] - (employerNav_Ref.current.offsetWidth * 0.5) + (activeDivDims[2] * 0.5);
+				// thisLocX = activeDivDims[0] - (employerNav_Ref.current.offsetWidth * 0.5) + (activeDivDims[2] * 0.2);
+				thisLocX = activeDivDims[0] - (employerNav_Ref.current.offsetWidth * 0.5) + (activeDivDims[2] * 0.2) - 5;
+			} else {
+				thisLocX = activeDivDims[0] - (employerNav_Ref.current.offsetWidth * 0.5) + (activeDivDims[2] * 0.3);
+			}
+
+			thisLocY = activeDivDims[1];
+			// thisLocW = activeDivDims[2];
+			thisLocW = activeDivDims[2] + 10;
+			thisLocH = activeDivDims[3];
+
+			// console.log('');
+			// console.log('employerNav_Ref');
+			// console.log('thisLocX = ' + thisLocX + '     thisLocY = ' + thisLocY);
+			// console.log('thisLocW = ' + thisLocW + '     thisLocH = ' + thisLocH);
+
+			gsap.to([activeEmplDiv_Ref.current], { x: thisLocX, y: thisLocY, width: thisLocW, height: thisLocH, duration: 0.375 });
+
+		} else {
+		// } else if (keyJSONnode.currentTarget.className === 'workNavItem') {
+
+			thisLocX = activeDivDims[0] - (typeNav_Ref.current.offsetWidth * 0.5) + (activeDivDims[2] * 0.5);
+			// thisLocX = activeDivDims[0] - (typeNav_Ref.current.offsetWidth * 0.5) + (activeDivDims[2] * 0.2);
+			thisLocY = activeDivDims[1];
+			thisLocW = activeDivDims[2];
+			thisLocH = activeDivDims[3];
+
+			// console.log('');
+			// console.log('typeNav_Ref');
+			// console.log('thisLocX = ' + thisLocX + '     thisLocY = ' + thisLocY);
+			// console.log('thisLocW = ' + thisLocW + '     thisLocH = ' + thisLocH);
+
+			gsap.to([activeTypeDiv_Ref.current], { x: thisLocX, y: thisLocY, width: thisLocW, height: thisLocH, duration: 0.375 });
+		}
+	};
+
+	//#endregion -------------------- const handleFilterKeyChange: setFilterKey / activeEmplDiv_Ref / activeTypeDiv_Ref --------------------
+
+
+
+	//#region ==================== MARK: COMPONENTS ====================
+
+	//#region -------------------- MARK: LoaderImage --------------------
+
+	// const LoaderImage = () => {
+	// // function LoaderImage() {
+
+	// 	// console.log('');
+	// 	// console.log('-------------------- MARK: LoaderImage --------------------');
+
+
+	// 	// const override = css`
+	// 	const override = `
+	// 		color: #ff0000;
+	// 		display: block;
+	// 		margin: 0 auto;
+	// 		border-color: #00ff00;
+	// 	`;
+
+
+	// 	return (
+
+	// 		<div className='loadingContainer' id='loadingContainerID'>
+	// 			<div className='loadingImage sweet-loading' id='loadingImageID'>
+	// 				<FadeLoader css={override} size={500} loading={isLoading} />
+	// 				<br />
+	// 				LOADING...
+	// 			</div>
+	// 		</div>
+	// 	)
+	// }
+
+	//#endregion -------------------- MARK: LoaderImage --------------------
+
+
+	//#region -------------------- MARK: workNav: renderEmployers --------------------
+
+	// const renderEmployers = () => {
+	function RenderEmployers() {
+
+		// console.log('');
+		// console.log('-------------------- MARK: renderEmployers --------------------');
+
+		return filterEmployer.map((e) =>
+
+			<div className={e.logopath !== '#' ? 'workNavItemLogo' : 'workNavItem'} id={e.album_id + '_NavID'} key={e.album_index} onClick={handleFilterKeyChange(e.album_id)}>
+			{/* <div className={e.logopath !== '#' ? 'workNavItemLogo' : 'workNavItem'} id={e.album_id + '_NavID'} key={e.album_index} onClick={handleFilterKeyChange(e.album_id)} ref={employerNav_Ref}> */}
+				{e.logopath !== '#' ? <img className='workNavLogo' src={remoteLoc + e.logopath} alt={e.employer} /> : e.employer}
+			</div>
+
+			// <div className={e.logopath !== '#' ? 'workNavItemLogo' : 'workNavItem'} id={e.album_id + 'NavID'} key={e.album_index} onClick={handleFilterKeyChange(e.album_id)} data-filter=".kiehls">
+			// 	{e.logopath !== '#' ? <img className='workNavLogo' src={remoteLoc + e.logopath} alt={e.employer} /> : e.employer}
+			// </div>
+
+			// <div className={e.logopath !== '#' ? 'workNavItemLogo' : 'workNavItem'} id={e.album_id + 'NavID'} key={e.album_index}>
+			// 	{e.logopath !== '#' ? <img className='workNavLogo' src={remoteLoc + e.logopath} alt={e.employer} /> : e.employer}
+			// </div>
+		);
+	};
+
+	//#endregion -------------------- MARK: workNav: renderEmployers --------------------
+
+
+	//#region -------------------- MARK: workNav: renderFilters --------------------
+
+	// const renderFilters = () => {
+	function RenderFilters() {
+
+		// console.log('');
+		// console.log('-------------------- MARK: renderFilters --------------------');
+
+		return filterType.map((e) =>
+			<div className='workNavItem' id={e.label + '_NavID'} key={e.key} onClick={handleFilterKeyChange(e.value)}>{e.label}</div>
+			// <div className='workNavItem' id={e.label + 'NavID'} key={e.key}>{e.label}</div>
+		);
+	};
+
+	//#endregion -------------------- MARK: workNav: renderFilters --------------------
+
+
+	//#region -------------------- MARK: renderElements: workItem[s] --------------------
+
+	const renderElements = () => { 
+	// function RenderElements() { 
+
+		// console.log('');
+		// console.log('-------------------- renderElements --------------------');
+
+		// return workData.filter((isSrc) => isSrc.src !== '#').map((workItem, index) =>
+		return workData.filter((isSrc) => isSrc.src !== '#').filter((isVisible) => isVisible.visiblity).map((workItem, index) =>
+
+			<div 
+				// className={`workItem ${workItem.format} ${workItem.album_id} masonryWidth${workItem.masonryWidth} masonryHeight${workItem.masonryHeight}`}
+				className={`workItem ${workItem.format} ${workItem.album_id} masonryWidth${workItem.masonryWidth}`}
+				// id={workItem.album_id + 'DivID' + index}
+				id={workItem.album_id + '_' + workItem.image_index + '_ID'}
+				key={index}
+				// onClick={(event) => loadContent(event, workItem)}
+				// onClick={workItem.availability ? (event) => loadContent(event, workItem) : undefined}
+				onClick={workItem.link !== '#' ? (event) => loadContent(event, workItem) : undefined}
+				// style={{ cursor: workItem.availability && 'pointer'}}
+				style={{ cursor: workItem.availability && 'pointer' }}
+				// style={{ cursor: workItem.link !== '#' && 'pointer' }}
+			>
+
+				<img
+					src={remoteLoc + workItem.album_id + '/sl/' + workItem.src}
+					alt={'workItem: ' + workItem.album_id}
+				/>
+
+				<div className='itemInfo'>
+					{/* <h3 className='masonry-title'>{employerData[workItem.album_index].employer}</h3>
+					<p className='masonry-description'>{workItem.caption}</p> */}
+					<h3>{employerData[workItem.album_index].employer}</h3>
+					<p>{workItem.caption}</p>
+					{/* <p>{workItem.caption} - {workItem.format}</p> */}
+				</div>
+
+			</div>
+		);
+	};
+
+	//#endregion -------------------- MARK: renderElements: workItem[s] --------------------
+
+
+	//#region -------------------- MARK: carousel REF: --------------------
+
+
+
+	//#endregion -------------------- MARK: carousel REF: --------------------
+
+	//#endregion ==================== MARK: COMPONENTS ====================
+
+
+	// workNavIN.play();
+
+
+	return (
+		<>
+			<div className='isotopeContainer'>
+
+			{/* #region ------------------------- MARK: workNavBar ------------------------- */}
+
+				<div className='workNavContainer' id='workNavContainerID'>
+					{/* <div className='workNavBar' id='workNavBarID'> */}
+					<div className='workNavBar' id='workNavBarID' ref={workNav_Ref}>
+
+						{/* <div className='activeEmplDiv' id='activeEmplDivID'></div> */}
+
+						{/* <div className='employerNav' id='employerNavID'> */}
+						<div className='employerNav' id='employerNavID' ref={employerNav_Ref}>
+							{/* <div className='activeEmplDiv' id='activeEmplDivID'></div> */}
+							<div className='activeEmplDiv' id='activeEmplDivID' ref={activeEmplDiv_Ref}></div>
+							<RenderEmployers />
+						</div>
+
+						{/* <div className='typeNav' id='typeNavID'> */}
+						<div className='typeNav' id='typeNavID' ref={typeNav_Ref}>
+							{/* <div className='activeTypeDiv' id='activeTypeDivID'></div> */}
+							<div className='activeTypeDiv' id='activeTypeDivID' ref={activeTypeDiv_Ref}></div>
+							<RenderFilters />
+						</div>
+
+						<div className='toggleNav' id='toggleNavID' onClick={() => { setWorkNavToggleBtn(!workNavToggleBtn); }} ref={toggleNav_Ref}>
+							{/* <div className='toggleBtn' id='toggleBtnID' onClick={() => { setWorkNavToggleBtn(!workNavToggleBtn); }} ref={toggleBtn_Ref}> */}
+							<div className='toggleBtn' id='toggleBtnID' ref={toggleBtn_Ref}>
+								{workNavToggleText}
+								{/* <span className='toggleText'>{workNavToggleText}</span> */}
+								{/* <div className='toggleText'>ReactJS v{React.version}</div> */}
+							</div>
+						</div>
+
+						{/* <div className='navToggleBtn' id='navToggleBtnID'>
+							<span>{workNavToggleText}</span>
+						</div> */}
+
+					</div>
+				</div>
+
+			{/* #endregion ------------------------- MARK: workNavBar ------------------------- */}
+
+
+			{/* #region ------------------------- MARK: galleryContainer ------------------------- */}
+
+				{/* <div className='galleryContainer' id='galleryContainerID'> */}
+				<div className='galleryContainer' id='galleryContainerID' ref={galleryContainer_Ref}>
+
+					{renderElements()}
+					{/* <LoaderImage /> */}
+
+					{/* {isLoading ? <LoaderImage /> : renderElements()} */}
+
+					{/* <Suspense fallback={<LoaderImage />}>
+						{renderElements()}
+					</Suspense> */}
+
+
+				{/* #region ------------------------- MARK: BANNERS: REACT ------------------------- */}
+
+					{/* <div className='bannerContainer' id='bannerContainerID'> */}
+					<div className='bannerContainer' id='bannerContainerID' ref={bannerContainer_Ref}>
+						{bannerShow}
+					</div>
+
+				{/* #endregion ------------------------- MARK: BANNERS: REACT ------------------------- */}
+
+
+				{/* #region ------------------------- MARK: BANNERS: IFRAME ------------------------- */}
+
+					<iframe
+						// className='banneriFrameClosed'
+						// className='banneriFrame'
+						className={banneriFrameOpen === true ? 'banneriFrameOpen' : 'banneriFrameClosed'}
+						id='banneriFrameID'
+						name='banneriFrame'
+						title='banneriFrame'
+						ref={banneriFrame_Ref}
+					/>
+
+				{/* #endregion ------------------------- MARK: BANNERS: IFRAME ------------------------- */}
+
+
+				{/* #region ------------------------- MARK: WEB: IFRAME ------------------------- */}
+
+					{/* <div className='webiFrameContainer webiFrameContainerOpen' id='webiFrameContainerID'> */}
+					<div className={webiFrameOpen === true ? 'webiFrameContainer webiFrameContainerOpen' : 'webiFrameContainer webiFrameContainerClosed'} id='webiFrameContainerID' onClick={() => { clearContent(); }} ref={iframeContainer_Ref}>
+
+						<iframe
+							className='webiFrame' 
+							id='webiFrameID'
+							name='webiFrame'
+							title='webiFrame'
+							ref={webiFrame_Ref}
+						/>
+
+						<button className='closeModalBtn closeModalBtnShow'> Close </button>
+
+					</div>
+
+				{/* #endregion ------------------------- MARK: WEB: IFRAME ------------------------- */}
+
+
+				{/* #region ------------------------- VIDEO PLAYER ------------------------- */}
+
+					<div className={videoOpen === true ? 'videoContainer videoContainerOpen' : 'videoContainer videoContainerClosed'} id='videoContainerID' onClick={() => { clearContent(); }} ref={videoContainer_Ref}>
+
+						<ReactPlayer
+							className='videoPlayer'
+							id='videoPlayerID'
+							// width='80%'
+							width={videoWidth} 
+							height={videoHeight} 
+							url={loadedVideo}
+							ref={videoPlayer_Ref}
+
+							config={{
+								vimeo: {
+									playerOptions: { 
+										autoplay: true, 
+										loop: true, 
+										// color: '00ffff',
+										// width: 1800,
+										// maxwidth: 2400,
+										// width: window.innerWidth * 0.8,
+									},
+								}
+							}}
+						/>
+
+						<button className={videoOpen ? 'closeModalBtn closeModalBtnShow' : 'closeModalBtn closeModalBtnHide'} onClick={() => { clearContent(); }}> Close </button>
+
+					</div>
+
+				{/* #region ------------------------- VIDEO PLAYER ------------------------- */}
+
+				</div>
+
+			{/* #rendegion ------------------------- MARK: galleryContainer ------------------------- */}
+
+			</div>
+		</>
+	)
+}
+
+// export default Work;

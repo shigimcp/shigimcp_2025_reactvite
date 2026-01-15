@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" enable-background="new 0 0 100 100">
+    <g>
+        <path id="btnPlayID" fill="#ffffff" d="M50 10c22.056 0 40 17.944 40 40S72.056 90 50 90 10 72.056 10 50s17.944-40 40-40m0-10C22.386 0 0 22.386 0 50s22.386 50 50 50 50-22.386 50-50S77.614 0 50 0zM72.5 50l-35 30V20z"/>
+    </g>
+</svg>
