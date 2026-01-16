@@ -1455,8 +1455,8 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 
 		//#region -------------------- FINDIN' OUT SH*T --------------------
 
-		console.log('');
-		console.log('-------------------- useEffect: browserDetect => workNavIN, workNavTL --------------------');
+		// console.log('');
+		// console.log('-------------------- useEffect: browserDetect => workNavIN, workNavTL --------------------');
 		// console.log('browserDetect = ' + browserDetect);
 
 		// // const ua = new UAParser().getResult();

@@ -50,7 +50,8 @@ const skillData = myData[3];
 // #region ==================== MARK: EmployerItem ====================
 
 // const localImgLoc = '/logos_pleaseCompress/';
-const remoteImgLoc = '/logos_pleaseCompress/';
+// const remoteImgLoc = '/logos_pleaseCompress/';
+const remoteImgLoc = '/logos_compressed/';
 // const remoteImgLoc = 'https://www.shigimcp.com/assets/img/';
 // const remoteImgLoc = 'https://www.shigimcp.com/assets/img/resume/';
 

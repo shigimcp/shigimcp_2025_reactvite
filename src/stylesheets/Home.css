@@ -69,11 +69,11 @@
 	/* position: absolute; */
 	/* top: 0px; */
 	/* top: 10px; */
-	/* top: -200px; */
+	top: -370px;
 	/* top: calc(-1 * (var(--header-height) + var(--navBar-height))); */
 	/* top: calc(-1 * (var(--header-height) + var(--navBar-height) + 5px)); */
 	/* top: calc(-1 * (var(--header-height) + var(--navBar-height) + 10px)); */
-	top: calc(-2 * (var(--header-height) + var(--navBar-height) + 30px));
+	/* top: calc(-2 * (var(--header-height) + var(--navBar-height) + 30px)); */
 
 	canvas {
 		/* border: 2px solid #ff0000; */

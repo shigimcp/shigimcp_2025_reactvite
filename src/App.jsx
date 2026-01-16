@@ -211,10 +211,10 @@ function App() {
 		// setFilterKey('*');
 		setFilterKey('null');
 
-		console.log('');
-		console.log('==================== COMPONENT: App.jsx ====================');
-		console.log('***** FUNCTION: toggleVisibility TRIGGERED! *****');
-		console.log('isChipVisible = ' + isChipVisible);
+		// console.log('');
+		// console.log('==================== COMPONENT: App.jsx ====================');
+		// console.log('***** FUNCTION: toggleVisibility TRIGGERED! *****');
+		// console.log('isChipVisible = ' + isChipVisible);
 	};
 
 	//#endregion -------------------- MARK: CONST: toggleVisibility --------------------

@@ -107,6 +107,8 @@ export default function Home() {
 
 			{/* <div> */}
 
+			{/* #region -------------------- MARK: homeHed -------------------- */}
+
 				<div className='homeHed'>
 					<h1>Shigeru McPherson</h1>
 					{/* <h2>digital designer &bull; art director</h2> */}
@@ -115,13 +117,20 @@ export default function Home() {
 					<h3>(and not afraid of writing code...!)</h3>
 					<div className='note'>
 						<b>NOTE:</b> This is my sandbox.
-						<br />
-						(You can tell, because... <i>why?! ===&#62;)</i>
 						{/* <br /> */}
-						{/* <br /><br /> */}
+						{/* This is my sandbox. */}
+						<br />
+						This will <i>always</i> be a work in progress...
+						<br />
+						(You can tell, because... <i>WHY?! ===&#62;)</i>
+						{/* <br /> */}
+						<br /><br />
 						{/* <i>Please, be forgiving... LOL!</i> */}
+						Please, be kind... <i>LOL!</i>
 					</div>
 				</div>
+
+			{/* #endregion -------------------- homeHed -------------------- */}
 
 			{/* #region -------------------- MARK: REF: https://www.youtube.com/watch?v=DPl34H2ISsk -------------------- */}
 

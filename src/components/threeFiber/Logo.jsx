@@ -107,8 +107,8 @@ export default function Logo() {
 
 	//#region ==================== FINDIN' OUT SH*T ====================
 
-	console.log('');
-	console.log('==================== COMPONENT: Logo.jsx ====================');
+	// console.log('');
+	// console.log('==================== COMPONENT: Logo.jsx ====================');
 
 	// // console.log('');
 	// console.log('props = ' + props);
