@@ -51,7 +51,8 @@ const skillData = myData[3];
 
 // const localImgLoc = '/logos_pleaseCompress/';
 // const remoteImgLoc = '/logos_pleaseCompress/';
-const remoteImgLoc = '/logos_compressed/';
+// const remoteImgLoc = '/logos_compressed/';
+const remoteImgLoc = '/shigimcp2025_reactvite/logos_compressed/';
 // const remoteImgLoc = 'https://www.shigimcp.com/assets/img/';
 // const remoteImgLoc = 'https://www.shigimcp.com/assets/img/resume/';
 
