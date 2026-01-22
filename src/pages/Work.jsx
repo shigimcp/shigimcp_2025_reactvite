@@ -30,7 +30,7 @@ import FadeLoader from 'react-spinners/FadeLoader';
 import ReactPlayer from 'react-player'
 
 // import '../stylesheets/Global.css';
-import '../stylesheets/App.css';
+// import '../stylesheets/App.css';
 import '../stylesheets/Work.css';
 
 // import myData from '../data/MyData';
@@ -128,16 +128,24 @@ let workNavHeight;
 
 //#region -------------------- MARK: DATA --------------------
 
+//#region -------------------- MARK: FINDIN' OUT SH*T --------------------
+
 // console.log('');
 // // console.log('myData = ' + myData);
 // console.log('myData = ');
 // console.log(myData);
+
+//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
 
 // let employerData = myData[0];
 // let workData = myData[1];
 
 let employerData = employers;
 let workData = work;
+
+
+//#region -------------------- MARK: FINDIN' MORE OUT SH*T --------------------
 
 // console.log('');
 // // console.log('employerData = ' + employerData);
@@ -149,6 +157,8 @@ let workData = work;
 // // console.log('workData = ' + workData);
 // console.log('workData = ');
 // console.log(workData);
+
+//#endregion -------------------- FINDIN' MORE OUT SH*T --------------------
 
 //#endregion -------------------- MARK: DATA --------------------
 
@@ -1457,17 +1467,23 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 
 		// console.log('');
 		// console.log('-------------------- useEffect: browserDetect => workNavIN, workNavTL --------------------');
-		// console.log('browserDetect = ' + browserDetect);
+		// // console.log('browserDetect = ' + browserDetect);
 
 		// // const ua = new UAParser().getResult();
 
 		// // console.log('ua = ' + ua);
 		// console.log(ua);
 		// console.log('ua.device.type = ' + ua.device.type);
-	
-		// console.log('workNav_Ref.current.id = ' + workNav_Ref.current.id);
-		// console.log('workNav_Ref.current.getBoundingClientRect().width = ' + workNav_Ref.current.getBoundingClientRect().width);
-		// console.log('workNav_Ref.current.getBoundingClientRect().height = ' + workNav_Ref.current.getBoundingClientRect().height);
+
+		// // console.log('');
+		// // console.log('workNav_Ref.current.id = ' + workNav_Ref.current.id);
+		// // console.log('workNav_Ref.current.getBoundingClientRect().width = ' + workNav_Ref.current.getBoundingClientRect().width);
+		// // console.log('workNav_Ref.current.getBoundingClientRect().height = ' + workNav_Ref.current.getBoundingClientRect().height);
+
+		// console.log('');
+		// console.log('screen.orientation = ' + screen.orientation);
+		// console.log('screen.orientation.type = ' + screen.orientation.type);
+		// console.log('window.matchMedia = ' + window.matchMedia);
 
 		//#endregion -------------------- FINDIN' OUT SH*T --------------------
 
@@ -1482,7 +1498,10 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 		// console.log('workNavHeight = ' + workNavHeight);
 
 
-		if (ua.device.type === undefined) {
+		// if (ua.device.type === undefined) {
+		// if ((ua.device.type === 'mobile') && (workNav_Ref.current.getBoundingClientRect().width >= 1920)) {
+		// if ((ua.device.type === 'mobile') && (workNav_Ref.current.getBoundingClientRect().width >= 1080)) {
+		if ((ua.device.type === 'mobile') && (workNav_Ref.current.getBoundingClientRect().width >= workNav_Ref.current.getBoundingClientRect().height)) {
 
 			// setBrowserDetect('desktop');
 
@@ -2021,14 +2040,15 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 
 	//#region ==================== MARK: COMPONENTS ====================
 
-	//#region -------------------- MARK: workNavContainer: RenderChips: chipItem[s] --------------------
+	//#region -------------------- MARK: chipContainer: RenderChips: chipItem[s] --------------------
 
 	// const RenderChips = () => {
 	function RenderChips() {
 	// function RenderChips({onClick}) {
 	// function RenderChips(props) {
 
-		//#region -------------------- FINDIN' OUT SH*T --------------------
+
+		//#region -------------------- MARK: FINDIN' OUT SH*T --------------------
 
 		// console.log('');
 		// console.log('-------------------- MARK: RenderChips --------------------');
@@ -2036,6 +2056,9 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 		// console.log(employers);
 
 		//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+		//#region -------------------- MARK: DATES --------------------
 
 		// let thisStartMonth = props.dateStart.slice(0, -6);
 		// let thisStartYear = props.dateStart.slice(6);
@@ -2045,6 +2068,28 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 
 		// let thisDateStart = thisStartMonth + '/' + thisStartYear;
 		// let thisDateEnd = thisEndMonth + '/' + thisEndYear;
+
+		// let thisDateStart = Intl.DateTimeFormat('en-US', {
+		// 	// day: '2-digit',
+		// 	month: '2-digit',
+		// 	// year: 'numeric',
+		// 	year: '2-digit',
+		// 	// hour: '2-digit',
+		// 	// minute: '2-digit',
+		// 	// hour12: false
+		// }).format(new Date(employers.date_start));
+
+		// let thisDateEnd = Intl.DateTimeFormat('en-US', {
+		// 	// day: '2-digit',
+		// 	month: '2-digit',
+		// 	// year: 'numeric',
+		// 	year: '2-digit',
+		// 	// hour: '2-digit',
+		// 	// minute: '2-digit',
+		// 	// hour12: false
+		// }).format(new Date(employers.date_end));
+
+		//#endregion -------------------- DATES --------------------
 
 
 		return filterEmployer.map((employer) =>
@@ -2102,15 +2147,30 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 
 				<div className='chipInfo'>
 					<h3>{employerData[employer.album_index].employer}</h3>
-					<p>{employer.caption} {employer.date_start} - {employer.date_end}</p>
+
+					{/* <p>{employer.caption} {employer.date_start} - {employer.date_end}</p> */}
+					{/* <p>{employer.caption} {thisDateStart} - {thisDateEnd}</p> */}
 					{/* {thisDateStart !== thisDateEnd ? <div className='employerDates'>{thisDateStart} - {thisDateEnd}</div> : <div className='employerDates'>{thisDateEnd}</div>} */}
+
+					<p>{employer.caption} {
+						Intl.DateTimeFormat('en-US', {
+							month: '2-digit',
+							year: '2-digit',
+						}).format(new Date(employer.date_start))
+					} - {
+						Intl.DateTimeFormat('en-US', {
+							month: '2-digit',
+							year: '2-digit',
+						}).format(new Date(employer.date_end))
+					}</p>
+
 				</div>
 
 			</div>
 		);
 	};
 
-	//#endregion -------------------- MARK: workNavContainer: RenderChips: chipItem[s] --------------------
+	//#endregion -------------------- MARK: chipContainer: RenderChips: chipItem[s] --------------------
 
 
 	//#region -------------------- MARK: workNavContainer: workNav: RenderEmployers --------------------
@@ -2263,7 +2323,7 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 				<div className='itemInfo'>
 					{/* <h3 className='masonry-title'>{employerData[workItem.album_index].employer}</h3>
 					<p className='masonry-description'>{workItem.caption}</p> */}
-					<h3>{employerData[workItem.album_index].employer}</h3>
+					{/* <h3>{employerData[workItem.album_index].employer}</h3> */}
 					<p>{workItem.caption}</p>
 					{/* <p>{workItem.caption} - {workItem.format}</p> */}
 				</div>
@@ -2530,6 +2590,8 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 			</div>
 
 		{/* #endregion ------------------------- MARK: chipContainer ------------------------- */}
+
+
 
 
 		{/* #region ------------------------- MARK: chipToggleBtn ------------------------- */}

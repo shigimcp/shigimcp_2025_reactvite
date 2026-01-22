@@ -12,6 +12,7 @@ import myData from '../data/MyData';
 
 //#endregion ==================== MARK: IMPORTS ====================
 
+
 //#region ==================== MARK: CONSTANTS ====================
 
 //#region -------------------- DATA --------------------
@@ -47,38 +48,83 @@ const skillData = myData[3];
 
 //#endregion ==================== MARK: CONSTANTS ====================
 
+
 // #region ==================== MARK: EmployerItem ====================
 
 // const localImgLoc = '/logos_pleaseCompress/';
 // const remoteImgLoc = '/logos_pleaseCompress/';
 // const remoteImgLoc = '/logos_compressed/';
-const remoteImgLoc = '/shigimcp2025_reactvite/logos_compressed/';
-// const remoteImgLoc = 'https://www.shigimcp.com/assets/img/';
+// const remoteImgLoc = './logos_compressed/';
+// const remoteImgLoc = '/shigimcp2025_reactvite/logos_compressed/';
+// const remoteImgLoc = '/shigimcp_2025_reactvite/logos_compressed/';
+const remoteImgLoc = 'https://www.shigimcp.com/assets/img/logos_compressed/';
 // const remoteImgLoc = 'https://www.shigimcp.com/assets/img/resume/';
 
 function EmployerItem(props) {
+
+	//#region -------------------- MARK: FINDIN' OUT SH*T --------------------
+
 	// console.log('');
 	// console.log('props.dateStart = ' + props.dateStart + '     props.dateEnd = ' + props.dateEnd);
+
+	//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
 
 	// let thisDateStart = props.dateStart.slice(0, -3);
 	// let thisDateEnd = props.dateEnd.slice(0, -3);
 
-	let thisStartMonth = props.dateStart.slice(0, -6);
-	let thisStartYear = props.dateStart.slice(6);
+	// let thisStartMonth = props.dateStart.slice(0, -6);
+	// let thisStartYear = props.dateStart.slice(6);
 
-	let thisEndMonth = props.dateEnd.slice(0, -6);
-	let thisEndYear = props.dateEnd.slice(6);
+	// let thisEndMonth = props.dateEnd.slice(0, -6);
+	// let thisEndYear = props.dateEnd.slice(6);
 
-	let thisDateStart = thisStartMonth + '/' + thisStartYear;
-	let thisDateEnd = thisEndMonth + '/' + thisEndYear;
+	// let thisDateStart = thisStartMonth + '/' + thisStartYear;
+	// let thisDateEnd = thisEndMonth + '/' + thisEndYear;
+
+
+	// let thisDateStart = new Date(props.dateStart);
+	// let thisDateEnd = new Date(props.dateEnd);
+
+	// let thisDateStart = Intl.DateTimeFormat('en-US').format(new Date(props.dateStart));
+	// let thisDateEnd = Intl.DateTimeFormat('en-US').format(new Date(props.dateEnd));
+
+	let thisDateStart = Intl.DateTimeFormat('en-US', {
+		// day: '2-digit',
+		month: '2-digit',
+		// year: 'numeric',
+		year: '2-digit',
+		// hour: '2-digit',
+		// minute: '2-digit',
+		// hour12: false
+	}).format(new Date(props.dateStart));
+
+	let thisDateEnd = Intl.DateTimeFormat('en-US', {
+		// day: '2-digit',
+		month: '2-digit',
+		// year: 'numeric',
+		year: '2-digit',
+		// hour: '2-digit',
+		// minute: '2-digit',
+		// hour12: false
+	}).format(new Date(props.dateEnd));
+
+	// thisDateStart = Intl.DateTimeFormat('en-US').format(props.dateStart);
+	// thisDateEnd = Intl.DateTimeFormat('en-US').format(props.dateEnd);
+
+
+	//#region -------------------- MARK: FINDIN' OUT MORE SH*T --------------------
 
 	// console.log('');
-	// console.log('thisStartMonth = ' + thisStartMonth + '     thisStartYear = ' + thisStartYear);
-	// console.log('thisEndMonth = ' + thisEndMonth + '     thisEndYear = ' + thisEndYear);
+	// // console.log('thisStartMonth = ' + thisStartMonth + '     thisStartYear = ' + thisStartYear);
+	// // console.log('thisEndMonth = ' + thisEndMonth + '     thisEndYear = ' + thisEndYear);
 	// console.log('thisDateStart = ' + thisDateStart + '     thisDateEnd = ' + thisDateEnd);
 
 	// console.log('');
 	// console.log('props.otherHtml = ' + props.otherHtml);
+
+	//#endregion -------------------- FINDIN' OUT MORE SH*T --------------------
+
 
 	if (props.availability) {
 		return (
@@ -91,7 +137,8 @@ function EmployerItem(props) {
 				<div className='employerInfoContainer'>
 
 					<div className='employerDates'>
-						{thisDateStart !== thisDateEnd ? <div className='employerDates'>{thisDateStart} - {thisDateEnd}</div> : <div className='employerDates'>{thisDateEnd}</div>}
+						{/* {thisDateStart !== thisDateEnd ? <div className='employerDates'>{thisDateStart} - {thisDateEnd}</div> : <div className='employerDates'>{thisDateEnd}</div>} */}
+						{thisDateStart !== thisDateEnd ? <div className='employerDates'>{thisDateStart.toString()} - {thisDateEnd.toString()}</div> : <div className='employerDates'>{thisDateEnd.toString()}</div>}
 					</div>
 
 					<h1>{props.employer}</h1>
@@ -132,6 +179,7 @@ function EmployerItem(props) {
 
 // #endregion ==================== MARK: EmployerItem ====================
 
+
 //#region ==================== MARK: EmployerList ====================
 
 function EmployerList() {
@@ -161,6 +209,7 @@ function EmployerList() {
 
 //#endregion ==================== MARK: EmployerList ====================
 
+
 //#region ==================== MARK: SkillChartItem ====================
 
 function SkillChartItem(props) {
@@ -185,6 +234,7 @@ function SkillChartItem(props) {
 }
 
 //#endregion ==================== MARK: SkillChartItem ====================
+
 
 //#region ==================== MARK: SkillChart ====================
 
@@ -216,6 +266,7 @@ function SkillChart(props) {
 
 //#endregion ==================== MARK: SkillChart ====================
 
+
 //#region ==================== MARK: SkillSet ====================
 
 function SkillSet() {
@@ -240,6 +291,8 @@ function SkillSet() {
 // export default function Resume(props) {
 export default function Resume() {
 
+	//#region ==================== MARK: FINDIN' OUT SH*T ====================
+
 	// console.log('');
 	// console.log('==================== COMPONENT: Resume.jsx ====================');
 
@@ -247,7 +300,11 @@ export default function Resume() {
 	// console.log('props = ' + props);
 	// console.log(props);
 
+	//#endregion ==================== FINDIN' OUT SH*T ====================
+
+
 	// localStorage.setItem('navLoc', locID);
+
 
 	//#region ==================== MARK: ASSETS _Ref ====================
 

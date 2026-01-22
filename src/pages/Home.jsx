@@ -107,32 +107,7 @@ export default function Home() {
 
 			{/* <div> */}
 
-			{/* #region -------------------- MARK: homeHed -------------------- */}
-
-				<div className='homeHed'>
-					<h1>Shigeru McPherson</h1>
-					{/* <h2>digital designer &bull; art director</h2> */}
-					<h2>digital designer &middot; art director</h2>
-					{/* <h2>digital designer &#183; art director</h2> */}
-					<h3>(and not afraid of writing code...!)</h3>
-					<div className='note'>
-						<b>NOTE:</b> This is my sandbox.
-						{/* <br /> */}
-						{/* This is my sandbox. */}
-						<br />
-						This will <i>always</i> be a work in progress...
-						<br />
-						(You can tell, because... <i>WHY?! ===&#62;)</i>
-						{/* <br /> */}
-						<br /><br />
-						{/* <i>Please, be forgiving... LOL!</i> */}
-						Please, be kind... <i>LOL!</i>
-					</div>
-				</div>
-
-			{/* #endregion -------------------- homeHed -------------------- */}
-
-			{/* #region -------------------- MARK: REF: https://www.youtube.com/watch?v=DPl34H2ISsk -------------------- */}
+			{/* #region -------------------- MARK: 3RF LOGO - REF: https://www.youtube.com/watch?v=DPl34H2ISsk -------------------- */}
 
 				<Canvas className='homeCanvas'>
 				{/* <Canvas className = 'homeCanvas' camera = {{ position: [0, 0, 5] }}> */}
@@ -160,7 +135,32 @@ export default function Home() {
 
 				</Canvas>
 
-			{/* #endregion -------------------- REF: https://www.youtube.com/watch?v=DPl34H2ISsk -------------------- */}
+			{/* #endregion -------------------- 3RF LOGO - REF: https://www.youtube.com/watch?v=DPl34H2ISsk -------------------- */}
+
+			{/* #region -------------------- MARK: homeHed -------------------- */}
+
+				<div className='homeHed'>
+					<h1>Shigeru McPherson</h1>
+					{/* <h2>digital designer &bull; art director</h2> */}
+					<h2>digital designer &middot; art director</h2>
+					{/* <h2>digital designer &#183; art director</h2> */}
+					<h3>(and not afraid of writing code...!)</h3>
+					<div className='note'>
+						<b>NOTE:</b> This is my sandbox.
+						{/* <br /> */}
+						{/* This is my sandbox. */}
+						<br />
+						This will <i>always</i> be a work in progress...
+						<br />
+						(You can tell, because... <i>WHY?! ===&#62;)</i>
+						{/* <br /> */}
+						<br /><br />
+						{/* <i>Please, be forgiving... LOL!</i> */}
+						Please, be kind... <i>LOL!</i>
+					</div>
+				</div>
+
+			{/* #endregion -------------------- homeHed -------------------- */}
 
 			{/* </div> */}
 		</>

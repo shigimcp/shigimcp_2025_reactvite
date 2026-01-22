@@ -9,57 +9,6 @@
 } */
 
 
-/* #region ==================== MARK: .homeHed ==================== */
-
-.homeHed {
-	/* border: 2px solid #00ff00; */
-	/* background-color: aqua; */
-
-	/* font-family: AvenirNext-Regular, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-
-	width: var(--body-max-width);
-	/* min-width: var(--body-min-width);
-	max-width: var(--body-max-width); */
-
-	margin: 0 auto;
-	padding: 0;
-
-	position: relative;
-	/* top: 400px; */
-	top: 30vh;
-
-	b {
-		font-family: AvenirNext-DemiBold, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	}
-
-	i {
-		font-family: AvenirNext-Italic, system-ui, Avenir, Helvetica, Arial, sans-serif;
-	}
-
-	h1 {
-		font-size: 5em;
-	}
-
-	h2 {
-		font-size: 3em;
-		line-height: 1em;
-	}
-
-	h3 {
-		font-size: 1.75em;
-		line-height: 2.5em;
-	}
-	.note {
-		font-size: 1.25em;
-		line-height: 1.5em;
-
-		margin-top: 100px;
-	}
-}
-
-/* #endregion ==================== .homeHed ==================== */
-
-
 /* #region ==================== MARK: .homeCanvas => canvas ==================== */
 
 .homeCanvas {
@@ -69,7 +18,9 @@
 	/* position: absolute; */
 	/* top: 0px; */
 	/* top: 10px; */
-	top: -370px;
+	/* top: -285px; */
+	/* top: -370px; */
+	top: calc(var(--header-height) + var(--navBar-height));
 	/* top: calc(-1 * (var(--header-height) + var(--navBar-height))); */
 	/* top: calc(-1 * (var(--header-height) + var(--navBar-height) + 5px)); */
 	/* top: calc(-1 * (var(--header-height) + var(--navBar-height) + 10px)); */
@@ -90,3 +41,71 @@
 }
 
 /* #endregion ==================== canvas ==================== */
+
+
+/* #region ==================== MARK: .homeHed ==================== */
+
+.homeHed {
+	/* border: 2px solid #ff0000; */
+	/* background-color: aqua; */
+
+	/* font-family: AvenirNext-Regular, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+
+	/* width: var(--body-max-width); */
+	/* min-width: var(--body-min-width);
+	max-width: var(--body-max-width); */
+
+	/* margin: 0 auto; */
+	margin: 0 11.25vw;
+	padding: 0;
+
+	/* position: relative; */
+	position: absolute;
+	/* top: 400px; */
+	/* top: 30vh; */
+	top: 31.25vh;
+
+	b {
+		font-family: AvenirNext-DemiBold, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	}
+
+	i {
+		font-family: AvenirNext-Italic, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	}
+
+	h1 {
+		/* font-size: 5em; */
+
+		font-size: 3.75rem;
+	}
+
+	h2 {
+		/* font-size: 3em;
+		line-height: 1em; */
+
+		font-size: 2.5rem;
+		line-height: 2.5rem;
+	}
+
+	h3 {
+		/* font-size: 1.75em;
+		line-height: 2.5em; */
+
+		font-size: 1.75rem;
+		line-height: 3.75rem;
+	}
+
+	.note {
+		/* font-size: 1.25em;
+		line-height: 1.5em; */
+
+		/* font-size: 1.25rem; */
+		/* line-height: 1.5rem; */
+
+		/* margin-top: 100px; */
+		/* margin-top: 150px; */
+		margin-top: 200px;
+	}
+}
+
+/* #endregion ==================== .homeHed ==================== */

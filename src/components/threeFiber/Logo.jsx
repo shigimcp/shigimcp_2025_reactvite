@@ -47,19 +47,6 @@ const remoteGitImageLoc = 'https://raw.githubusercontent.com/shigimcp/threejs-ex
 // #endregion ==================== CONSTANTS / VARS ====================
 
 
-
-// #region ==================== FUNCTIONS ====================
-
-// #endregion ==================== FUNCTIONS ====================
-
-
-
-// #region ==================== LOGOMESH: EXTRUDE - REF: https://muffinman.io/blog/three-js-extrude-svg-path/#update-september-2025 ====================
-
-// #endregion ==================== LOGOMESH: EXTRUDE - REF: https://muffinman.io/blog/three-js-extrude-svg-path/#update-september-2025 ====================
-
-
-
 export default function Logo() {
 
 	// #region -------------------- MARK: SVG load and extrusion --------------------
@@ -144,7 +131,8 @@ export default function Logo() {
 			{/* <group scale={0.05} rotation={[Math.PI * 1, Math.PI * 0.125, Math.PI * 0.125]} position={[-2.5, 1.375, 0]}> */}
 			{/* <group scale={0.05} rotation={[Math.PI * 1, 0, 0]} position={[-2.5, 1.375, 0]} ref={group_Ref}> */}
 			{/* <group scale={0.05} rotation={[Math.PI * 1, 0, 0]} position={[0, 0, 0]} ref={group_Ref}> */}
-			<group scale={0.05} rotation={[Math.PI * 1, 0, 0]} position={[2.5, 0.375, 0]} ref={group_Ref}>
+			{/* <group scale={0.05} rotation={[Math.PI * 1, 0, 0]} position={[2.5, 0.375, 0]} ref={group_Ref}> */}
+			<group scale={0.05} rotation={[Math.PI * 1, 0, 0]} position={[2.25, 0.375, 0]} ref={group_Ref}>
 
 				{shapes.map((shape, i) => (
 

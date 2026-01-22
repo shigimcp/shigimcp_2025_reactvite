@@ -30,7 +30,8 @@
 	.haiku {
 		/* border: 2px solid #00ffff; */
 
-		font-size: 15px;
+		/* font-size: 15px; */
+		font-size: 1rem;
 		font-weight: normal;
 		text-align: center;
 		/* letter-spacing: 0.0625px; */
@@ -42,7 +43,8 @@
 		padding: 0 0 25px 0;
 
 		h1 {
-			font-size: 2em;
+			/* font-size: 2em; */
+			font-size: 2rem;
 			font-weight: inherit;
 			/* letter-spacing: 0.005em; */
 			/* line-height: 1.125em; */
@@ -51,7 +53,8 @@
 		}
 
 		h2 {
-			font-size: 1.625em;
+			/* font-size: 1.625em; */
+			font-size: 1.625rem;
 			font-weight: inherit;
 			/* letter-spacing: 0.025em; */
 			/* line-height: inherit; */
@@ -59,7 +62,8 @@
 		}
 
 		h3 {
-			font-size: 1.375em;
+			/* font-size: 1.375em; */
+			font-size: 1.375rem;
 			font-weight: normal;
 			/* letter-spacing: 0.025em; */
 			/* line-height: inherit; */
@@ -67,7 +71,8 @@
 		}
 
 		.credit {
-			font-size: 1em;
+			/* font-size: 1em; */
+			font-size: 1rem;
 			/* letter-spacing: 0.025em; */
 			line-height: 2.5em;
 
@@ -75,7 +80,8 @@
 		}
 
 		.plea {
-			font-size: 0.875em;
+			/* font-size: 0.875em; */
+			font-size: 0.875rem;
 			/* letter-spacing: 0.0375em; */
 			line-height: 0.125em;
 
@@ -193,11 +199,13 @@
 		font-family: AnimeAceItalic, Arial, Helvetica, sans-serif;
 		/* font-size: 12px;
 		line-height: 17.5px; */
-		font-size: 17.5px;
-		line-height: 25px;
+		/* font-size: 17.5px;
+		line-height: 25px; */
 		/* font-size: 1.625em;
 		line-height: 1em; */
+
 		text-align: center;
+
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 
@@ -214,6 +222,44 @@
 		/* position: relative; */
 		/* position: absolute; */
 		/* z-index: 999; */
+
+		p, p1, p2 {
+			letter-spacing: 0.025rem;
+		}
+
+		p {
+			/* font-size: 1rem; */
+			font-size: 0.9375rem;
+			line-height: 1.5rem;
+
+			/* margin: 0.5625rem 0 0 0; */
+			/* margin: 0 0 0.5625rem 0; */
+			margin: 0 0 0.5625rem 0.625rem;
+			/* padding: 0; */
+		}
+
+		p1, p2 {
+			font-size: 0.8125rem;
+			line-height: 1.25rem;
+		}
+
+		p1 {
+			/* font-size: 0.8125rem;
+			line-height: 1.25rem; */
+
+			/* margin: 0.5625rem 0 0 0; */
+			margin: 0 0 0.5625rem 0;
+			/* padding: 0; */
+		}
+
+		p2 {
+			/* font-size: 0.8125rem;
+			line-height: 1.25rem; */
+
+			margin: 0.5625rem 0 0 0;
+			/* margin: 0 0 0.5625rem 0; */
+			/* padding: 0; */
+		}
 
 		.thoughtBubbleSvg {
 			/* border: 2px solid #0000ff; */
@@ -247,12 +293,17 @@
 			/* width: 77.5%; */
 			/* height: 60%; */
 
+			width: 82.5%;
 			/* width: 80%; */
-			width: 75%;
+			/* width: 75%; */
 			height: 60%;
 
-			/* margin: 0; */
-			/* padding: 0; */
+			margin: 0;
+			padding: 0;
+
+			/* margin: 0.28125rem 0 0 0; */
+			/* margin: 0 0 0.5625rem 0; */
+			/* margin: 0 0 0.28125em 0; */
 
 			display: flex;
 			flex-direction: column;
@@ -261,13 +312,17 @@
 
 			position: absolute;
 
+			/* top: 19.375%; */
 			/* top: 20%; */
-			top: 21%;
+			/* top: 21%; */
 			/* top: 21.25%; */
 			/* top: 21.5%; */
-			/* top: 19.375%; */
-			left: 13.125%;
-			/* left: 11.25%; */
+			top: 22.5%;
+
+			/* left: 13.125%; */
+			left: 11.25%;
+			/* left: 10.625%; */
+			/* left: 10%; */
 			/* left: 8.75%; */
 
 			p {
@@ -329,10 +384,11 @@
 		font-family: AnimeAceItalic, Arial, Helvetica, sans-serif;
 		/* font-size: 12px; */
 		/* font-size: 0.625rem; */
-		font-size: 17.5px;
-		line-height: 25px;
+		/* font-size: 17.5px;
+		line-height: 25px; */
+
 		text-align: center;
-		/* letter-spacing: 0.025em; */
+		letter-spacing: 0.025rem;
 		/* color: #666666; */
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -380,9 +436,13 @@
 			/* border: 2px solid #ff00ff; */
 			width: 100%;
 
-			margin: 0;
-			/* padding: 0; */
-			padding: 0 0 0 1.25%;
+			font-size: 0.875rem;
+			line-height: 1.375rem;
+
+			/* margin: 0; */
+			margin: -1.25% 0 0 1.5%;
+			padding: 0;
+			/* padding: 0 0 0 1.25%; */
 
 			position: inherit;
 			/* top: 50%; */
