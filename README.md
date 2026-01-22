@@ -1,4 +1,4 @@
-# shigimcp2025-reactvite (in-progress)
+# shigimcp_2025_reactvite (in-progress)
 sandboxing shigimcp portfolio website [to resolve REACT 19 breaking changes]... again
 
 ==================================================
