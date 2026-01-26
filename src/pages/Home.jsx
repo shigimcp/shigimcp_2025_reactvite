@@ -83,16 +83,43 @@ import Logo from '../components/threeFiber/Logo';
 
 
 
-export default function Home() {
+// export default function Home() {
+export default function Home(props) {
+// export default function Home({isLargeScreen}) {
+// export default function Home({islargescreen}) {
 
 	//#region ==================== FINDIN' OUT SH*T ====================
 
+	console.log('');
+	console.log('==================== COMPONENT: Home.jsx ====================');
+
 	// console.log('');
-	// console.log('==================== COMPONENT: Home.jsx ====================');
+	console.log('props = ' + props);
+	console.log(props);
 
 	// // console.log('');
-	// console.log('props = ' + props);
-	// console.log(props);
+	// console.log('isLargeScreen = ' + isLargeScreen);
+	// console.log(isLargeScreen);
+
+	// // console.log('');
+	// console.log('typeof isLargeScreen = ' + typeof isLargeScreen);
+	// console.log(typeof isLargeScreen);
+
+	// // console.log('');
+	// console.log('islargescreen = ' + islargescreen);
+	// console.log(islargescreen);
+
+	// // console.log('');
+	// console.log('typeof islargescreen = ' + typeof islargescreen);
+	// console.log(typeof islargescreen);
+
+	// // console.log('');
+	// console.log('props.isLargeScreen = ' + props.isLargeScreen);
+	// console.log(props.isLargeScreen);
+
+	// // console.log('');
+	// console.log('typeof props.isLargeScreen = ' + typeof props.isLargeScreen);
+	// console.log(typeof props.isLargeScreen);
 
 	// // console.log('');
 	// console.log('logoSVG = ' + logoSVG);
@@ -139,24 +166,35 @@ export default function Home() {
 
 			{/* #region -------------------- MARK: homeHed -------------------- */}
 
-				<div className='homeHed'>
+				{/* <div className='homeHed'> */}
+				{/* <div className='homeHed homeHed_d'> */}
+				{/* <div className='homeHed homeHed_l'> */}
+				{/* <div className='homeHed homeHed_m'> */}
+				{/* <div className={isLargeScreen ? 'homeHed homeHed_d' : 'homeHed homeHed_l'}> */}
+				{/* <div className={islargescreen ? 'homeHed homeHed_d' : 'homeHed homeHed_l'}> */}
+				<div className={props.isLargeScreen ? 'homeHed homeHed_d' : 'homeHed homeHed_l'}>
 					<h1>Shigeru McPherson</h1>
 					{/* <h2>digital designer &bull; art director</h2> */}
 					<h2>digital designer &middot; art director</h2>
 					{/* <h2>digital designer &#183; art director</h2> */}
 					<h3>(and not afraid of writing code...!)</h3>
 					<div className='note'>
-						<b>NOTE:</b> This is my sandbox.
-						{/* <br /> */}
-						{/* This is my sandbox. */}
-						<br />
-						This will <i>always</i> be a work in progress...
-						<br />
-						(You can tell, because... <i>WHY?! ===&#62;)</i>
-						{/* <br /> */}
-						<br /><br />
-						{/* <i>Please, be forgiving... LOL!</i> */}
-						Please, be kind... <i>LOL!</i>
+						<p>
+							<b>NOTE:</b> This is my sandbox.
+							{/* <br /> */}
+							{/* This is my sandbox. */}
+							<br />
+							This will <i>always</i> be a work in progress...
+							<br />
+							(You can tell, because... <i>WHY?! &#128514; ===&#62;)</i>
+						</p>
+						<p>
+							{/* <br /> */}
+							{/* <br /><br /> */}
+							{/* <i>Please, be forgiving... LOL!</i> */}
+							{/* Please, be kind... <i>LOL!</i> */}
+							Please, be kind... &#128540;
+						</p>
 					</div>
 				</div>
 

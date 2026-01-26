@@ -19,7 +19,8 @@
 	line-height: 14px; */
 
 	/* width: 80vw; */
-	width: 100vw;
+	width: 90vw;
+	/* width: 100vw; */
 	/* height: auto; */
 
 	margin: 0 auto;
@@ -63,7 +64,11 @@
 	.masonryWidth1 {
 		/* width: calc(4.16666667vw - 25px); */
 		/* width: calc(8.33333333vw - 25px); */
-		width: calc(16.6666666666667vw - 25px);
+		/* width: calc(10vw - 25px); */
+		width: calc(15vw - 20px);
+		/* width: calc(16.25vw - 25px); */
+		/* width: calc(16.6666666666667vw - 25px); */
+		/* width: calc(20vw - 25px); */
 		/* width: calc(33.3333333333333vw - 25px); */
 		/* width: calc(66.6666666666667vw - 25px); */
 
@@ -90,7 +95,10 @@
 		/* width: calc(4.16666667vw - 25px); */
 		/* width: calc(8.33333333vw - 25px); */
 		/* width: calc(16.6666666666667vw - 25px); */
-		width: calc(33.3333333333333vw - 25px);
+		/* width: calc(20vw - 25px); */
+		/* width: calc(22.5vw - 25px); */
+		width: calc(30vw - 25px);
+		/* width: calc(33.3333333333333vw - 25px); */
 		/* width: calc(66.6666666666667vw - 25px); */
 
 		/* width: calc(10vw - 25px); */
@@ -260,18 +268,21 @@
 
 				/* font-size: 0.9375em; */
 
-				/* font-size: 0.9375rem; */
+				font-size: 0.9375rem;
 
 				padding: 5px 0 0 0;
 			}
 
 			p {
-				font-family: AvenirNext-Medium, system-ui, Helvetica, Arial, sans-serif;
+				font-family: AvenirNext-Regular, system-ui, Helvetica, Arial, sans-serif;
+				/* font-family: AvenirNext-Medium, system-ui, Helvetica, Arial, sans-serif; */
 
 				/* font-size: 0.8375em; */
 
-				font-size: 0.875rem;
 				/* font-size: 1rem; */
+				/* font-size: 0.875rem; */
+				font-size: 0.8125rem;
+				/* line-height: 0.875rem; */
 			}
 		}
 	}
@@ -599,7 +610,7 @@
 			/* line-height: 1rem; */
 
 			/* width: calc(var(--body-min-width) - 150px); */
-			height: inherit;
+			/* height: inherit; */
 			/* height: var(--navBar-height); */
 			/* height: calc(var(--navBar-height) * 1.25); */
 
@@ -755,6 +766,7 @@
 			/* width: calc(var(--body-min-width) - 160px); */
 			width: calc(var(--body-min-width) - 180px);
 			/* width: calc(var(--body-min-width) - 250px); */
+			height: inherit;
 
 			/* margin-right: 250px; */
 			/* padding-right: 150px; */
@@ -797,6 +809,8 @@
 			/* width: 35%; */
 			width: 40%;
 			/* width: 50%; */
+			/* height: var(--workNav-height); */
+			height: calc(var(--workNav-height) * 0.75);
 
 			/* display: none; */
 
@@ -867,9 +881,10 @@
 			/* right: var(--body-min-width); */
 			/* right: calc(var(--body-min-width) * 2.0); */
 			/* right: var(--workNav-width); */
-			right: calc(var(--workNav-width) - 160px);
-			/* right: calc(var(--workNav-width) + 340px); */
 			/* right: calc(var(--workNav-width) - 100px); */
+			/* right: calc(var(--workNav-width) - 160px); */
+			right: calc(var(--workNav-width) - 175px);
+			/* right: calc(var(--workNav-width) + 340px); */
 			/* right: var(--body-max-width); */
 			/* right: 100vw; */
 
@@ -934,7 +949,7 @@
 	/* max-width: 80vw; */
 	/* max-width: 1400px; */
 	/* max-width: 1440px; */
-	max-width: var(--body-min-width);
+	/* max-width: var(--body-min-width); */
 	/* height: 50vh; */
 	/* height: var(--workNav-height); */
 	/* height: var(--navBar-height); */
@@ -976,8 +991,8 @@
 	/* top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height)); */
 	/* top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) + 20px); */
 	/* top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) - 15px); */
-	top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) - 20px);
-	/* top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) - 30px); */
+	/* top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) - 20px); */
+	top: calc(var(--header-height) + var(--navBar-height) + var(--workNav-height) - 30px);
 	/* top: calc(var(--header-height) + var(--navBar-height)); */
 	/* top: calc(var(--header-height) + var(--workNav-height)); */
 	/* top: calc(var(--header-height) + var(--workNav-height) - 10px); */
@@ -1114,6 +1129,15 @@
 	}
 
 	/* #endregion - - - - - - - - - - - MARK: .chipItem - - - - - - - - - - -  */
+}
+
+.chipContainer_d {
+	min-width: var(--body-max-width);
+	max-width: 75vw;
+}
+
+.chipContainer_l {
+	max-width: var(--body-min-width);
 }
 
 /* #endregion -------------------- MARK: .chipContainer - REF: https://packery.metafizzy.co/layout & https://codepen.io/desandro/pen/xZjOXq -------------------- */

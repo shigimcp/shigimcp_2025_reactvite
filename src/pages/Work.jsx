@@ -10,8 +10,8 @@ import { useEffect } from 'react';
 
 // import { isBrowser } from "react-device-detect";
 
-// REF: https://www.youtube.com/watch?v=PMXUCNzthQU&t=508s => https://www.npmjs.com/package/ua-parser-js => https://github.com/faisalman/ua-parser-js => https://docs.uaparser.dev/api/main/overview.html
-import { UAParser } from 'ua-parser-js';
+// // REF: https://www.youtube.com/watch?v=PMXUCNzthQU&t=508s => https://www.npmjs.com/package/ua-parser-js => https://github.com/faisalman/ua-parser-js => https://docs.uaparser.dev/api/main/overview.html
+// import { UAParser } from 'ua-parser-js';
 
 import { gsap } from 'gsap';
 
@@ -77,7 +77,7 @@ import JBJA_10263 from '../assets/images/ea/banners/CR_10263_J_by_JENNIFER_ANIST
 const remoteLoc = 'https://www.shigimcp.com/assets/img/';
 const videoLoc = 'https://vimeo.com/';
 
-const ua = new UAParser().getResult();
+// const ua = new UAParser().getResult();
 
 // console.log('ua = ' + ua);
 // console.log(ua);
@@ -337,7 +337,8 @@ const workNavTL = new gsap.timeline().pause();
 // export default function Work({chipvisibility, handlechiptoggle}) {
 // export default function Work({isChipVisible, setIsChipVisible}) {
 // export default function Work({isChipVisible, setIsChipVisible, toggleVisibility}) {
-export default function Work({isChipVisible, setIsChipVisible, filterKey, setFilterKey}) {
+// export default function Work({isChipVisible, setIsChipVisible, filterKey, setFilterKey}) {
+export default function Work({isLargeScreen, isChipVisible, setIsChipVisible, filterKey, setFilterKey}) {
 
 // const Work = ({chipVisibility, setChipVisibility}) => {
 // export default function Work({chipVisibility}) {
@@ -368,12 +369,20 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 
 	//#region ==================== FINDIN' OUT SH*T ====================
 
-	// console.log('');
-	// console.log('==================== COMPONENT: Work.jsx ====================');
+	console.log('');
+	console.log('==================== COMPONENT: Work.jsx ====================');
 
 	// // console.log('');
 	// console.log('props = ' + props);
 	// console.log(props);
+
+	// console.log('');
+	console.log('isLargeScreen = ' + isLargeScreen);
+	console.log(isLargeScreen);
+
+	// console.log('');
+	console.log('typeof isLargeScreen = ' + typeof isLargeScreen);
+	console.log(typeof isLargeScreen);
 
 	// console.log('');
 	// console.log('isBrowser = ' + isBrowser);
@@ -1501,7 +1510,8 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 		// if (ua.device.type === undefined) {
 		// if ((ua.device.type === 'mobile') && (workNav_Ref.current.getBoundingClientRect().width >= 1920)) {
 		// if ((ua.device.type === 'mobile') && (workNav_Ref.current.getBoundingClientRect().width >= 1080)) {
-		if ((ua.device.type === 'mobile') && (workNav_Ref.current.getBoundingClientRect().width >= workNav_Ref.current.getBoundingClientRect().height)) {
+		// if ((ua.device.type === 'mobile') && (workNav_Ref.current.getBoundingClientRect().width >= workNav_Ref.current.getBoundingClientRect().height)) {
+		if (workNav_Ref.current.getBoundingClientRect().width >= workNav_Ref.current.getBoundingClientRect().height) {
 
 			// setBrowserDetect('desktop');
 
@@ -2323,7 +2333,7 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 				<div className='itemInfo'>
 					{/* <h3 className='masonry-title'>{employerData[workItem.album_index].employer}</h3>
 					<p className='masonry-description'>{workItem.caption}</p> */}
-					{/* <h3>{employerData[workItem.album_index].employer}</h3> */}
+					<h3>{employerData[workItem.album_index].employer}</h3>
 					<p>{workItem.caption}</p>
 					{/* <p>{workItem.caption} - {workItem.format}</p> */}
 				</div>
@@ -2577,7 +2587,8 @@ export default function Work({isChipVisible, setIsChipVisible, filterKey, setFil
 
 			{/* <div className='chipContainer' id='chipContainerID' style={{ zIndex: chipvisibility ? 0 : -999 }} ref={chipContainer_Ref}> */}
 
-			<div className='chipContainer' id='chipContainerID' style={{ display: isChipVisible ? "flex" : "none" }} ref={chipContainer_Ref}>
+			{/* <div className='chipContainer' id='chipContainerID' style={{ display: isChipVisible ? "flex" : "none" }} ref={chipContainer_Ref}> */}
+			<div className={isLargeScreen ? 'chipContainer chipContainer_d' : 'chipContainer chipContainer_l'} id='chipContainerID' style={{ display: isChipVisible ? "flex" : "none" }} ref={chipContainer_Ref}>
 
 				{/* <div className='chipContainer' id='chipContainerID'> */}
 				{/* <div className='chipContainer' id='chipContainerID' ref={chipNav_Ref}> */}

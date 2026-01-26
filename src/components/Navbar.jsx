@@ -22,10 +22,14 @@ import '../stylesheets/App.css';
 // function Navbar() {
 // const Navbar = () => {
 // export default function Navbar() {
-// export default function Navbar(props) {
+export default function Navbar(props) {
 // export default function Navbar({isChipVisible, setIsChipVisible}) {
 // export default function Navbar({isChipVisible, setIsChipVisible, toggleVisibility}) {
-export default function Navbar({isChipVisible, setIsChipVisible, toggleVisibility, filterKey, setFilterKey}) {
+// export default function Navbar({isChipVisible, setIsChipVisible, toggleVisibility, filterKey, setFilterKey}) {
+// export default function Navbar({isMobile, setIsMobile, isChipVisible, setIsChipVisible, toggleVisibility, filterKey, setFilterKey}) {
+// export default function Navbar({isLandscape, setIsLandscape, isChipVisible, setIsChipVisible, toggleVisibility, filterKey, setFilterKey}) {
+// export default function Navbar({isLandscape, isChipVisible, setIsChipVisible, toggleVisibility, filterKey, setFilterKey}) {
+// export default function Navbar({isLargeScreen, isChipVisible, setIsChipVisible, toggleVisibility, filterKey, setFilterKey}) {
 
 // export default function Navbar(React.forwardRef(props, navBar_Ref)) {
 // const Navbar = (props) => {
@@ -145,7 +149,6 @@ export default function Navbar({isChipVisible, setIsChipVisible, toggleVisibilit
 
 	//#endregion -------------------- MARK: CONST: handleChipToggle --------------------
 
-
 	//#endregion ==================== MARK: CONSTs / FUNCTIONs ====================
 
 
@@ -166,12 +169,52 @@ export default function Navbar({isChipVisible, setIsChipVisible, toggleVisibilit
 
 	//#region ==================== FINDIN' OUT SH*T ====================
 
+	console.log('');
+	console.log('==================== COMPONENT: Navbar.jsx ====================');
+
 	// console.log('');
-	// console.log('==================== COMPONENT: Navbar.jsx ====================');
+	console.log('props = ' + props);
+	console.log(props);
 
 	// // console.log('');
-	// console.log('props = ' + props);
-	// console.log(props);
+	// console.log('isMobile = ' + isMobile);
+	// console.log(isMobile);
+
+	// // console.log('');
+	// console.log('setIsMobile = ' + setIsMobile);
+	// console.log(setIsMobile);
+
+	// // console.log('');
+	// console.log('isLandscape = ' + isLandscape);
+	// console.log(isLandscape);
+
+	// console.log('');
+	// console.log('setIsLandscape = ' + setIsLandscape);
+	// console.log(setIsLandscape);
+
+	// // console.log('');
+	// console.log('isLargeScreen = ' + isLargeScreen);
+	// console.log(isLargeScreen);
+
+	// // console.log('');
+	// console.log('typeof isLargeScreen = ' + typeof isLargeScreen);
+	// console.log(typeof isLargeScreen);
+
+	console.log('');
+	console.log('props.isLargeScreen = ' + props.isLargeScreen);
+	console.log(props.isLargeScreen);
+
+	// console.log('');
+	console.log('typeof props.isLargeScreen = ' + typeof props.isLargeScreen);
+	console.log(typeof props.isLargeScreen);
+
+	// console.log('');
+	// console.log('props.appProps.isLargeScreen = ' + props.appProps.isLargeScreen);
+	// console.log(props.appProps.isLargeScreen);
+
+	// // console.log('');
+	// console.log('typeof props.appProps.isLargeScreen = ' + typeof props.appProps.isLargeScreen);
+	// console.log(typeof props.appProps.isLargeScreen);
 
 	// // console.log('');
 	// console.log('props.chipvisibility = ' + props.chipvisibility);
@@ -305,13 +348,16 @@ export default function Navbar({isChipVisible, setIsChipVisible, toggleVisibilit
 				<Routes>
 				{/* <Routes ref={navBar_Ref}> */}
 
-					<Route path="/" element={<Home />} />
+					{/* <Route path="/" element={<Home />} /> */}
+					<Route path="/" element={<Home isLargeScreen={props.isLargeScreen} />} />
 
 					{/* <Route path="work" element={<Work />} /> */}
 					{/* <Route path="work" element={<Work ref={work_Ref}/>} /> */}
 					{/* <Route path="work" element={<Work isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} />} /> */}
 					{/* <Route path="work" element={<Work isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} toggleVisibility={toggleVisibility} />} /> */}
-					<Route path="work" element={<Work isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} filterKey={filterKey} setFilterKey={setFilterKey} />} />
+					{/* <Route path="work" element={<Work isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} filterKey={filterKey} setFilterKey={setFilterKey} />} /> */}
+					{/* <Route path="work" element={<Work isChipVisible={props.isChipVisible} setIsChipVisible={props.setIsChipVisible} filterKey={props.filterKey} setFilterKey={props.setFilterKey} />} /> */}
+					<Route path="work" element={<Work isLargeScreen={props.isLargeScreen} isChipVisible={props.isChipVisible} setIsChipVisible={props.setIsChipVisible} filterKey={props.filterKey} setFilterKey={props.setFilterKey} />} />
 
 					<Route path="about" element={<About />} />
 					<Route path="resume" element={<Resume />} />
@@ -357,10 +403,14 @@ export default function Navbar({isChipVisible, setIsChipVisible, toggleVisibilit
 							<Link to='/about' className='navItem' id='aboutID' ref={navAbout_Ref}>About</Link>
 							<Link to='/resume' className='navItem' id='resumeID' ref={navResume_Ref}>Resume</Link> */}
 
-							<NavLink to='/' className='navItem' id='homeID'>Home</NavLink>
+							{/* <NavLink to='/' className='navItem' id='homeID'>Home</NavLink> */}
+							{/* <NavLink to='/' className='navItem' id='homeID' isLargeScreen={props.isLargeScreen}>Home</NavLink> */}
+							{/* <NavLink to='/' className='navItem' id='homeID' islargescreen={props.isLargeScreen}>Home</NavLink> */}
+							<NavLink to='/' className='navItem' id='homeID' islargescreen={props.isLargeScreen ? props.isLargeScreen.value : ''}>Home</NavLink>
 
 							{/* <NavLink to='/work' className='navItem' id='workID'>Work</NavLink> */}
-							<NavLink to='/work' className='navItem' id='workID' onClick={toggleVisibility}>Work</NavLink>
+							{/* <NavLink to='/work' className='navItem' id='workID' onClick={toggleVisibility}>Work</NavLink> */}
+							<NavLink to='/work' className='navItem' id='workID' onClick={props.toggleVisibility}>Work</NavLink>
 							{/* <NavLink to='/work' className='navItem' id='workID' onClick={handleChipToggle}>Work</NavLink> */}
 							{/* <NavLink to='/work' className='navItem' id='workID' onClick={props.handlechiptoggle}>Work</NavLink> */}
 							{/* <NavLink to='/work' className='navItem' id='workID' state={{ props }} onClick={props.handlechiptoggle}>Work</NavLink> */}

@@ -5,6 +5,8 @@
 
 // import Navbar from './Navbar';
 
+import { Link } from 'react-router-dom'
+
 import '../stylesheets/App.css';
 
 import logo from '../assets/images/0elements/shigeru_logo_ko.svg';
@@ -68,10 +70,12 @@ export default function Header() {
 			<div className='hedContainer' id='hedContainerID'>
 
 				<div className='hed' id='hedID'>
-					<div className='logo' id='logoID'>
-						<img src={logo} className='logoK' id='logoKID' alt='logo' />
-						<img src={logoRev} className='logoW' id='logoWID' alt='logoRev' />
-					</div>
+					<Link to="/">
+						<div className='logo' id='logoID'>
+							<img src={logo} className='logoK' id='logoKID' alt='logo' />
+							<img src={logoRev} className='logoW' id='logoWID' alt='logoRev' />
+						</div>
+					</Link>
 
 					<div className='hed01' id='hed01'>Shigeru McPherson</div>
 					<div className='hed02' id='hed02'>digital designer &middot; art director &middot; front-end developer</div>

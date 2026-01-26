@@ -3,6 +3,7 @@
 // import { Route, Routes } from 'react-router-dom';
 // import { useRef } from 'react';
 import { useState } from 'react';
+// import { useEffect } from 'react';
 // import { useLocation } from 'react-router-dom';
 // import { Outlet } from 'react-router-dom';
 
@@ -18,9 +19,33 @@ import Navbar from './components/Navbar';
 // // import Preload from './pages/Preload';
 // // import Scene from './components/three/Scene';
 
+// // REF: https://www.youtube.com/watch?v=PMXUCNzthQU&t=508s => https://www.npmjs.com/package/ua-parser-js => https://github.com/faisalman/ua-parser-js => https://docs.uaparser.dev/api/main/overview.html
+// import { UAParser } from 'ua-parser-js';
+
 import "./stylesheets/App.css";
 
 //#endregion ==================== MARK: IMPORTS ====================
+
+
+//#region ==================== MARK: CONSTANTS n VARS ====================
+
+//#region -------------------- MARK: CONST: ua/browserDetect --------------------
+
+// const ua = new UAParser().getResult();
+
+// let browserDetect = 'desktop';
+
+// if (ua.device.type === undefined) {
+// 	// setBrowserDetect('desktop');
+// 	browserDetect = 'desktop';
+// } else {
+// 	// setBrowserDetect(ua.device.type);
+// 	browserDetect = ua.device.type;
+// }
+
+//#endregion -------------------- MARK: CONST: ua/browserDetect --------------------
+
+//#endregion ==================== CONSTANTS n VARS ====================
 
 
 function App() {
@@ -44,6 +69,12 @@ function App() {
 	// const [chipVisibility, setChipVisibility] = useState(true);
 	// // const [visibility, setVisibility] = useState(true);
 	// // const [isVisible, setIsVisible] = useState(true);
+
+	// const [isMobile, setIsMobile] = useState();
+	// // const [isMobile, setIsMobile] = useState(false);
+
+	// const [matches, setMatches] = useState(false);
+	// const [isLandscape, setIsLandscape] = useState();
 
 	const [isChipVisible, setIsChipVisible] = useState(true);
 	const [filterKey, setFilterKey] = useState();
@@ -220,13 +251,69 @@ function App() {
 	//#endregion -------------------- MARK: CONST: toggleVisibility --------------------
 
 
+	//#region -------------------- MARK: CONST: useMediaQuery - REF: https://stackoverflow.com/questions/54491645/media-query-syntax-for-reactjs#:~:text=Sorted%20by:,file=src/App.js --------------------
+
+	// const useMediaQuery = (query) => {
+
+	// 	// const [matches, setMatches] = useState(false);
+
+	// 	useEffect(() => {
+
+	// 		const mediaQuery = window.matchMedia(query);
+
+	// 		// console.log('');
+	// 		// console.log('mediaQuery = ' + mediaQuery);
+	// 		// console.log(mediaQuery);
+
+	// 		setMatches(mediaQuery.matches);
+
+	// 		const handler = (event) => setMatches(event.matches);
+
+	// 		// Use addEventListener
+	// 		mediaQuery.addEventListener('change', handler);
+
+	// 		return () => {
+	// 			// Use removeEventListener for cleanup
+	// 			mediaQuery.removeEventListener('change', handler);
+	// 		};
+
+	// 	}, [query]);
+
+	// 	return matches;
+	// };
+
+	// const isLargeScreen = useMediaQuery('(min-width: 768px)');
+	// const isLargeScreen = useMediaQuery('(min-width: 1920px)');
+	// const isLargeScreen = useMediaQuery('(min-width: 1920px)');
+
+	const isLargeScreen = window.matchMedia('(min-width: 1920px)').matches;
+
+	// // setIsLandscape(useMediaQuery('(min-width: 1920px)'));`
+	// setIsLandscape(isLargeScreen);
+
+	//#endregion -------------------- MARK: CONST: useMediaQuery - REF: https://stackoverflow.com/questions/54491645/media-query-syntax-for-reactjs#:~:text=Sorted%20by:,file=src/App.js --------------------
+
+
+	//#region -------------------- MARK: CONST: appProps --------------------
+
+	// let appProps = {
+	// 	 isLargeScreen: {isLargeScreen}, 
+	// 	 isChipVisible: {isChipVisible}, 
+	// 	 setIsChipVisible: {setIsChipVisible}, 
+	// 	 toggleVisibility: {toggleVisibility}, 
+	// 	 filterKey: {filterKey}, 
+	// 	 setFilterKey: {setFilterKey}
+	// };
+
+	//#endregion -------------------- MARK: CONST: appProps --------------------
+
 	//#endregion ==================== MARK: CONSTs/FUNCTIONs ====================
 
 
 	//#region ==================== FINDIN' OUT SH*T ====================
 
-	// console.log('');
-	// console.log('==================== COMPONENT: App.jsx ====================');
+	console.log('');
+	console.log('==================== COMPONENT: App.jsx ====================');
 
 	// // console.log('');
 	// console.log('props = ' + props);
@@ -235,6 +322,44 @@ function App() {
 	// // console.log('');
 	// console.log('locationApp.pathname = ' + locationApp.pathname);
 	// console.log(locationApp.pathname);
+
+	// // console.log('');
+	// // console.log('ua = ' + ua);
+	// console.log(ua);
+	// console.log('ua.device.type = ' + ua.device.type);
+
+	// console.log('browserDetect = ' + browserDetect);
+
+	// // console.log('');
+	// console.log('screen.orientation = ' + screen.orientation);
+	// console.log('screen.orientation.type = ' + screen.orientation.type);
+
+	// // console.log('');
+	// console.log('window.matchMedia = ' + window.matchMedia);
+
+	// // console.log('');
+	// console.log('isMobile = ' + isMobile);
+	// console.log(isMobile);
+
+	// // console.log('');
+	// console.log('isLandscape = ' + isLandscape);
+	// console.log(isLandscape);
+
+	// console.log('');
+	console.log('window.innerWidth = ' + window.innerWidth);
+	console.log(window.innerWidth);
+
+	// console.log('');
+	console.log('isLargeScreen = ' + isLargeScreen);
+	console.log(isLargeScreen);
+
+	// console.log('');
+	console.log('typeof isLargeScreen = ' + typeof isLargeScreen);
+	console.log(typeof isLargeScreen);
+
+	// // console.log('');
+	// console.log('window.matchMedia((min-width: 1920px)).media = ' + window.matchMedia('(min-width: 1920px)').media);
+	// console.log(window.matchMedia('(min-width: 1920px)').media);
 
 	// // console.log('');
 	// console.log('typeof chipVisibility = ' + typeof chipVisibility);
@@ -287,7 +412,13 @@ function App() {
 				{/* <Navbar handleChipToggle={handleChipToggle} /> */}
 				{/* <Navbar isChipVisible={isChipVisible} handleChipToggle={handleChipToggle} /> */}
 				{/* <Navbar isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} toggleVisibility={toggleVisibility} /> */}
-				<Navbar isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} toggleVisibility={toggleVisibility} filterKey={filterKey} setFilterKey={setFilterKey} />
+				{/* <Navbar isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} toggleVisibility={toggleVisibility} filterKey={filterKey} setFilterKey={setFilterKey} /> */}
+				{/* <Navbar isMobile={isMobile} setIsMobile={setIsMobile} isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} toggleVisibility={toggleVisibility} filterKey={filterKey} setFilterKey={setFilterKey} /> */}
+				{/* <Navbar isLandscape={isLandscape} setIsLandscape={setIsLandscape} isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} toggleVisibility={toggleVisibility} filterKey={filterKey} setFilterKey={setFilterKey} /> */}
+				{/* <Navbar isLandscape={isLandscape} isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} toggleVisibility={toggleVisibility} filterKey={filterKey} setFilterKey={setFilterKey} /> */}
+
+				<Navbar isLargeScreen={isLargeScreen} isChipVisible={isChipVisible} setIsChipVisible={setIsChipVisible} toggleVisibility={toggleVisibility} filterKey={filterKey} setFilterKey={setFilterKey} />
+				{/* <Navbar appProps={appProps} /> */}
 
 				{/* <Navbar chipVisibility={chipVisibility} handleChipToggle={handleChipToggle} /> */}
 				{/* <Navbar chipVisibility={chipVisibility} setChipVisibility={setChipVisibility} handleChipToggle={handleChipToggle} /> */}
