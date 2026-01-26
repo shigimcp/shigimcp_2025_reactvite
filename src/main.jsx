@@ -22,9 +22,9 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(
 	<StrictMode>
-		<BrowserRouter>
+		{/* <BrowserRouter> */}
 		{/* <BrowserRouter basename={import.meta.env.BASE_URL}> */}
-		{/* <BrowserRouter basename='/shigimcp_2025_reactvite/'> */}
+		<BrowserRouter basename='/shigimcp_2025_reactvite/'>
 		{/* <BrowserRouter basename='/Xstage/shigimcp_2025_reactvite'> */}
 			<App />
 		</BrowserRouter>
