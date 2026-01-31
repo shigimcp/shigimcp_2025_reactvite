@@ -1798,6 +1798,7 @@ export default function Work({isLargeScreen, isChipVisible, setIsChipVisible, fi
 			layoutMode: 'packery',
 			packery: {
 				gutter: 20,
+				// gutter: 40,
 				// columnWidth: '.workItem',
 				// rowHeight: 60,
 				// horizontal: true
@@ -2319,8 +2320,8 @@ export default function Work({isLargeScreen, isChipVisible, setIsChipVisible, fi
 				key={index}
 				// onClick={(event) => loadContent(event, workItem)}
 				// onClick={workItem.availability ? (event) => loadContent(event, workItem) : undefined}
-				onClick={workItem.link !== '#' ? (event) => loadContent(event, workItem) : undefined}
-				// style={{ cursor: workItem.availability && 'pointer'}}
+				// onClick={workItem.link !== '#' ? (event) => loadContent(event, workItem) : undefined}
+				onClick={workItem.availability === true ? (event) => loadContent(event, workItem) : null}
 				style={{ cursor: workItem.availability && 'pointer' }}
 				// style={{ cursor: workItem.link !== '#' && 'pointer' }}
 			>
@@ -2330,12 +2331,22 @@ export default function Work({isLargeScreen, isChipVisible, setIsChipVisible, fi
 					alt={'workItem: ' + workItem.album_id}
 				/>
 
-				<div className='itemInfo'>
-					{/* <h3 className='masonry-title'>{employerData[workItem.album_index].employer}</h3>
-					<p className='masonry-description'>{workItem.caption}</p> */}
-					<h3>{employerData[workItem.album_index].employer}</h3>
-					<p>{workItem.caption}</p>
-					{/* <p>{workItem.caption} - {workItem.format}</p> */}
+				{/* <div className='itemInfo'> */}
+				<div className={workItem.availability === true ? 'itemInfo_CTA' : 'itemInfo'}>
+					<div className='itemDetails'>
+						{/* <h3 className='masonry-title'>{employerData[workItem.album_index].employer}</h3>
+						<p className='masonry-description'>{workItem.caption}</p> */}
+						<h3>{employerData[workItem.album_index].employer}</h3>
+						<p>{workItem.caption}</p>
+						{/* <p>{workItem.caption} - {workItem.format}</p> */}
+					</div>
+					{/* <div className='itemCTA'> */}
+					<div className={workItem.availability === true ? 'itemCTA' : 'itemCTA_NA'}>
+						<p>PLAY ▶</p>
+						{/* <p>{workItem.availability === true ? workItem.cta : ''}</p> */}
+						{/* <p>{workItem.availability === true ? workItem.cta + ' ▶' : ''}</p> */}
+						{/* <p>{workItem.availability === true ? 'PLAY ▶' : ''}</p> */}
+					</div>
 				</div>
 
 			</div>

@@ -1,8 +1,8 @@
 {
 	"name": "shigimcp_2025_reactvite",
-	"homepage": "https://shigimcp.github.io/shigimcp_2025_reactvite/",
-	"_homepage": "https://www.shigimcp.com/Xstage/shigimcp_2025_reactVite",
-	"__homepage": "https://www.shigimcp.com",
+	"homepage": "https://www.shigimcp.com",
+	"_homepage": "https://shigimcp.github.io/shigimcp_2025_reactvite/",
+	"__homepage": "https://www.shigimcp.com/Xstage/shigimcp_2025_reactVite",
 	"___homepage": ".",
 	"private": false,
 	"version": "0.0.0",

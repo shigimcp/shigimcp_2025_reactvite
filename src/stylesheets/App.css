@@ -160,7 +160,8 @@
 
 			text-align: right;
 
-			margin-right: 20px;
+			/* margin-right: 20px; */
+			margin-right: 2rem;
 
 			a {
 				color: #ffffff;
@@ -293,7 +294,8 @@
 
 			.active {
 				/* border: 2px inset #00ffff; */
-				background-color: #dddddd;
+				/* background-color: #dddddd; */
+				background: linear-gradient(0deg, rgba(0, 0, 0, 0.125) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.125) 100%);
 
 				/* @include bgGradient01(); */
 				/* @include bgGradient02(); */
@@ -316,7 +318,8 @@
 
 		.resumeNav {
 			/* border: 1px solid #ff0000; */
-			background-color: #dddddd;
+			/* background-color: #dddddd; */
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.125) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.125) 100%);
 
 			/* @include bgGradient06(); */
 			/* @include bgGradient07(); */

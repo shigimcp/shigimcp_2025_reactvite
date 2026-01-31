@@ -141,7 +141,8 @@ export default function Home(props) {
 
 					{/* <PerspectiveCamera makeDefault fov={17.5} position={[0, 0, 15]} /> */}
 					{/* <PerspectiveCamera makeDefault position={[0, 0.5, 6.25]} /> */}
-					<PerspectiveCamera makeDefault fov={25} position={[0, 0.5, 10]} />
+					{/* <PerspectiveCamera makeDefault fov={25} position={[0, 0.5, 10]} /> */}
+					<PerspectiveCamera makeDefault fov={22.5} position={[0, 0.75, 10]} />
 
 					{/* <mesh>
 						<boxGeometry args={[2, 2, 2]} />
@@ -180,21 +181,23 @@ export default function Home(props) {
 					<h3>(and not afraid of writing code...!)</h3>
 					<div className='note'>
 						<p>
-							<b>NOTE:</b> This is my sandbox.
+							<b>NOTE:</b> This website is my sandbox.
 							{/* <br /> */}
 							{/* This is my sandbox. */}
 							<br />
-							This will <i>always</i> be a work in progress...
+							This will <i>always</i> be a work in progress.
 							<br />
-							(You can tell, because... <i>WHY?! &#128514; ===&#62;)</i>
 						</p>
 						<p>
-							{/* <br /> */}
-							{/* <br /><br /> */}
-							{/* <i>Please, be forgiving... LOL!</i> */}
-							{/* Please, be kind... <i>LOL!</i> */}
-							Please, be kind... &#128540;
+							(You can tell, because... <i>WHY?!?! &#128514; ===&#62;)</i>
 						</p>
+						{/* <p>
+							<br />
+							<br /><br />
+							<i>Please, be forgiving... LOL!</i>
+							Please, be kind... <i>LOL!</i>
+							Please, be kind... &#128540;
+						</p> */}
 					</div>
 				</div>
 

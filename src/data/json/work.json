@@ -212,7 +212,7 @@
    "masonryHeight": 1,
    "link": "anims/KU-12045_062424_PRIDE_HP_HERO_BANNER_V1_ANIM_STAGED/index.html",
    "link2": "anims/KU-12045_062424_PRIDE_HP_HERO_BANNER_V1_ANIM_STAGED/index.html",
-   "link3": "KU-12045_062424_PRIDE_HP_HERO_BANNER_V1_ANIM_STAGED",
+   "link3": "anims/KU-12045_062424_PRIDE_HP_HERO_BANNER_V1_ANIM_STAGED/index.html",
    "link4": "KU12045062424PRIDEHPHEROBANNERV1ANIMSTAGED",
    "cta": "click image for HTML5 presentation",
    "alert": "",
@@ -220,7 +220,7 @@
    "mheight": 1400,
    "mwidthORIG": 2000,
    "mheightORIG": 1400,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -240,7 +240,7 @@
    "masonryHeight": 1,
    "link": "anims/KU-0000_HOMEPAGE_ANIMS_WK01_products_snow_STAGED/index.html",
    "link2": "anims/KU-0000_HOMEPAGE_ANIMS_WK01_products_snow_STAGED/index.html",
-   "link3": "KU-0000_HOMEPAGE_ANIMS_WK01_products_snow_STAGED",
+   "link3": "anims/KU-0000_HOMEPAGE_ANIMS_WK01_products_snow_STAGED/index.html",
    "link4": "KU0000HOMEPAGEANIMSWK01productssnowSTAGED",
    "cta": "click image for HTML5 presentation",
    "alert": "",
@@ -248,7 +248,7 @@
    "mheight": 1400,
    "mwidthORIG": 2000,
    "mheightORIG": 1400,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -273,7 +273,7 @@
    "cta": "click image for website",
    "alert": "This is a LIVE website!",
    "mwidth": 1920,
-   "mheight": 900,
+   "mheight": 1150,
    "mwidthORIG": 1920,
    "mheightORIG": 1080,
    "availability": true,
@@ -518,7 +518,7 @@
    "format_src": "html5",
    "masonryWidth": 2,
    "masonryHeight": 1,
-   "link": "html5/xxxxxx_CURVE_WEBSITE_2018_protosite",
+   "link": "https://www.shigimcp.com/assets/img/ea/html5/xxxxxx_CURVE_WEBSITE_2018_protosite/index.html",
    "link2": "html5/xxxxxx_CURVE_WEBSITE_2018_protosite",
    "link3": "html5/xxxxxx_CURVE_WEBSITE_2018_protosite",
    "link4": "html5/xxxxxx_CURVE_WEBSITE_2018_protosite",
@@ -528,7 +528,7 @@
    "mheight": 1300,
    "mwidthORIG": 1366,
    "mheightORIG": 1300,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -574,7 +574,7 @@
    "format_src": "html5",
    "masonryWidth": 2,
    "masonryHeight": 1,
-   "link": "mobile/RDSlookfinder/index.html",
+   "link": "https://www.shigimcp.com/assets/img/ea/mobile/RDSlookfinder/index.html",
    "link2": "mobile/RDSlookfinder/index.html",
    "link3": "mobile/RDSlookfinder/index.html",
    "link4": "mobile/RDSlookfinder/index.html",
@@ -584,7 +584,7 @@
    "mheight": 1375,
    "mwidthORIG": 990,
    "mheightORIG": 1375,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -668,7 +668,7 @@
    "mheight": 250,
    "mwidthORIG": 300,
    "mheightORIG": 250,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -696,7 +696,7 @@
    "mheight": 600,
    "mwidthORIG": 300,
    "mheightORIG": 600,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -836,7 +836,7 @@
    "mheight": 250,
    "mwidthORIG": 300,
    "mheightORIG": 250,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -892,7 +892,7 @@
    "mheight": 250,
    "mwidthORIG": 300,
    "mheightORIG": 250,
-   "availability": false,
+   "availability": true,
    "visiblity": true
  },
  {
@@ -1480,7 +1480,7 @@
    "mheight": 1340,
    "mwidthORIG": 1900,
    "mheightORIG": 1340,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -1610,7 +1610,7 @@
    "format_src": "standard",
    "masonryWidth": 1,
    "masonryHeight": 1,
-   "link": "flash/seventeen/hearst_seventeen.html",
+   "link": "https://www.shigimcp.com/assets/img/hearst/flash/seventeen/hearst_seventeen.html",
    "link2": "flash/seventeen/hearst_seventeen.html",
    "link3": "flash/seventeen/hearst_seventeen.html",
    "link4": "flash/seventeen/hearst_seventeen.html",
@@ -1621,7 +1621,7 @@
    "mwidthORIG": 450,
    "mheightORIG": 360,
    "availability": false,
-   "visiblity": true
+   "visiblity": false
  },
  {
    "album_index": 6,
@@ -1638,7 +1638,7 @@
    "format_src": "standard",
    "masonryWidth": 1,
    "masonryHeight": 1,
-   "link": "flash/cosmo/hearst_cosmo.html",
+   "link": "https://www.shigimcp.com/assets/img/hearst/flash/cosmo/hearst_cosmo.html",
    "link2": "flash/cosmo/hearst_cosmo.html",
    "link3": "flash/cosmo/hearst_cosmo.html",
    "link4": "flash/cosmo/hearst_cosmo.html",
@@ -1649,7 +1649,7 @@
    "mwidthORIG": 450,
    "mheightORIG": 360,
    "availability": false,
-   "visiblity": true
+   "visiblity": false
  },
  {
    "album_index": 7,
@@ -1733,7 +1733,7 @@
    "mwidthORIG": 785,
    "mheightORIG": 700,
    "availability": false,
-   "visiblity": true
+   "visiblity": false
  },
  {
    "album_index": 8,
@@ -1872,7 +1872,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -1900,7 +1900,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -1928,7 +1928,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -1956,7 +1956,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -1984,7 +1984,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -2012,7 +2012,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -2040,7 +2040,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -2068,7 +2068,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -2096,7 +2096,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -2124,7 +2124,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -2152,7 +2152,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -2180,7 +2180,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -2208,7 +2208,7 @@
    "mheight": 100,
    "mwidthORIG": 100,
    "mheightORIG": 100,
-   "availability": true,
+   "availability": false,
    "visiblity": true
  },
  {
@@ -2674,7 +2674,7 @@
    "format_src": "external",
    "masonryWidth": 2,
    "masonryHeight": 1,
-   "link": "https://www.shigimcp.com/Xstage/shigimcp_2020_react/img/other/SquirrelBit_3D_webgl_desktop/",
+   "link": "https://www.shigimcp.com/Xstage/shigimcp_2020_react/img/other/SquirrelBit_3D_webgl_desktop",
    "link2": "https://www.shigimcp.com/Xstage/shigimcp_2020_react/img/other/SquirrelBit_3D_webgl_desktop/",
    "link3": "https://www.shigimcp.com/Xstage/shigimcp_2020_react/img/other/SquirrelBit_3D_webgl_desktop/",
    "link4": "https://www.shigimcp.com/Xstage/shigimcp_2020_react/img/other/SquirrelBit_3D_webgl_desktop/",

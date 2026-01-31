@@ -8,9 +8,10 @@ export default defineConfig({
 		commonjsOptions: {
 			transformMixedEsModules: true
 		},
-		base: "/shigimcp_2025_reactvite/",
-		// base: "/Xstage/shigimcp_2025_reactvite/",
-		// base: "./",
-		// base: '',
+		// base: "/shigimcp_2025_reactvite/"
+		// base: "/Xstage/shigimcp_2025_reactvite/"
+		// base: "./"
+		base: "/"
+		// base: ""
 	}
 });
