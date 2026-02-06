@@ -1,4 +1,5 @@
-import employers from '../data/json/employers_https.json';
+// import employers from '../data/json/employers_https.json';
+import employers from '../data/json/employers.json';
 
 
 const employerData = employers.map((employer) => employer);

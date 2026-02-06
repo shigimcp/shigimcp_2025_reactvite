@@ -519,7 +519,7 @@
    "masonryWidth": 2,
    "masonryHeight": 1,
    "link": "https://www.shigimcp.com/assets/img/ea/html5/xxxxxx_CURVE_WEBSITE_2018_protosite/index.html",
-   "link2": "html5/xxxxxx_CURVE_WEBSITE_2018_protosite",
+   "link2": "html5/xxxxxx_CURVE_WEBSITE_2018_protosite/index.html",
    "link3": "html5/xxxxxx_CURVE_WEBSITE_2018_protosite",
    "link4": "html5/xxxxxx_CURVE_WEBSITE_2018_protosite",
    "cta": "click image for HTML5 presentation",
@@ -528,7 +528,7 @@
    "mheight": 1300,
    "mwidthORIG": 1366,
    "mheightORIG": 1300,
-   "availability": false,
+   "availability": true,
    "visiblity": true
  },
  {
@@ -2675,7 +2675,7 @@
    "masonryWidth": 2,
    "masonryHeight": 1,
    "link": "https://www.shigimcp.com/Xstage/shigimcp_2020_react/img/other/SquirrelBit_3D_webgl_desktop",
-   "link2": "https://www.shigimcp.com/Xstage/shigimcp_2020_react/img/other/SquirrelBit_3D_webgl_desktop/",
+   "link2": "https://www.shigimcp.com/Xstage/shigimcp_2020_react/img/other/SquirrelBit_3D_webgl_desktop/index.html",
    "link3": "https://www.shigimcp.com/Xstage/shigimcp_2020_react/img/other/SquirrelBit_3D_webgl_desktop/",
    "link4": "https://www.shigimcp.com/Xstage/shigimcp_2020_react/img/other/SquirrelBit_3D_webgl_desktop/",
    "cta": "click image to play",

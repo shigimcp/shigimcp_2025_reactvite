@@ -412,6 +412,45 @@
 			}
 		}
 	}
+
+	.resumeToggle {
+		/* border: 1px solid rgba(0, 0, 0, 0.125); */
+
+		/* width: inherit; */
+		width: var(--body-min-width);
+
+		display: flex;
+		justify-content: right;
+
+		position: fixed;
+
+		button {
+			border: 1px solid rgba(0, 0, 0, 0.125);
+			/* border: none; */
+			background-color: #ffffff;
+			/* background-color: #dddddd; */
+			/* background: linear-gradient(0deg, rgba(0, 0, 0, 0.125) 0%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.125) 100%); */
+
+			font-family: inherit;
+			font-size: 0.75rem;
+
+			margin: 0;
+			padding: 5px 10px;
+
+			/* position: relative; */
+			position: absolute;
+			/* position: fixed; */
+
+			/* top: calc(var(--header-height) * 2); */
+			/* left: 500px; */
+			/* left: var(--body-min-width); */
+			/* left: calc(100vw - var(--body-max-width) + 30px); */
+			/* left: calc((var(--body-max-width) + var(--body-min-width)) * 0.75); */
+			right: -8rem;
+			/* right: var(--body-min-width); */
+			/* right: calc((var(--body-max-width) - var(--body-min-width)) * 0.5); */
+		}
+	}
 }
 
 /* #endregion ==================== MARK: BASE ==================== */

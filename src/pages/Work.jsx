@@ -35,7 +35,8 @@ import '../stylesheets/Work.css';
 
 // import myData from '../data/MyData';
 
-import employers from '../data/json/employers_https.json';
+// import employers from '../data/json/employers_https.json';
+import employers from '../data/json/employers.json';
 import work from '../data/json/work.json';
 // import about from '../data/json/about.json';
 // import skills from '../data/json/skills.json'
@@ -1069,11 +1070,11 @@ export default function Work({isLargeScreen, isChipVisible, setIsChipVisible, fi
 			case 'mobile': {
 				//#region -------------------- ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) --------------------
 
-				console.log('');
-				console.log('-------------------- ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) --------------------');
-				console.log('I AM either HTML5, WEBSITE or MOBILE: ' + thisWorkItem.format);
-				console.log('thisWorkItem = ' + thisWorkItem);
-				console.log(thisWorkItem);
+				// console.log('');
+				// console.log('-------------------- ASSIGN NEW CONTENT: html5, website, mobile (IFRAME) --------------------');
+				// console.log('I AM either HTML5, WEBSITE or MOBILE: ' + thisWorkItem.format);
+				// console.log('thisWorkItem = ' + thisWorkItem);
+				// console.log(thisWorkItem);
 				// console.log('thisWorkItem.format_src = ' + thisWorkItem.format_src);
 				// console.log(thisWorkItem.format_src);
 

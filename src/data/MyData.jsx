@@ -1,6 +1,7 @@
 // import employers from '../data/json/employers_http.json';
-import employers from '../data/json/employers_https.json';
+// import employers from '../data/json/employers_https.json';
 // import employers from '../data/json/employers_https_noBullets.json';
+import employers from '../data/json/employers.json';
 import work from '../data/json/work.json';
 import about from '../data/json/about.json';
 import skills from '../data/json/skills.json'

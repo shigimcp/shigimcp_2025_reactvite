@@ -2,7 +2,7 @@
 
 // import React from 'react';
 // import { useRef } from 'react';
-// import { useState } from 'react';
+import { useState } from 'react';
 // import Moment from 'moment';
 
 // import "../stylesheets/App.css";
@@ -10,19 +10,35 @@ import '../stylesheets/Resume.css';
 
 import myData from '../data/MyData';
 
-//#endregion ==================== MARK: IMPORTS ====================
+//#endregion ==================== IMPORTS ====================
 
 
 //#region ==================== MARK: CONSTANTS ====================
 
-//#region -------------------- DATA --------------------
+//#region -------------------- MARK: DATA --------------------
 
 const employerData = myData[0];
 const skillData = myData[3];
 
 //#endregion -------------------- DATA --------------------
 
-//#region -------------------- RESUME URLs --------------------
+// let resumeLength;
+
+//#region -------------------- MARK: IMAGE URLs --------------------
+
+// const localImgLoc = '/logos_pleaseCompress/';
+// const remoteImgLoc = '/logos_pleaseCompress/';
+// const remoteImgLoc = '/logos_compressed/';
+// const remoteImgLoc = './logos_compressed/';
+// const remoteImgLoc = '/shigimcp2025_reactvite/logos_compressed/';
+// const remoteImgLoc = '/shigimcp_2025_reactvite/logos_compressed/';
+const remoteImgLoc = 'https://www.shigimcp.com/assets/img/logos_compressed/';
+// const remoteImgLoc = 'https://www.shigimcp.com/assets/img/resume/';
+
+//#endregion -------------------- IMAGE URLs --------------------
+
+
+//#region -------------------- MARK: RESUME URLs --------------------
 
 // const remoteResumeLoc = 'https://www.shigimcp.com/assets/resume/';
 
@@ -46,29 +62,85 @@ const skillData = myData[3];
 
 //#endregion -------------------- RESUME URLs --------------------
 
-//#endregion ==================== MARK: CONSTANTS ====================
+//#endregion ==================== CONSTANTS ====================
 
 
-// #region ==================== MARK: EmployerItem ====================
+//#region ==================== MARK: FUNCTIONS ====================
 
-// const localImgLoc = '/logos_pleaseCompress/';
-// const remoteImgLoc = '/logos_pleaseCompress/';
-// const remoteImgLoc = '/logos_compressed/';
-// const remoteImgLoc = './logos_compressed/';
-// const remoteImgLoc = '/shigimcp2025_reactvite/logos_compressed/';
-// const remoteImgLoc = '/shigimcp_2025_reactvite/logos_compressed/';
-const remoteImgLoc = 'https://www.shigimcp.com/assets/img/logos_compressed/';
-// const remoteImgLoc = 'https://www.shigimcp.com/assets/img/resume/';
+// #region -------------------- MARK: toggleResume --------------------
+
+// const toggleResume = (isLongform, setIsLongform) => {
+
+// 	// #region -------------------- FINDIN' OUT SH*T --------------------
+
+// 	console.log('');
+// 	console.log('-------------------- CONST: toggleResume --------------------');
+
+// 	// console.log('');
+// 	console.log('isLongform = ' + isLongform);
+// 	// console.log(isLongform);
+
+// 	// #endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
+// 	setIsLongform(!isLongform);
+
+
+// 	//#region -------------------- FINDIN' OUT MORE SH*T --------------------
+
+// 	// // console.log('');
+// 	// console.log('chipVisibility_POST = ' + chipVisibility);
+
+// 	//#endregion -------------------- FINDIN' OUT MORE SH*T --------------------
+// }
+
+// #endregion -------------------- toggleResume --------------------
+
+//#endregion ==================== FUNCTIONS ====================
+
+
+//#region ==================== MARK: COMPONENTS ====================
+
+// #region -------------------- MARK: EmployerItem --------------------
 
 function EmployerItem(props) {
+
+	// let resumeLength = props.isInResume;
+
+	//#region -------------------- MARK: useState DEFs --------------------
+
+	// const [isLongform, setIsLongform] = useState(false);
+
+	//#endregion -------------------- useState DEFs --------------------
+
 
 	//#region -------------------- MARK: FINDIN' OUT SH*T --------------------
 
 	// console.log('');
+	// console.log('-------------------- COMPONENT: EmployerItem --------------------');
+
+	// // console.log('');
+	// console.log('props = ' + props);
+	// console.log(props);
+
+	// console.log('');
 	// console.log('props.dateStart = ' + props.dateStart + '     props.dateEnd = ' + props.dateEnd);
+
+	// console.log('');
+	// console.log('props.dateStart = ' + props.dateStart + '     props.dateEnd = ' + props.dateEnd);
+
+	// // console.log('');
+	// console.log('isLongform = ' + isLongform);
+	// // console.log(isLongform);
+
+	// // console.log('');
+	// console.log('props.isLongform = ' + props.isLongform);
+	// // console.log(props.isLongform);
 
 	//#endregion -------------------- FINDIN' OUT SH*T --------------------
 
+
+	//#region -------------------- MARK: EmployerItem(props): dates --------------------
 
 	// let thisDateStart = props.dateStart.slice(0, -3);
 	// let thisDateEnd = props.dateEnd.slice(0, -3);
@@ -112,6 +184,8 @@ function EmployerItem(props) {
 	// thisDateStart = Intl.DateTimeFormat('en-US').format(props.dateStart);
 	// thisDateEnd = Intl.DateTimeFormat('en-US').format(props.dateEnd);
 
+	//#endregion -------------------- EmployerItem(props): dates --------------------
+
 
 	//#region -------------------- MARK: FINDIN' OUT MORE SH*T --------------------
 
@@ -126,7 +200,11 @@ function EmployerItem(props) {
 	//#endregion -------------------- FINDIN' OUT MORE SH*T --------------------
 
 
-	if (props.availability) {
+	// if (props.availability) {
+	// if (props.isInResume) {
+	// if (resumeLength) {
+	if (props.isLongform ? props.availability : props.isInResume)
+
 		return (
 			<div className='employerItem'>
 
@@ -165,25 +243,49 @@ function EmployerItem(props) {
 					{props.languages ? <p className='skillHilite' ><strong>Languages:</strong> {props.languages}</p> : ''} */}
 				</div>
 
-				<div className='employerDates'>
-					{/* {thisDateStart !== thisDateEnd ? <div className='employerDates'>{thisDateStart} - {thisDateEnd}</div> : <div className='employerDates'>{thisDateEnd}</div>} */}
-				</div>
+				{/* <div className='employerDates'>
+					{thisDateStart !== thisDateEnd ? <div className='employerDates'>{thisDateStart} - {thisDateEnd}</div> : <div className='employerDates'>{thisDateEnd}</div>}
+				</div> */}
 
 			</div>
 		);
 
-	} else {
-		return null;
-	}
+	// } else {
+	// 	return null;
+	// }
 }
 
-// #endregion ==================== MARK: EmployerItem ====================
+// #endregion -------------------- MARK: EmployerItem --------------------
 
 
-//#region ==================== MARK: EmployerList ====================
+//#region -------------------- MARK: EmployerList --------------------
 
-function EmployerList() {
+// function EmployerList() {
+function EmployerList(props) {
+// function EmployerList(isLongform) {
+
+	//#region -------------------- MARK: FINDIN' OUT SH*T --------------------
+
+	// console.log('');
+	// console.log('-------------------- COMPONENT: EmployerList --------------------');
+
+	// // console.log('');
+	// console.log('props = ' + props);
+	// console.log(props);
+
+	// // console.log('');
+	// console.log('props.isLongform = ' + props.isLongform);
+	// // console.log(props.isLongform);
+
+	// // console.log('');
+	// console.log('isLongform = ' + isLongform);
+	// // console.log(isLongform);
+
+	//#endregion -------------------- FINDIN' OUT SH*T --------------------
+
+
 	const employerItems = employerData.map((employer) => (
+
 		<EmployerItem
 			key={employer.album_id}
 			album_id={employer.album_id}
@@ -201,20 +303,30 @@ function EmployerList() {
 			employerLogoPath={employer.logopath}
 			employerLogo={employer.logo}
 			availability={employer.availability}
+			isInResume={employer.isInResume}
+			isLongform={props.isLongform}
 		/>
+
 	));
 
-	return <div className='employerList'>{employerItems}</div>;
+	// return <div className='employerList'>{employerItems}</div>;
+
+	return (
+		<div className='employerList'>{employerItems}</div>
+		// <div className='employerList' isLongform={props.isLongform}>{employerItems}</div>
+		// <div className='employerList' isLongform={isLongform}>{employerItems}</div>
+	);
 }
 
-//#endregion ==================== MARK: EmployerList ====================
+//#endregion -------------------- EmployerList --------------------
 
 
-//#region ==================== MARK: SkillChartItem ====================
+//#region -------------------- MARK: SkillChartItem --------------------
 
 function SkillChartItem(props) {
 	// if (props.skill) {
 	if (props.skill && props.availability) {
+	// if (props.skill && props.isInResume) {
 		return (
 			<div className='chartItem'>
 				<div className='chartCell'>
@@ -233,10 +345,10 @@ function SkillChartItem(props) {
 	}
 }
 
-//#endregion ==================== MARK: SkillChartItem ====================
+//#endregion -------------------- SkillChartItem --------------------
 
 
-//#region ==================== MARK: SkillChart ====================
+//#region -------------------- MARK: SkillChart --------------------
 
 function SkillChart(props) {
 	const skillItems = skillData
@@ -251,6 +363,7 @@ function SkillChart(props) {
 				exp={skill.exp}
 				notes={skill.notes}
 				availability={skill.availability}
+				isInResume={skill.isInResume}
 			/>
 		));
 
@@ -264,10 +377,10 @@ function SkillChart(props) {
 	);
 }
 
-//#endregion ==================== MARK: SkillChart ====================
+//#endregion -------------------- SkillChart --------------------
 
 
-//#region ==================== MARK: SkillSet ====================
+//#region -------------------- MARK: SkillSet --------------------
 
 function SkillSet() {
 	return (
@@ -283,7 +396,9 @@ function SkillSet() {
 	);
 }
 
-//#endregion ==================== MARK: SkillSet ====================
+//#endregion -------------------- SkillSet --------------------
+
+//#endregion ==================== COMPONENTS ====================
 
 
 
@@ -306,20 +421,51 @@ export default function Resume() {
 	// localStorage.setItem('navLoc', locID);
 
 
-	//#region ==================== MARK: ASSETS _Ref ====================
+	//#region ==================== MARK: useRef DEFs ====================
 
 	// const dialogModal_Ref = useRef(null);
 	// const dialogHotspot_Ref = useRef(null);
 	// const dialogBox_Ref = useRef(null);
 
-	//#endregion ==================== MARK: ASSETS _Ref ====================
+	//#endregion ==================== useRef DEFs ====================
+
+
+	//#region ==================== MARK: useState DEFs ====================
+
+	const [isLongform, setIsLongform] = useState(false);
+
+	//#endregion ==================== useState DEFs ====================
+
+
+	//#region ==================== MARK: FINDIN' MORE OUT SH*T ====================
+
+	// // console.log('');
+	// console.log('props = ' + props);
+	// console.log(props);
+
+	// // console.log('');
+	// console.log('isLongform = ' + isLongform);
+	// // console.log(isLongform);
+
+	// // console.log('');
+	// console.log('setIsLongform = ' + setIsLongform);
+	// // console.log(setIsLongform);
+
+	//#endregion ==================== FINDIN' MORE OUT SH*T ====================
 
 	return (
 		<>
 			<div className='employerContainer' id='employerContainerID'>
 			{/* <div className='bodyContainer' id='bodyContainerID'> */}
 
-				<EmployerList />
+				<div className='resumeToggle'>
+					{/* <button onClick={() => toggleResume(isLongform, setIsLongform)}>Long Form</button> */}
+					{/* <button onClick={() => setIsLongform(!isLongform)}>long form</button> */}
+					<button onClick={() => setIsLongform(!isLongform)}>{isLongform ? '<< view short format' : '<< view long format'}</button>
+				</div>
+
+				{/* <EmployerList /> */}
+				<EmployerList isLongform={isLongform} />
 
 				<div className='eduContainer'>
 					<h1 className='sectHed'>Education</h1>

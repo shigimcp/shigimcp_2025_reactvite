@@ -200,13 +200,13 @@ export default function Navbar(props) {
 	// console.log('typeof isLargeScreen = ' + typeof isLargeScreen);
 	// console.log(typeof isLargeScreen);
 
-	console.log('');
+	// console.log('');
 	console.log('props.isLargeScreen = ' + props.isLargeScreen);
-	console.log(props.isLargeScreen);
+	// console.log(props.isLargeScreen);
 
 	// console.log('');
 	console.log('typeof props.isLargeScreen = ' + typeof props.isLargeScreen);
-	console.log(typeof props.isLargeScreen);
+	// console.log(typeof props.isLargeScreen);
 
 	// console.log('');
 	// console.log('props.appProps.isLargeScreen = ' + props.appProps.isLargeScreen);

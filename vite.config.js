@@ -12,6 +12,5 @@ export default defineConfig({
 		// base: "/Xstage/shigimcp_2025_reactvite/"
 		// base: "./"
 		base: "/"
-		// base: ""
 	}
 });

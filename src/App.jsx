@@ -347,15 +347,19 @@ function App() {
 
 	// console.log('');
 	console.log('window.innerWidth = ' + window.innerWidth);
-	console.log(window.innerWidth);
+	// console.log(window.innerWidth);
+
+	// console.log('');
+	console.log('window.innerHeight = ' + window.innerHeight);
+	// console.log(window.innerHeight);
 
 	// console.log('');
 	console.log('isLargeScreen = ' + isLargeScreen);
-	console.log(isLargeScreen);
+	// console.log(isLargeScreen);
 
 	// console.log('');
 	console.log('typeof isLargeScreen = ' + typeof isLargeScreen);
-	console.log(typeof isLargeScreen);
+	// console.log(typeof isLargeScreen);
 
 	// // console.log('');
 	// console.log('window.matchMedia((min-width: 1920px)).media = ' + window.matchMedia('(min-width: 1920px)').media);
